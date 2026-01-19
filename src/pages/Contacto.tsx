@@ -25,12 +25,12 @@ const Contacto = () => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary/10 to-accent/10 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+      <section className="relative bg-gradient-to-br from-primary via-secondary to-accent py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
             Contáctanos
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-2xl text-white/90 max-w-2xl mx-auto font-light">
             Estamos aquí para ayudarte. Escríbenos y resolveremos todas tus dudas
           </p>
         </div>

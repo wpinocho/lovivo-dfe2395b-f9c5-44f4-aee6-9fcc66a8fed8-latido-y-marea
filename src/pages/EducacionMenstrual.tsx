@@ -8,14 +8,24 @@ const EducacionMenstrual = () => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary/10 to-accent/10 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Educación Menstrual
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Reconecta con tu ciclo menstrual y descubre la sabiduría de tu cuerpo cíclico
-          </p>
+      <section className="relative h-[500px] overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1616798002516-1a21f8f5f0e2?w=1600&h=900&fit=crop"
+            alt="Educación Menstrual"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 to-accent/60"></div>
+        </div>
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <div className="text-white text-center max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 leading-tight">
+              Educación Menstrual
+            </h1>
+            <p className="text-2xl font-light">
+              Reconecta con tu ciclo menstrual y descubre la sabiduría de tu cuerpo cíclico
+            </p>
+          </div>
         </div>
       </section>
 
@@ -23,7 +33,7 @@ const EducacionMenstrual = () => {
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">¿Qué es la Educación Menstrual?</h2>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">¿Qué es la Educación Menstrual?</h2>
             <p className="text-lg text-muted-foreground">
               Es un proceso de autoconocimiento que te permite comprender las fases de tu ciclo, 
               reconocer tus necesidades en cada etapa y honrar tu naturaleza cíclica. A través de 
@@ -37,7 +47,7 @@ const EducacionMenstrual = () => {
       {/* Beneficios */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">¿Qué aprenderás?</h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-16">¿Qué aprenderás?</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
@@ -86,7 +96,7 @@ const EducacionMenstrual = () => {
       {/* Modalidades */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Modalidades</h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-16">Modalidades</h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="hover:shadow-lg transition-shadow">
@@ -149,16 +159,16 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary/5">
+      <section className="py-24 bg-gradient-to-br from-secondary/10 via-accent/5 to-primary/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
             Comienza tu viaje de autoconocimiento
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
             Agenda una sesión informativa gratuita y descubre cómo la educación menstrual 
             puede transformar tu relación con tu cuerpo
           </p>
-          <Button size="lg" asChild>
+          <Button size="lg" className="text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-all" asChild>
             <a href="/contacto">Agendar sesión</a>
           </Button>
         </div>

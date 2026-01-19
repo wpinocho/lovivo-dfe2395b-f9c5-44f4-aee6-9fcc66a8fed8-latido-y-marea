@@ -189,13 +189,13 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
         {/* Product Details */}
         <div className="space-y-6">
           <div>
-            <h1 className="text-3xl font-bold">{logic.product.title}</h1>
-            <div className="flex items-center gap-4 mt-2">
-              <span className="text-2xl font-bold">
+            <h1 className="text-4xl md:text-5xl font-display font-bold">{logic.product.title}</h1>
+            <div className="flex items-center gap-4 mt-4">
+              <span className="text-3xl font-bold text-primary">
                 {logic.formatMoney(logic.currentPrice)}
               </span>
               {logic.currentCompareAt && logic.currentCompareAt > logic.currentPrice && (
-                <span className="text-lg text-muted-foreground line-through">
+                <span className="text-xl text-muted-foreground line-through">
                   {logic.formatMoney(logic.currentCompareAt)}
                 </span>
               )}
@@ -203,10 +203,10 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           </div>
 
           {logic.product.description && (
-            <div>
-              <h3 className="font-semibold mb-2">Descripción</h3>
+            <div className="bg-muted/30 p-6 rounded-2xl">
+              <h3 className="font-display font-bold text-xl mb-3">Descripción</h3>
               <div 
-                className="text-muted-foreground prose prose-sm max-w-none"
+                className="text-foreground/80 prose prose-sm max-w-none leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: logic.product.description }}
               />
             </div>
@@ -214,10 +214,10 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
 
           {/* Product Options */}
           {logic.product.options && logic.product.options.length > 0 && (
-            <div className="space-y-4">
+            <div className="space-y-6 bg-muted/20 p-6 rounded-2xl">
               {logic.product.options.map((option) => (
                 <div key={option.name}>
-                  <Label className="text-base font-medium">{option.name}</Label>
+                  <Label className="text-lg font-display font-semibold">{option.name}</Label>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {option.values.map((value) => {
                       const isSelected = logic.selected[option.name] === value
@@ -282,10 +282,10 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
               <Button
                 onClick={logic.handleAddToCart}
                 disabled={!logic.inStock}
-                className="flex-1"
+                className="flex-1 text-lg py-6 shadow-lg hover:shadow-xl transition-all"
                 size="lg"
               >
-                <ShoppingCart className="mr-2 h-4 w-4" />
+                <ShoppingCart className="mr-2 h-5 w-5" />
                 {logic.inStock ? 'Agregar al carrito' : 'Agotado'}
               </Button>
               
@@ -301,7 +301,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           <Button
             variant="outline"
             onClick={logic.handleNavigateBack}
-            className="w-full"
+            className="w-full border-2 hover:bg-primary hover:text-white transition-all"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Seguir comprando

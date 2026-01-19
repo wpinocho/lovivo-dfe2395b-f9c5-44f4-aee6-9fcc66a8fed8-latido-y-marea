@@ -27,22 +27,32 @@ const ArmaTuMealPrep = () => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary/10 to-accent/10 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Arma tu Meal Prep
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Organiza un calendario comunitario para que tus amigas, familiares y seres queridos 
-            se turnen para llevarte comida casera en tu postparto. Para que nunca te olvides de comer.
-          </p>
+      <section className="relative h-[500px] overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1600&h=900&fit=crop"
+            alt="Meal Prep Comunitario"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/80 via-primary/70 to-secondary/60"></div>
+        </div>
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <div className="text-white text-center max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 leading-tight">
+              Arma tu Meal Prep
+            </h1>
+            <p className="text-2xl font-light">
+              Organiza un calendario comunitario para que tus amigas, familiares y seres queridos 
+              se turnen para llevarte comida casera en tu postparto. Para que nunca te olvides de comer.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Como Funciona */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">¿Cómo funciona?</h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-16">¿Cómo funciona?</h2>
           
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
@@ -76,9 +86,9 @@ const ArmaTuMealPrep = () => {
           </div>
 
           {/* Formulario */}
-          <Card className="max-w-3xl mx-auto">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6">Crea tu Calendario Comunitario</h3>
+          <Card className="max-w-3xl mx-auto shadow-2xl border-2 hover:border-primary/30 transition-all">
+            <CardContent className="p-10">
+              <h3 className="text-3xl font-display font-bold mb-6">Crea tu Calendario Comunitario</h3>
               <p className="text-muted-foreground mb-6">
                 Completa este formulario y te enviaremos un enlace único que podrás compartir 
                 con tu comunidad para que se organicen y te apoyen con comida casera.

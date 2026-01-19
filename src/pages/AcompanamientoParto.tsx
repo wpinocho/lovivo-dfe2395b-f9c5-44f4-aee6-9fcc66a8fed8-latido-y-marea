@@ -7,15 +7,25 @@ const AcompanamientoParto = () => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary/10 to-accent/10 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Acompañamiento de Parto
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Presencia continua, soporte emocional y físico para que vivas tu parto con 
-            seguridad, autonomía y profundo respeto
-          </p>
+      <section className="relative h-[500px] overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1519689373023-dd07c7988002?w=1600&h=900&fit=crop"
+            alt="Acompañamiento de Parto"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-accent/70"></div>
+        </div>
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <div className="text-white text-center max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 leading-tight">
+              Acompañamiento de Parto
+            </h1>
+            <p className="text-2xl font-light">
+              Presencia continua, soporte emocional y físico para que vivas tu parto con 
+              seguridad, autonomía y profundo respeto
+            </p>
+          </div>
         </div>
       </section>
 
@@ -23,7 +33,7 @@ const AcompanamientoParto = () => {
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">¿Qué es una Doula?</h2>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">¿Qué es una Doula?</h2>
             <p className="text-lg text-muted-foreground mb-4">
               Una doula es una acompañante profesional de parto que brinda apoyo físico, emocional 
               e informativo continuo antes, durante y después del nacimiento. No somos personal médico, 
@@ -40,7 +50,7 @@ const AcompanamientoParto = () => {
       {/* Etapas del Acompañamiento */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Nuestro Acompañamiento</h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-16">Nuestro Acompañamiento</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
@@ -151,7 +161,7 @@ const AcompanamientoParto = () => {
       {/* Beneficios */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Beneficios del Acompañamiento</h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-16">Beneficios del Acompañamiento</h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card>
@@ -198,16 +208,16 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary/5">
+      <section className="py-24 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
             ¿Lista para tu acompañamiento?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
             Conversemos sobre cómo podemos acompañarte en este momento sagrado. 
             Ofrecemos una sesión informativa gratuita sin compromiso.
           </p>
-          <Button size="lg" asChild>
+          <Button size="lg" className="text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-all" asChild>
             <a href="/contacto">Agenda tu sesión informativa</a>
           </Button>
         </div>

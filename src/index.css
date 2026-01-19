@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,24 +23,24 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 20 20% 20%;
 
-    --primary: 18 85% 70%;
+    --primary: 340 82% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 18 90% 85%;
-    --secondary-foreground: 20 20% 20%;
+    --secondary: 280 70% 65%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 18 40% 95%;
-    --muted-foreground: 20 15% 50%;
+    --muted: 28 40% 94%;
+    --muted-foreground: 340 10% 45%;
 
-    --accent: 18 80% 75%;
+    --accent: 165 75% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 18 30% 90%;
-    --input: 18 30% 90%;
-    --ring: 18 85% 70%;
+    --border: 340 20% 85%;
+    --input: 340 20% 90%;
+    --ring: 340 82% 52%;
 
     --radius: 0.75rem;
 
@@ -104,10 +106,12 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-dm-sans;
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
   }
 }
