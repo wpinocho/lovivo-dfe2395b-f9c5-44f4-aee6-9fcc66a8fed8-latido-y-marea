@@ -274,7 +274,13 @@ export const EcommerceTemplate = ({
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/20 text-center text-white/80">
-          <p>&copy; 2025 Latido y Marea. Todos los derechos reservados.</p>
+          <p className="mb-2">&copy; 2025 Latido y Marea. Todos los derechos reservados.</p>
+          <Link 
+            to="/aviso-privacidad" 
+            className="text-white/70 hover:text-white transition-colors text-sm underline"
+          >
+            Aviso de Privacidad
+          </Link>
         </div>
       </div>
     </div>
