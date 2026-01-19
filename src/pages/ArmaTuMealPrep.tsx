@@ -4,9 +4,247 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, Users, Heart, Salad } from 'lucide-react';
+import { Calendar, Users, Heart, Salad, Copy, Check, User } from 'lucide-react';
+import { useState } from 'react';
+import { Badge } from '@/components/ui/badge';
 
 const ArmaTuMealPrep = () => {
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [formData, setFormData] = useState({
+    nombre: '',
+    fecha: '',
+    personas: '',
+    preferencias: '',
+    alergias: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowCalendar(true);
+  };
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href + '?id=example123');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  // Generar días de ejemplo (próximos 14 días)
+  const generateDays = () => {
+    const days = [];
+    const startDate = new Date();
+    startDate.setDate(startDate.getDate() + 7); // Empezar en 7 días
+    
+    for (let i = 0; i < 14; i++) {
+      const date = new Date(startDate);
+      date.setDate(startDate.getDate() + i);
+      days.push({
+        date: date,
+        available: i !== 3 && i !== 7, // Algunos días ya ocupados
+        volunteer: i === 3 ? 'María G.' : i === 7 ? 'Ana L.' : null
+      });
+    }
+    return days;
+  };
+
+  const days = generateDays();
+
+  if (showCalendar) {
+    return (
+      <EcommerceTemplate showCart={false}>
+        {/* Hero del Calendario */}
+        <section className="py-16" style={{ backgroundColor: '#e8a77c' }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h1 className="text-4xl md:text-5xl font-semibold mb-4 text-black">
+                ¡Tu calendario está listo! 🎉
+              </h1>
+              <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+                Comparte este enlace con tu comunidad para que se organicen y te lleven comida
+              </p>
+            </div>
+
+            {/* Enlace para compartir */}
+            <Card className="max-w-2xl mx-auto border border-gray-200">
+              <CardContent className="p-6">
+                <Label className="text-black mb-2 block">Enlace para compartir</Label>
+                <div className="flex gap-2">
+                  <Input 
+                    value="https://latidoymarea.com/meal-prep/maria-lopez"
+                    readOnly
+                    className="flex-1 border-gray-300"
+                  />
+                  <Button onClick={handleCopyLink} variant="outline">
+                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                  </Button>
+                </div>
+                <p className="text-sm text-gray-600 mt-2">
+                  Comparte este enlace por WhatsApp, email o redes sociales
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Información del calendario */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Card className="mb-8 border border-gray-200">
+              <CardContent className="p-6">
+                <h2 className="text-2xl font-semibold mb-4 text-black">Información del Calendario</h2>
+                <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+                  <div>
+                    <span className="font-semibold text-black">Nombre:</span> {formData.nombre || 'María López'}
+                  </div>
+                  <div>
+                    <span className="font-semibold text-black">Fecha probable de parto:</span> {formData.fecha || '15 de Marzo, 2025'}
+                  </div>
+                  <div>
+                    <span className="font-semibold text-black">Personas en casa:</span> {formData.personas || '3'}
+                  </div>
+                  <div>
+                    <span className="font-semibold text-black">Preferencias:</span> {formData.preferencias || 'Sin gluten, vegetariana'}
+                  </div>
+                  {(formData.alergias || 'Nueces') && (
+                    <div className="md:col-span-2">
+                      <span className="font-semibold text-black">Alergias/Restricciones:</span> {formData.alergias || 'Nueces'}
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Calendario de días */}
+            <div>
+              <h2 className="text-3xl font-semibold mb-6 text-black text-center">
+                Calendario de Comidas
+              </h2>
+              <p className="text-center text-gray-700 mb-8">
+                Cada persona puede elegir un día para llevar comida. Los días en verde están disponibles.
+              </p>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {days.map((day, idx) => (
+                  <Card 
+                    key={idx}
+                    className={`border-2 transition-all ${
+                      day.available 
+                        ? 'border-green-300 hover:border-primary hover:shadow-md cursor-pointer' 
+                        : 'border-gray-300 bg-gray-50'
+                    }`}
+                  >
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <div>
+                          <div className="font-semibold text-black">
+                            {day.date.toLocaleDateString('es-MX', { weekday: 'long' })}
+                          </div>
+                          <div className="text-sm text-gray-600">
+                            {day.date.toLocaleDateString('es-MX', { day: 'numeric', month: 'long' })}
+                          </div>
+                        </div>
+                        {day.available ? (
+                          <Badge className="bg-green-500">Disponible</Badge>
+                        ) : (
+                          <Badge variant="secondary">Ocupado</Badge>
+                        )}
+                      </div>
+                      
+                      {day.volunteer ? (
+                        <div className="flex items-center gap-2 text-sm mt-3 p-2 bg-white rounded border border-gray-200">
+                          <User className="h-4 w-4 text-primary" />
+                          <span className="text-gray-700">{day.volunteer} llevará comida</span>
+                        </div>
+                      ) : (
+                        <Button 
+                          className="w-full mt-3" 
+                          variant="outline"
+                          size="sm"
+                        >
+                          Yo llevo comida este día
+                        </Button>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Instrucciones */}
+        <section className="py-16" style={{ backgroundColor: '#e8a77c' }}>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-semibold text-center mb-8 text-black">
+              ¿Cómo funciona para quienes ayudan?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="border border-gray-200">
+                <CardContent className="p-6">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mb-3">
+                    1
+                  </div>
+                  <h3 className="font-semibold mb-2 text-black">Elige un día</h3>
+                  <p className="text-gray-700 text-sm">
+                    Selecciona el día que mejor te convenga para llevar comida
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-gray-200">
+                <CardContent className="p-6">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mb-3">
+                    2
+                  </div>
+                  <h3 className="font-semibold mb-2 text-black">Prepara la comida</h3>
+                  <p className="text-gray-700 text-sm">
+                    Cocina considerando las preferencias y alergias mencionadas
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-gray-200">
+                <CardContent className="p-6">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mb-3">
+                    3
+                  </div>
+                  <h3 className="font-semibold mb-2 text-black">Entrega</h3>
+                  <p className="text-gray-700 text-sm">
+                    Lleva la comida el día seleccionado (preferible en envases retornables)
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-gray-200">
+                <CardContent className="p-6">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mb-3">
+                    4
+                  </div>
+                  <h3 className="font-semibold mb-2 text-black">Disfruta ayudar</h3>
+                  <p className="text-gray-700 text-sm">
+                    Tu apoyo es invaluable en esta etapa tan importante
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Botón para crear otro */}
+        <section className="py-12 bg-white text-center">
+          <Button 
+            onClick={() => setShowCalendar(false)} 
+            variant="outline" 
+            size="lg"
+          >
+            Crear otro calendario
+          </Button>
+        </section>
+      </EcommerceTemplate>
+    );
+  }
+
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero */}
@@ -112,13 +350,16 @@ const ArmaTuMealPrep = () => {
           </h2>
           <Card className="border border-gray-200">
             <CardContent className="p-8">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="nombre" className="text-black">Nombre completo</Label>
                   <Input 
                     id="nombre" 
                     placeholder="Tu nombre" 
                     className="mt-2 border-gray-300 focus:border-primary"
+                    value={formData.nombre}
+                    onChange={(e) => setFormData({...formData, nombre: e.target.value})}
+                    required
                   />
                 </div>
 
@@ -128,6 +369,9 @@ const ArmaTuMealPrep = () => {
                     id="fecha" 
                     type="date" 
                     className="mt-2 border-gray-300 focus:border-primary"
+                    value={formData.fecha}
+                    onChange={(e) => setFormData({...formData, fecha: e.target.value})}
+                    required
                   />
                 </div>
 
@@ -138,6 +382,9 @@ const ArmaTuMealPrep = () => {
                     type="number" 
                     placeholder="2" 
                     className="mt-2 border-gray-300 focus:border-primary"
+                    value={formData.personas}
+                    onChange={(e) => setFormData({...formData, personas: e.target.value})}
+                    required
                   />
                 </div>
 
@@ -148,6 +395,8 @@ const ArmaTuMealPrep = () => {
                     placeholder="Ej: Vegetariana, sin gluten, alergias, etc." 
                     className="mt-2 border-gray-300 focus:border-primary"
                     rows={4}
+                    value={formData.preferencias}
+                    onChange={(e) => setFormData({...formData, preferencias: e.target.value})}
                   />
                 </div>
 
@@ -158,6 +407,8 @@ const ArmaTuMealPrep = () => {
                     placeholder="Alergias alimentarias o ingredientes a evitar" 
                     className="mt-2 border-gray-300 focus:border-primary"
                     rows={3}
+                    value={formData.alergias}
+                    onChange={(e) => setFormData({...formData, alergias: e.target.value})}
                   />
                 </div>
 
