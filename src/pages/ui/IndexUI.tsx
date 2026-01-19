@@ -47,7 +47,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               Sobre Latido y Marea
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Somos doulas y educadoras dedicadas a acompañar a mujeres y personas gestantes 
+              Somos un equipo de doulas y educadoras dedicadas a acompañar a mujeres y personas gestantes 
               en sus ciclos, embarazo y postparto con presencia, información clara y contención amorosa. 
               Facilitamos procesos de autoconocimiento a través de la educación menstrual, y en el parto 
               ofrecemos soporte emocional, físico y práctico para que cada experiencia se viva con seguridad, 
