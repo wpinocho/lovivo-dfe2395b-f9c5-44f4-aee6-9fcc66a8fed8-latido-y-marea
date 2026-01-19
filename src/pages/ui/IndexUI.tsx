@@ -170,7 +170,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       {/* Espacio Seguro */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black">
+          <h2 className="text-xl sm:text-2xl font-medium text-black italic">
             Espacio Seguro 🏳️‍🌈
           </h2>
         </div>
