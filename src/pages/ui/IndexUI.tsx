@@ -153,7 +153,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-24 bg-[#b8a8c4] relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#f4a07f' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-white">
             ¿Lista para comenzar tu acompañamiento?
