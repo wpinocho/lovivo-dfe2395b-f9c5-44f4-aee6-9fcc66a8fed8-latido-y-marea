@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, Users, Heart, Salad, Copy, Check, User } from 'lucide-react';
+import { Calendar, Users, Heart, Salad, Copy, Check, User, Edit2, Plus } from 'lucide-react';
 import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 
@@ -16,7 +16,8 @@ const ArmaTuMealPrep = () => {
     fecha: '',
     personas: '',
     preferencias: '',
-    alergias: ''
+    alergias: '',
+    semanas: '2'
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -30,18 +31,19 @@ const ArmaTuMealPrep = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Generar días de ejemplo (próximos 14 días)
+  // Generar días basados en fecha de parto y semanas solicitadas
   const generateDays = () => {
     const days = [];
-    const startDate = new Date();
-    startDate.setDate(startDate.getDate() + 7); // Empezar en 7 días
+    const startDate = formData.fecha ? new Date(formData.fecha + 'T00:00:00') : new Date();
+    const numWeeks = parseInt(formData.semanas) || 2;
+    const totalDays = numWeeks * 7;
     
-    for (let i = 0; i < 14; i++) {
+    for (let i = 0; i < totalDays; i++) {
       const date = new Date(startDate);
       date.setDate(startDate.getDate() + i);
       days.push({
         date: date,
-        available: i !== 3 && i !== 7, // Algunos días ya ocupados
+        available: i !== 3 && i !== 7, // Algunos días ya ocupados como ejemplo
         volunteer: i === 3 ? 'María G.' : i === 7 ? 'Ana L.' : null
       });
     }
@@ -98,20 +100,62 @@ const ArmaTuMealPrep = () => {
                     <span className="font-semibold text-black">Nombre:</span> {formData.nombre || 'María López'}
                   </div>
                   <div>
-                    <span className="font-semibold text-black">Fecha probable de parto:</span> {formData.fecha || '15 de Marzo, 2025'}
+                    <span className="font-semibold text-black">Fecha de inicio:</span> {formData.fecha ? new Date(formData.fecha + 'T00:00:00').toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' }) : '15 de Marzo, 2025'}
                   </div>
                   <div>
                     <span className="font-semibold text-black">Personas en casa:</span> {formData.personas || '3'}
                   </div>
                   <div>
+                    <span className="font-semibold text-black">Duración:</span> {formData.semanas || '2'} semanas
+                  </div>
+                  <div>
                     <span className="font-semibold text-black">Preferencias:</span> {formData.preferencias || 'Sin gluten, vegetariana'}
                   </div>
                   {(formData.alergias || 'Nueces') && (
-                    <div className="md:col-span-2">
+                    <div>
                       <span className="font-semibold text-black">Alergias/Restricciones:</span> {formData.alergias || 'Nueces'}
                     </div>
                   )}
                 </div>
+              </CardContent>
+            </Card>
+
+            {/* Controles de Edición */}
+            <Card className="mb-8 border border-gray-200">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-4 text-black flex items-center gap-2">
+                  <Edit2 className="h-5 w-5" />
+                  Ajustar Calendario
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  ¿El bebé llegó antes o necesitas más tiempo? Puedes modificar tu calendario aquí.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <Label className="text-black mb-2 block">Nueva fecha de inicio</Label>
+                    <Input
+                      type="date"
+                      value={formData.fecha}
+                      onChange={(e) => setFormData({...formData, fecha: e.target.value})}
+                      className="border-gray-300 focus:border-primary"
+                    />
+                  </div>
+                  <div>
+                    <Label className="text-black mb-2 block">Semanas de comida</Label>
+                    <Input
+                      type="number"
+                      min="1"
+                      max="8"
+                      value={formData.semanas}
+                      onChange={(e) => setFormData({...formData, semanas: e.target.value})}
+                      className="border-gray-300 focus:border-primary"
+                    />
+                  </div>
+                </div>
+                <Button className="mt-4 w-full md:w-auto" variant="outline">
+                  <Plus className="h-4 w-4 mr-2" />
+                  Actualizar Calendario
+                </Button>
               </CardContent>
             </Card>
 
@@ -364,7 +408,7 @@ const ArmaTuMealPrep = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="fecha" className="text-black">Fecha probable de parto</Label>
+                  <Label htmlFor="fecha" className="text-black">Fecha de inicio del calendario</Label>
                   <Input 
                     id="fecha" 
                     type="date" 
@@ -373,6 +417,9 @@ const ArmaTuMealPrep = () => {
                     onChange={(e) => setFormData({...formData, fecha: e.target.value})}
                     required
                   />
+                  <p className="text-sm text-gray-600 mt-1">
+                    Puede ser tu fecha probable de parto o cuando quieras comenzar a recibir comida
+                  </p>
                 </div>
 
                 <div>
@@ -386,6 +433,24 @@ const ArmaTuMealPrep = () => {
                     onChange={(e) => setFormData({...formData, personas: e.target.value})}
                     required
                   />
+                </div>
+
+                <div>
+                  <Label htmlFor="semanas" className="text-black">¿Cuántas semanas te gustaría recibir comida?</Label>
+                  <Input 
+                    id="semanas" 
+                    type="number" 
+                    placeholder="2" 
+                    min="1"
+                    max="8"
+                    className="mt-2 border-gray-300 focus:border-primary"
+                    value={formData.semanas}
+                    onChange={(e) => setFormData({...formData, semanas: e.target.value})}
+                    required
+                  />
+                  <p className="text-sm text-gray-600 mt-1">
+                    Recomendamos entre 2-4 semanas para el postparto
+                  </p>
                 </div>
 
                 <div>
