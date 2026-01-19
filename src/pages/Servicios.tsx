@@ -28,7 +28,7 @@ const servicios = [
       'Apoyo emocional continuo',
       'Visitas prenatales'
     ],
-    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-lgj9gjwe55e.png'
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768845283480-x83ys2ehgid.png'
   },
   {
     icono: Heart,
@@ -54,7 +54,7 @@ const servicios = [
       'Rituales de cierre',
       'Red de apoyo y recursos'
     ],
-    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-wfa31xxksr.png'
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768845283480-wzh6om1bf5h.png'
   }
 ];
 
