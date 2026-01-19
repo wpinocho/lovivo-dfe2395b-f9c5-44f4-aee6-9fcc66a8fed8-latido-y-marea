@@ -535,7 +535,7 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Formulario */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
             Crea tu calendario
