@@ -71,17 +71,17 @@ export const EcommerceTemplate = ({
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
-                to="/educacion-menstrual" 
-                className="text-white hover:text-white/80 transition-colors font-medium relative group"
-              >
-                Educación Menstrual
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
-              </Link>
-              <Link 
                 to="/acompanamiento-parto" 
                 className="text-white hover:text-white/80 transition-colors font-medium relative group"
               >
                 Acompañamiento
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+              </Link>
+              <Link 
+                to="/educacion-menstrual" 
+                className="text-white hover:text-white/80 transition-colors font-medium relative group"
+              >
+                Educación Menstrual
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
@@ -154,18 +154,18 @@ export const EcommerceTemplate = ({
                 Servicios
               </Link>
               <Link 
-                to="/educacion-menstrual" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-white transition-colors font-medium py-2"
-              >
-                Educación Menstrual
-              </Link>
-              <Link 
                 to="/acompanamiento-parto" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-white/80 hover:text-white transition-colors font-medium py-2"
               >
                 Acompañamiento de Parto
+              </Link>
+              <Link 
+                to="/educacion-menstrual" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-white/80 hover:text-white transition-colors font-medium py-2"
+              >
+                Educación Menstrual
               </Link>
               <Link 
                 to="/arma-tu-meal-prep" 
@@ -234,16 +234,16 @@ export const EcommerceTemplate = ({
                 Servicios
               </Link>
               <Link 
-                to="/educacion-menstrual" 
-                className="block text-white/80 hover:text-white transition-colors"
-              >
-                Educación Menstrual
-              </Link>
-              <Link 
                 to="/acompanamiento-parto" 
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 Acompañamiento de Parto
+              </Link>
+              <Link 
+                to="/educacion-menstrual" 
+                className="block text-white/80 hover:text-white transition-colors"
+              >
+                Educación Menstrual
               </Link>
               <Link 
                 to="/arma-tu-meal-prep" 
