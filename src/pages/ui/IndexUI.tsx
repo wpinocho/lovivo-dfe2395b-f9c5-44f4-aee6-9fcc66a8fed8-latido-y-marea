@@ -57,30 +57,30 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
           {/* Valores */}
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <div className="text-center p-8 bg-white border border-gray-200 hover:border-primary transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary mb-6">
-                <Heart className="h-8 w-8 text-white" />
+            <div className="text-center p-8 border border-gray-200 hover:border-primary transition-all" style={{ backgroundColor: '#b8a8c4' }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white mb-6 rounded-full">
+                <Heart className="h-8 w-8" style={{ color: '#b8a8c4' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-black">Presencia</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-white">Presencia</h3>
+              <p className="text-white">
                 Acompañamiento consciente en cada etapa de tu proceso
               </p>
             </div>
-            <div className="text-center p-8 bg-white border border-gray-200 hover:border-primary transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary mb-6">
-                <Leaf className="h-8 w-8 text-white" />
+            <div className="text-center p-8 border border-gray-200 hover:border-primary transition-all" style={{ backgroundColor: '#b8a8c4' }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white mb-6 rounded-full">
+                <Leaf className="h-8 w-8" style={{ color: '#b8a8c4' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-black">Autoconocimiento</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-white">Autoconocimiento</h3>
+              <p className="text-white">
                 Educación menstrual para conectar con tu cuerpo cíclico
               </p>
             </div>
-            <div className="text-center p-8 bg-white border border-gray-200 hover:border-primary transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary mb-6">
-                <Users className="h-8 w-8 text-white" />
+            <div className="text-center p-8 border border-gray-200 hover:border-primary transition-all" style={{ backgroundColor: '#b8a8c4' }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white mb-6 rounded-full">
+                <Users className="h-8 w-8" style={{ color: '#b8a8c4' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-black">Respeto</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-white">Respeto</h3>
+              <p className="text-white">
                 Honramos tu autonomía y sabiduría corporal
               </p>
             </div>
