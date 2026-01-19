@@ -1,6 +1,5 @@
 import { EcommerceTemplate } from '@/templates/EcommerceTemplate';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Heart, Moon, Sun, Baby } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -16,8 +15,6 @@ const servicios = [
       'Rituales y prácticas de conexión',
       'Sesiones individuales o grupales'
     ],
-    color: 'from-secondary/20 to-secondary/5',
-    bgColor: 'bg-secondary',
     imagen: 'https://images.unsplash.com/photo-1616798002516-1a21f8f5f0e2?w=800&h=600&fit=crop'
   },
   {
@@ -31,9 +28,7 @@ const servicios = [
       'Apoyo emocional continuo',
       'Visitas prenatales'
     ],
-    color: 'from-primary/20 to-primary/5',
-    bgColor: 'bg-primary',
-    imagen: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=600&fit=crop'
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-lgj9gjwe55e.png'
   },
   {
     icono: Heart,
@@ -46,9 +41,7 @@ const servicios = [
       'Acompañamiento respetuoso',
       'Conexión con tu pareja/familia'
     ],
-    color: 'from-accent/20 to-accent/5',
-    bgColor: 'bg-accent',
-    imagen: 'https://images.unsplash.com/photo-1519689373023-dd07c7988002?w=800&h=600&fit=crop'
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360979-e1ujhdhn2kl.png'
   },
   {
     icono: Sun,
@@ -61,9 +54,7 @@ const servicios = [
       'Rituales de cierre',
       'Red de apoyo y recursos'
     ],
-    color: 'from-primary/20 via-secondary/10 to-accent/5',
-    bgColor: 'bg-gradient-to-r from-primary to-secondary',
-    imagen: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=600&fit=crop&auto=format&q=80'
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-wfa31xxksr.png'
   }
 ];
 
@@ -71,52 +62,56 @@ const Servicios = () => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-secondary to-accent py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+      <section className="relative bg-white py-24 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-semibold text-black mb-6">
             Nuestros Servicios
           </h1>
-          <p className="text-2xl text-white/90 max-w-2xl mx-auto font-light">
+          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
             Acompañamiento personalizado en cada etapa de tu proceso
           </p>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
       </section>
 
       {/* Servicios Grid */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {servicios.map((servicio, idx) => {
               const Icono = servicio.icono;
               return (
-                <Card key={idx} className="overflow-hidden hover:shadow-2xl transition-all group border-2 hover:border-primary/30">
+                <Card key={idx} className="overflow-hidden border border-gray-200 hover:border-black transition-all">
                   <div className="relative h-64 overflow-hidden">
                     <img 
                       src={servicio.imagen}
                       alt={servicio.titulo}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${servicio.color}`}></div>
                   </div>
                   <CardContent className="p-8">
-                    <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl ${servicio.bgColor} mb-6 shadow-lg`}>
-                      <Icono className="h-10 w-10 text-white" />
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-3 bg-black">
+                        <Icono className="h-6 w-6 text-white" />
+                      </div>
+                      <h2 className="text-2xl font-semibold text-black">
+                        {servicio.titulo}
+                      </h2>
                     </div>
-                    <h3 className="text-3xl font-display font-bold mb-3">{servicio.titulo}</h3>
-                    <p className="text-muted-foreground text-lg mb-6">{servicio.descripcion}</p>
-                    
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-lg mb-4">Incluye:</h4>
-                      <ul className="space-y-3">
-                        {servicio.incluye.map((item, i) => (
-                          <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                            <span className="text-primary text-xl mt-0.5">•</span>
-                            <span className="text-base">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <p className="text-gray-700 mb-6">
+                      {servicio.descripcion}
+                    </p>
+                    <div className="space-y-2 mb-6">
+                      <p className="font-medium text-black mb-3">Incluye:</p>
+                      {servicio.incluye.map((item, i) => (
+                        <p key={i} className="text-gray-700 flex items-start gap-2">
+                          <span className="mt-1">•</span>
+                          <span>{item}</span>
+                        </p>
+                      ))}
                     </div>
+                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800">
+                      <a href="/contacto">Más información</a>
+                    </Button>
                   </CardContent>
                 </Card>
               );
@@ -125,66 +120,17 @@ const Servicios = () => {
         </div>
       </section>
 
-      {/* Proceso */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-16">¿Cómo trabajamos?</h2>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center p-6 rounded-2xl hover:bg-primary/5 transition-all">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary text-white text-3xl font-bold mb-6 shadow-lg">
-                1
-              </div>
-              <h3 className="font-display font-bold text-xl mb-3">Primera conversación</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Nos conocemos y exploramos tus necesidades
-              </p>
-            </div>
-            
-            <div className="text-center p-6 rounded-2xl hover:bg-secondary/5 transition-all">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-secondary to-accent text-white text-3xl font-bold mb-6 shadow-lg">
-                2
-              </div>
-              <h3 className="font-display font-bold text-xl mb-3">Plan personalizado</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Diseñamos juntas el acompañamiento ideal
-              </p>
-            </div>
-            
-            <div className="text-center p-6 rounded-2xl hover:bg-accent/5 transition-all">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-accent to-primary text-white text-3xl font-bold mb-6 shadow-lg">
-                3
-              </div>
-              <h3 className="font-display font-bold text-xl mb-3">Acompañamiento</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Presencia continua en tu proceso
-              </p>
-            </div>
-            
-            <div className="text-center p-6 rounded-2xl hover:bg-primary/5 transition-all">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary via-secondary to-accent text-white text-3xl font-bold mb-6 shadow-lg">
-                4
-              </div>
-              <h3 className="font-display font-bold text-xl mb-3">Seguimiento</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Estamos contigo después del proceso
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            ¿Lista para comenzar tu acompañamiento?
+      <section className="py-20 bg-black text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+            ¿Interesada en nuestros servicios?
           </h2>
-          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-            Conversemos sobre cómo podemos acompañarte en este momento único de tu vida
+          <p className="text-lg mb-8 text-white/80">
+            Contáctanos para una consulta gratuita
           </p>
-          <Button size="lg" className="text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-all" asChild>
-            <a href="/contacto">Contacta con nosotras</a>
+          <Button size="lg" asChild className="bg-white text-black hover:bg-gray-100">
+            <a href="/contacto">Contáctanos</a>
           </Button>
         </div>
       </section>

@@ -5,6 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useState } from 'react';
 
 const Contacto = () => {
@@ -25,165 +26,168 @@ const Contacto = () => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-secondary to-accent py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+      <section className="relative bg-white py-20 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-semibold text-black mb-6">
             Contáctanos
           </h1>
-          <p className="text-2xl text-white/90 max-w-2xl mx-auto font-light">
+          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
             Estamos aquí para ayudarte. Escríbenos y resolveremos todas tus dudas
           </p>
         </div>
       </section>
 
       {/* Contacto Grid */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Información de Contacto */}
             <div>
-              <h2 className="text-3xl font-bold mb-6">Información de Contacto</h2>
-              <p className="text-muted-foreground mb-8">
+              <h2 className="text-3xl font-semibold mb-6 text-black">Información de Contacto</h2>
+              <p className="text-gray-700 mb-8">
                 ¿Tienes alguna pregunta? Nos encantaría escucharte. Envíanos un mensaje 
                 y te responderemos lo antes posible.
               </p>
 
               <div className="space-y-6">
-                <Card>
+                <Card className="border border-gray-200 hover:border-black transition-all">
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-primary/10 rounded-full p-3">
-                      <Mail className="h-6 w-6 text-primary" />
+                    <div className="bg-black p-3">
+                      <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-muted-foreground">contacto@latidoymarea.com</p>
-                      <p className="text-sm text-muted-foreground mt-1">
+                      <h3 className="font-semibold mb-1 text-black">Email</h3>
+                      <p className="text-gray-700">contacto@latidoymarea.com</p>
+                      <p className="text-sm text-gray-600 mt-1">
                         Respondemos en 24-48 horas
                       </p>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-gray-200 hover:border-black transition-all">
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-primary/10 rounded-full p-3">
-                      <Phone className="h-6 w-6 text-primary" />
+                    <div className="bg-black p-3">
+                      <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Teléfono</h3>
-                      <p className="text-muted-foreground">+52 (555) 123-4567</p>
-                      <p className="text-sm text-muted-foreground mt-1">
+                      <h3 className="font-semibold mb-1 text-black">Teléfono</h3>
+                      <p className="text-gray-700">+52 (555) 123-4567</p>
+                      <p className="text-sm text-gray-600 mt-1">
                         Lun - Vie: 9:00 AM - 6:00 PM
                       </p>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-gray-200 hover:border-black transition-all">
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-primary/10 rounded-full p-3">
-                      <MapPin className="h-6 w-6 text-primary" />
+                    <div className="bg-black p-3">
+                      <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Ubicación</h3>
-                      <p className="text-muted-foreground">
+                      <h3 className="font-semibold mb-1 text-black">Ubicación</h3>
+                      <p className="text-gray-700">
                         Ciudad de México, México
                       </p>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Entregas en toda la ciudad
+                      <p className="text-sm text-gray-600 mt-1">
+                        Atendemos en CDMX y área metropolitana
                       </p>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-gray-200 hover:border-black transition-all">
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-primary/10 rounded-full p-3">
-                      <Clock className="h-6 w-6 text-primary" />
+                    <div className="bg-black p-3">
+                      <Clock className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Horarios</h3>
-                      <div className="text-muted-foreground space-y-1">
-                        <p>Lunes - Viernes: 9:00 AM - 6:00 PM</p>
-                        <p>Sábados: 10:00 AM - 2:00 PM</p>
-                        <p>Domingos: Cerrado</p>
-                      </div>
+                      <h3 className="font-semibold mb-1 text-black">Horario</h3>
+                      <p className="text-gray-700">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                      <p className="text-sm text-gray-600 mt-1">
+                        Sábados: 10:00 AM - 2:00 PM
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
               </div>
             </div>
 
-            {/* Formulario de Contacto */}
+            {/* Formulario */}
             <div>
-              <Card>
+              <h2 className="text-3xl font-semibold mb-6 text-black">Envíanos un mensaje</h2>
+              <Card className="border border-gray-200">
                 <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold mb-6">Envíanos un mensaje</h2>
-                  
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <Label htmlFor="nombre">Nombre completo *</Label>
-                      <Input 
+                      <Label htmlFor="nombre" className="text-black">Nombre completo</Label>
+                      <Input
                         id="nombre"
                         value={formData.nombre}
-                        onChange={(e) => setFormData({...formData, nombre: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
                         required
+                        className="mt-2 border-gray-300 focus:border-black"
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="email">Email *</Label>
-                      <Input 
+                      <Label htmlFor="email" className="text-black">Email</Label>
+                      <Input
                         id="email"
                         type="email"
                         value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
+                        className="mt-2 border-gray-300 focus:border-black"
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="telefono">Teléfono</Label>
-                      <Input 
+                      <Label htmlFor="telefono" className="text-black">Teléfono</Label>
+                      <Input
                         id="telefono"
                         type="tel"
                         value={formData.telefono}
-                        onChange={(e) => setFormData({...formData, telefono: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
+                        className="mt-2 border-gray-300 focus:border-black"
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="asunto">Asunto *</Label>
-                      <select 
-                        id="asunto"
+                      <Label htmlFor="asunto" className="text-black">Asunto</Label>
+                      <Select
                         value={formData.asunto}
-                        onChange={(e) => setFormData({...formData, asunto: e.target.value})}
-                        className="w-full h-10 px-3 rounded-md border border-input bg-background"
-                        required
+                        onValueChange={(value) => setFormData({ ...formData, asunto: value })}
                       >
-                        <option value="">Selecciona un asunto</option>
-                        <option value="doula">Acompañamiento de Parto</option>
-                        <option value="educacion-menstrual">Educación Menstrual</option>
-                        <option value="prenatal">Acompañamiento Prenatal</option>
-                        <option value="postparto">Acompañamiento Postparto</option>
-                        <option value="otro">Otro</option>
-                      </select>
+                        <SelectTrigger className="mt-2 border-gray-300 focus:border-black">
+                          <SelectValue placeholder="Selecciona un asunto" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="acompanamiento-parto">Acompañamiento de Parto</SelectItem>
+                          <SelectItem value="educacion-menstrual">Educación Menstrual</SelectItem>
+                          <SelectItem value="prenatal">Acompañamiento Prenatal</SelectItem>
+                          <SelectItem value="postparto">Acompañamiento Postparto</SelectItem>
+                          <SelectItem value="meal-prep">Meal Prep</SelectItem>
+                          <SelectItem value="otro">Otro</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div>
-                      <Label htmlFor="mensaje">Mensaje *</Label>
-                      <Textarea 
+                      <Label htmlFor="mensaje" className="text-black">Mensaje</Label>
+                      <Textarea
                         id="mensaje"
                         value={formData.mensaje}
-                        onChange={(e) => setFormData({...formData, mensaje: e.target.value})}
-                        placeholder="Cuéntanos cómo podemos ayudarte..."
-                        rows={5}
+                        onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
                         required
+                        rows={5}
+                        className="mt-2 border-gray-300 focus:border-black"
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full">
-                      Enviar Mensaje
+                    <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800" size="lg">
+                      Enviar mensaje
                     </Button>
                   </form>
                 </CardContent>
@@ -193,48 +197,58 @@ const Contacto = () => {
         </div>
       </section>
 
-      {/* FAQ Rápido */}
-      <section className="py-16 bg-muted/30">
+      {/* FAQ */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
-          
+          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
+            Preguntas Frecuentes
+          </h2>
           <div className="space-y-6">
-            <Card>
+            <Card className="border border-gray-200">
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">¿Cuándo debo contratar una doula?</h3>
-                <p className="text-muted-foreground">
-                  Lo ideal es contactarnos en el segundo trimestre de embarazo, aunque también 
-                  podemos acompañarte si nos contactas más tarde. Nunca es demasiado pronto o tarde.
+                <h3 className="text-lg font-semibold mb-2 text-black">
+                  ¿Cuándo debo contactar a una doula?
+                </h3>
+                <p className="text-gray-700">
+                  Lo ideal es desde el segundo trimestre de embarazo, pero puedes contactarnos 
+                  en cualquier momento. Nunca es tarde para recibir acompañamiento.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border border-gray-200">
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">¿Qué diferencia hay entre una doula y una partera?</h3>
-                <p className="text-muted-foreground">
-                  Las doulas brindamos apoyo emocional, físico e informativo, pero no realizamos 
-                  procedimientos médicos. Complementamos el trabajo del equipo de salud.
+                <h3 className="text-lg font-semibold mb-2 text-black">
+                  ¿Cuánto cuesta el acompañamiento?
+                </h3>
+                <p className="text-gray-700">
+                  Los costos varían según el tipo de acompañamiento. Contáctanos para 
+                  una consulta gratuita donde te daremos información detallada.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border border-gray-200">
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">¿Acompañan partos en hospital?</h3>
-                <p className="text-muted-foreground">
-                  Sí, acompañamos partos en hospital, casa de parto y domicilio. Nos adaptamos 
-                  al lugar que elijas para tu parto.
+                <h3 className="text-lg font-semibold mb-2 text-black">
+                  ¿Atienden partos en hospital o en casa?
+                </h3>
+                <p className="text-gray-700">
+                  Acompañamos partos en hospitales, casas de parto y partos en casa. 
+                  Respetamos tu decisión sobre dónde quieres parir.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border border-gray-200">
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">¿Ofrecen talleres de educación menstrual?</h3>
-                <p className="text-muted-foreground">
-                  Sí, facilitamos talleres individuales y grupales de educación menstrual. 
-                  Contáctanos para conocer las próximas fechas.
+                <h3 className="text-lg font-semibold mb-2 text-black">
+                  ¿Qué incluye la educación menstrual?
+                </h3>
+                <p className="text-gray-700">
+                  Incluye sesiones donde aprenderás sobre las 4 fases de tu ciclo, 
+                  registro cíclico, autoconocimiento y herramientas para vivir en armonía 
+                  con tu cuerpo.
                 </p>
               </CardContent>
             </Card>

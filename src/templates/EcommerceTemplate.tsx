@@ -47,7 +47,7 @@ export const EcommerceTemplate = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const header = (
-    <div className={`py-4 border-b border-border/50 shadow-sm ${headerClassName}`}>
+    <div className={`py-4 border-b border-gray-200 bg-white ${headerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -58,45 +58,45 @@ export const EcommerceTemplate = ({
             <nav className="flex space-x-8">
               <Link 
                 to="/" 
-                className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg relative group"
+                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
               >
                 Nosotros
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/servicios" 
-                className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg relative group"
+                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
               >
                 Servicios
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/educacion-menstrual" 
-                className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg relative group"
+                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
               >
                 Educación Menstrual
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/acompanamiento-parto" 
-                className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg relative group"
+                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
               >
                 Acompañamiento
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/arma-tu-meal-prep" 
-                className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg relative group"
+                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
               >
                 Meal Prep
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/contacto" 
-                className="text-foreground/80 hover:text-primary transition-colors font-medium text-lg relative group"
+                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
               >
                 Contacto
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
               </Link>
             </nav>
           </div>
@@ -198,7 +198,7 @@ export const EcommerceTemplate = ({
   )
 
   const footer = (
-    <div className={`bg-gradient-to-br from-primary via-secondary to-accent text-white py-16 ${footerClassName}`}>
+    <div className={`bg-black text-white py-16 ${footerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
@@ -209,9 +209,9 @@ export const EcommerceTemplate = ({
                 alt="Latido y Marea"
                 className="h-12 w-12"
               />
-              <span className="text-2xl font-display font-bold">Latido y Marea</span>
+              <span className="text-xl font-semibold">Latido y Marea</span>
             </div>
-            <p className="text-white/90 mb-6 text-lg leading-relaxed">
+            <p className="text-white/80 mb-6">
               Doulas y educadoras menstruales dedicadas a acompañar tu ciclo, embarazo y 
               postparto con presencia, información clara y contención amorosa.
             </p>
@@ -219,53 +219,53 @@ export const EcommerceTemplate = ({
 
           {/* Links */}
           <div>
-            <h3 className="font-display font-bold text-xl mb-6 text-white">Navegación</h3>
+            <h3 className="font-semibold mb-6 text-white">Navegación</h3>
             <div className="space-y-3">
               <Link 
                 to="/" 
-                className="block text-white/90 hover:text-white transition-colors text-lg hover:translate-x-1 transform duration-200"
+                className="block text-white/80 hover:text-white transition-colors"
               >
-                → Nosotros
+                Nosotros
               </Link>
               <Link 
                 to="/servicios" 
-                className="block text-white/90 hover:text-white transition-colors text-lg hover:translate-x-1 transform duration-200"
+                className="block text-white/80 hover:text-white transition-colors"
               >
-                → Servicios
+                Servicios
               </Link>
               <Link 
                 to="/educacion-menstrual" 
-                className="block text-white/90 hover:text-white transition-colors text-lg hover:translate-x-1 transform duration-200"
+                className="block text-white/80 hover:text-white transition-colors"
               >
-                → Educación Menstrual
+                Educación Menstrual
               </Link>
               <Link 
                 to="/acompanamiento-parto" 
-                className="block text-white/90 hover:text-white transition-colors text-lg hover:translate-x-1 transform duration-200"
+                className="block text-white/80 hover:text-white transition-colors"
               >
-                → Acompañamiento de Parto
+                Acompañamiento de Parto
               </Link>
               <Link 
                 to="/arma-tu-meal-prep" 
-                className="block text-white/90 hover:text-white transition-colors text-lg hover:translate-x-1 transform duration-200"
+                className="block text-white/80 hover:text-white transition-colors"
               >
-                → Arma tu Meal Prep
+                Arma tu Meal Prep
               </Link>
             </div>
           </div>
 
           {/* Contacto */}
           <div>
-            <h3 className="font-display font-bold text-xl mb-6 text-white">Contacto</h3>
-            <div className="space-y-3 text-white/90">
+            <h3 className="font-semibold mb-6 text-white">Contacto</h3>
+            <div className="space-y-3 text-white/80">
               <Link 
                 to="/contacto" 
-                className="block hover:text-white transition-colors text-lg hover:translate-x-1 transform duration-200"
+                className="block hover:text-white transition-colors"
               >
-                → Contáctanos
+                Contáctanos
               </Link>
-              <p className="text-lg">📧 contacto@latidoymarea.com</p>
-              <p className="text-lg">📞 +52 (555) 123-4567</p>
+              <p>contacto@latidoymarea.com</p>
+              <p>+52 (555) 123-4567</p>
               <div className="mt-6">
                 <SocialLinks />
               </div>
@@ -273,8 +273,8 @@ export const EcommerceTemplate = ({
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/30 text-center text-white/90">
-          <p className="text-lg font-light">&copy; 2025 Latido y Marea. Todos los derechos reservados.</p>
+        <div className="mt-12 pt-8 border-t border-white/20 text-center text-white/80">
+          <p>&copy; 2025 Latido y Marea. Todos los derechos reservados.</p>
         </div>
       </div>
     </div>
