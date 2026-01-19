@@ -77,53 +77,47 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* Etapas del Acompañamiento */}
-      <section className="py-20" style={{ backgroundColor: '#b8a8c4' }}>
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
             Etapas del Acompañamiento
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border border-gray-200 hover:border-primary transition-all">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
-                  <Baby className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-black">Prenatal</h3>
-                <p className="text-gray-700">
-                  Visitas de preparación donde conversamos sobre tus deseos, miedos y 
-                  construimos tu plan de parto. Aprenderemos técnicas de respiración, 
-                  posiciones y métodos de alivio del dolor.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="text-center p-8 border border-gray-200 hover:border-primary transition-all" style={{ backgroundColor: '#b8a8c4' }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white mb-6 rounded-full">
+                <Baby className="h-8 w-8" style={{ color: '#b8a8c4' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Prenatal</h3>
+              <p className="text-white">
+                Visitas de preparación donde conversamos sobre tus deseos, miedos y 
+                construimos tu plan de parto. Aprenderemos técnicas de respiración, 
+                posiciones y métodos de alivio del dolor.
+              </p>
+            </div>
 
-            <Card className="border border-gray-200 hover:border-primary transition-all">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
-                  <Heart className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-black">Durante el Parto</h3>
-                <p className="text-gray-700">
-                  Presencia continua desde el trabajo de parto hasta el nacimiento. 
-                  Apoyo físico con masajes y posturas, apoyo emocional constante y 
-                  recordatorios de tu poder y sabiduría corporal.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="text-center p-8 border border-gray-200 hover:border-primary transition-all" style={{ backgroundColor: '#b8a8c4' }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white mb-6 rounded-full">
+                <Heart className="h-8 w-8" style={{ color: '#b8a8c4' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Durante el Parto</h3>
+              <p className="text-white">
+                Presencia continua desde el trabajo de parto hasta el nacimiento. 
+                Apoyo físico con masajes y posturas, apoyo emocional constante y 
+                recordatorios de tu poder y sabiduría corporal.
+              </p>
+            </div>
 
-            <Card className="border border-gray-200 hover:border-primary transition-all">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
-                  <Sparkles className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-black">Postparto</h3>
-                <p className="text-gray-700">
-                  Visita postparto para integrar la experiencia del parto, resolver 
-                  dudas sobre lactancia y cuidados del bebé, y ofrecer contención 
-                  emocional en esta nueva etapa.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="text-center p-8 border border-gray-200 hover:border-primary transition-all" style={{ backgroundColor: '#b8a8c4' }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white mb-6 rounded-full">
+                <Sparkles className="h-8 w-8" style={{ color: '#b8a8c4' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Postparto</h3>
+              <p className="text-white">
+                Visita postparto para integrar la experiencia del parto, resolver 
+                dudas sobre lactancia y cuidados del bebé, y ofrecer contención 
+                emocional en esta nueva etapa.
+              </p>
+            </div>
           </div>
         </div>
       </section>
