@@ -477,55 +477,55 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Cómo Funciona */}
-      <section className="py-20" style={{ backgroundColor: '#b8a8c4' }}>
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
             ¿Cómo funciona?
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
-            <Card className="border border-gray-200 hover:border-primary transition-all">
+            <Card className="border-0" style={{ backgroundColor: '#b8a8c4' }}>
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-white rounded-full mx-auto mb-4 flex items-center justify-center text-primary font-bold">
                   1
                 </div>
-                <h3 className="font-semibold mb-2 text-black">Crea tu calendario</h3>
-                <p className="text-gray-700 text-sm">
+                <h3 className="font-semibold mb-2 text-white">Crea tu calendario</h3>
+                <p className="text-white/90 text-sm">
                   Completa el formulario con tus datos y preferencias alimenticias
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-primary transition-all">
+            <Card className="border-0" style={{ backgroundColor: '#b8a8c4' }}>
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-white rounded-full mx-auto mb-4 flex items-center justify-center text-primary font-bold">
                   2
                 </div>
-                <h3 className="font-semibold mb-2 text-black">Comparte el enlace</h3>
-                <p className="text-gray-700 text-sm">
+                <h3 className="font-semibold mb-2 text-white">Comparte el enlace</h3>
+                <p className="text-white/90 text-sm">
                   Envía el enlace a tu familia y amigas
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-primary transition-all">
+            <Card className="border-0" style={{ backgroundColor: '#b8a8c4' }}>
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-white rounded-full mx-auto mb-4 flex items-center justify-center text-primary font-bold">
                   3
                 </div>
-                <h3 className="font-semibold mb-2 text-black">Se organizan</h3>
-                <p className="text-gray-700 text-sm">
+                <h3 className="font-semibold mb-2 text-white">Se organizan</h3>
+                <p className="text-white/90 text-sm">
                   Cada persona elige un día para llevarte comida
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-primary transition-all">
+            <Card className="border-0" style={{ backgroundColor: '#b8a8c4' }}>
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-white rounded-full mx-auto mb-4 flex items-center justify-center text-primary font-bold">
                   4
                 </div>
-                <h3 className="font-semibold mb-2 text-black">Disfruta</h3>
-                <p className="text-gray-700 text-sm">
+                <h3 className="font-semibold mb-2 text-white">Disfruta</h3>
+                <p className="text-white/90 text-sm">
                   Recibe comida con amor sin preocuparte por cocinar
                 </p>
               </CardContent>
