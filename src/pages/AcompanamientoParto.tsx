@@ -211,14 +211,6 @@ const AcompanamientoParto = () => {
               </CardContent>
             </Card>
           </div>
-
-          <div className="mt-10 p-8 bg-primary/10 border-l-4 border-primary">
-            <p className="text-gray-700 text-lg">
-              <strong className="text-black">Importante:</strong> Nuestro acompañamiento emocional 
-              complementa el cuidado profesional de salud mental. Si necesitas atención psicológica 
-              o psiquiátrica especializada, te ayudaremos a conectar con profesionales adecuados.
-            </p>
-          </div>
         </div>
       </section>
 
