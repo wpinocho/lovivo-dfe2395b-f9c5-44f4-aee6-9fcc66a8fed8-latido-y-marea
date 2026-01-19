@@ -165,7 +165,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             <Button size="lg" className="text-lg px-10 py-6 bg-white text-primary hover:bg-gray-100" asChild>
               <a href="/contacto">Contáctanos</a>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white text-white hover:bg-white hover:text-primary" asChild>
+            <Button size="lg" className="text-lg px-10 py-6 bg-white text-primary hover:bg-gray-100" asChild>
               <a href="/servicios">Nuestros servicios</a>
             </Button>
           </div>
