@@ -471,7 +471,7 @@ const ArmaTuMealPrep = () => {
             Es una herramienta comunitaria que te permite crear un calendario donde familiares, 
             amigas y seres queridos pueden organizarse para llevarte comida casera durante tu postparto. 
             De esta manera, no tienes que preocuparte por cocinar y puedes enfocarte en descansar 
-            y cuidar a tu bebé.
+            y cuidar a tu bebé sin descuidarte a ti.
           </p>
         </div>
       </section>
