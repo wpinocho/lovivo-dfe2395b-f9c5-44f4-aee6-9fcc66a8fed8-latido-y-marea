@@ -265,7 +265,7 @@ export const EcommerceTemplate = ({
                 Contáctanos
               </Link>
               <p>contacto@latidoymarea.com</p>
-              <p>+52 (555) 123-4567</p>
+              <p>+52 55 5965 2494</p>
               <div className="mt-6">
                 <SocialLinks />
               </div>

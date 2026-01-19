@@ -72,7 +72,7 @@ const Contacto = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-black">Teléfono</h3>
-                      <p className="text-gray-700">+52 (555) 123-4567</p>
+                      <p className="text-gray-700">+52 55 5965 2494</p>
                       <p className="text-sm text-gray-600 mt-1">
                         Lun - Vie: 9:00 AM - 6:00 PM
                       </p>
