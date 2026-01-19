@@ -295,7 +295,7 @@ const ArmaTuMealPrep = () => {
       <section className="relative h-[500px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1547592180-85f173990554?w=1600&h=900&fit=crop"
+            src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768846993945-0vn0cif6h7ol.png"
             alt="Comida saludable"
             className="w-full h-full object-cover"
           />
