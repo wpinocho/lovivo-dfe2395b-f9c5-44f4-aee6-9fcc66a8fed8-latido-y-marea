@@ -243,13 +243,29 @@ const Contacto = () => {
             <Card className="border border-gray-200">
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold mb-2 text-black">
-                  ¿Qué incluye la educación menstrual?
+                  ¿Qué incluye el acompañamiento de parto?
                 </h3>
-                <p className="text-gray-700">
-                  Incluye sesiones donde aprenderás sobre las 4 fases de tu ciclo, 
-                  registro cíclico, autoconocimiento y herramientas para vivir en armonía 
-                  con tu cuerpo.
+                <p className="text-gray-700 mb-3">
+                  El acompañamiento de parto incluye:
                 </p>
+                <ul className="text-gray-700 space-y-2">
+                  <li className="flex gap-2">
+                    <span>•</span>
+                    <span><strong>Visitas prenatales:</strong> Conocernos, crear tu plan de parto y aprender técnicas de respiración y relajación</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span>•</span>
+                    <span><strong>Durante el parto:</strong> Presencia continua, apoyo físico (masajes, posturas), apoyo emocional constante y técnicas de alivio del dolor</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span>•</span>
+                    <span><strong>Visita postparto:</strong> Integración de la experiencia, apoyo en lactancia y contención emocional</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span>•</span>
+                    <span><strong>Disponibilidad:</strong> Contacto durante todo tu embarazo para resolver dudas</span>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
           </div>
