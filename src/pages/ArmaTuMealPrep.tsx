@@ -440,7 +440,7 @@ const ArmaTuMealPrep = () => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero */}
-      <section className="relative min-h-[450px] h-[500px] overflow-hidden">
+      <section className="relative min-h-[400px] h-[450px] sm:h-[500px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/dfe2395b-f9c5-44f4-aee6-9fcc66a8fed8/meal-prep-hero-new.jpg"
@@ -449,12 +449,12 @@ const ArmaTuMealPrep = () => {
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-12">
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-8 sm:py-12">
           <div className="text-white max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 sm:mb-6 text-white leading-tight">
               Arma tu Meal Prep
             </h1>
-            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-8 leading-relaxed">
               Organiza un calendario para que tu comunidad te lleve comida casera en el postparto
             </p>
           </div>
@@ -462,12 +462,12 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-12 bg-white">
+      <section className="py-8 sm:py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-6 text-black">
             ¿Qué es Meal Prep?
           </h2>
-          <p className="text-lg text-gray-700 mb-8">
+          <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-8">
             Es una herramienta comunitaria que te permite crear un calendario donde familiares, 
             amigas y seres queridos pueden organizarse para llevarte comida casera durante tu postparto. 
             De esta manera, no tienes que preocuparte por cocinar y puedes enfocarte en descansar 
@@ -477,9 +477,9 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Cómo Funciona */}
-      <section className="pb-12 bg-white">
+      <section className="pb-8 sm:pb-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-12 text-black">
             ¿Cómo funciona?
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
@@ -535,9 +535,9 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Formulario */}
-      <section className="py-12 bg-white">
+      <section className="py-8 sm:py-12 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-12 text-black">
             Crea tu calendario
           </h2>
           <Card className="border border-gray-200">
@@ -635,9 +635,9 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Beneficios */}
-      <section className="py-20 bg-white">
+      <section className="py-8 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-16 text-black">
             Beneficios
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -681,14 +681,14 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-10 sm:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <Card className="border-2 border-primary shadow-xl">
-            <CardContent className="p-8 sm:p-12">
-              <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-black">
+            <CardContent className="p-6 sm:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black">
                 ¿Necesitas ayuda?
               </h2>
-              <p className="text-lg mb-8 text-gray-700">
+              <p className="text-base sm:text-lg mb-6 sm:mb-8 text-gray-700">
                 Contáctanos si tienes dudas sobre cómo armar tu calendario
               </p>
               <Button size="lg" asChild>
