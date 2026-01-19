@@ -58,45 +58,45 @@ export const EcommerceTemplate = ({
             <nav className="flex space-x-8">
               <Link 
                 to="/" 
-                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
+                className="text-foreground hover:text-primary transition-colors font-medium relative group"
               >
                 Nosotros
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/servicios" 
-                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
+                className="text-foreground hover:text-primary transition-colors font-medium relative group"
               >
                 Servicios
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/educacion-menstrual" 
-                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
+                className="text-foreground hover:text-primary transition-colors font-medium relative group"
               >
                 Educación Menstrual
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/acompanamiento-parto" 
-                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
+                className="text-foreground hover:text-primary transition-colors font-medium relative group"
               >
                 Acompañamiento
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/arma-tu-meal-prep" 
-                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
+                className="text-foreground hover:text-primary transition-colors font-medium relative group"
               >
                 Meal Prep
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/contacto" 
-                className="text-black hover:text-gray-600 transition-colors font-medium relative group"
+                className="text-foreground hover:text-primary transition-colors font-medium relative group"
               >
                 Contacto
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </Link>
             </nav>
           </div>
@@ -198,7 +198,7 @@ export const EcommerceTemplate = ({
   )
 
   const footer = (
-    <div className={`bg-black text-white py-16 ${footerClassName}`}>
+    <div className={`bg-primary text-white py-16 ${footerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}

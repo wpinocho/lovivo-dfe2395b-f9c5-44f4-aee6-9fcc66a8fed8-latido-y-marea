@@ -53,9 +53,9 @@ const ArmaTuMealPrep = () => {
             ¿Cómo funciona?
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
-            <Card className="border border-gray-200 hover:border-black transition-all">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-black rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
                   1
                 </div>
                 <h3 className="font-semibold mb-2 text-black">Crea tu calendario</h3>
@@ -65,9 +65,9 @@ const ArmaTuMealPrep = () => {
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-black transition-all">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-black rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
                   2
                 </div>
                 <h3 className="font-semibold mb-2 text-black">Comparte el enlace</h3>
@@ -77,9 +77,9 @@ const ArmaTuMealPrep = () => {
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-black transition-all">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-black rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
                   3
                 </div>
                 <h3 className="font-semibold mb-2 text-black">Se organizan</h3>
@@ -89,9 +89,9 @@ const ArmaTuMealPrep = () => {
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-black transition-all">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-black rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">
                   4
                 </div>
                 <h3 className="font-semibold mb-2 text-black">Disfruta</h3>
@@ -118,7 +118,7 @@ const ArmaTuMealPrep = () => {
                   <Input 
                     id="nombre" 
                     placeholder="Tu nombre" 
-                    className="mt-2 border-gray-300 focus:border-black"
+                    className="mt-2 border-gray-300 focus:border-primary"
                   />
                 </div>
 
@@ -127,7 +127,7 @@ const ArmaTuMealPrep = () => {
                   <Input 
                     id="fecha" 
                     type="date" 
-                    className="mt-2 border-gray-300 focus:border-black"
+                    className="mt-2 border-gray-300 focus:border-primary"
                   />
                 </div>
 
@@ -137,7 +137,7 @@ const ArmaTuMealPrep = () => {
                     id="personas" 
                     type="number" 
                     placeholder="2" 
-                    className="mt-2 border-gray-300 focus:border-black"
+                    className="mt-2 border-gray-300 focus:border-primary"
                   />
                 </div>
 
@@ -146,7 +146,7 @@ const ArmaTuMealPrep = () => {
                   <Textarea 
                     id="preferencias" 
                     placeholder="Ej: Vegetariana, sin gluten, alergias, etc." 
-                    className="mt-2 border-gray-300 focus:border-black"
+                    className="mt-2 border-gray-300 focus:border-primary"
                     rows={4}
                   />
                 </div>
@@ -156,12 +156,12 @@ const ArmaTuMealPrep = () => {
                   <Textarea 
                     id="alergias" 
                     placeholder="Alergias alimentarias o ingredientes a evitar" 
-                    className="mt-2 border-gray-300 focus:border-black"
+                    className="mt-2 border-gray-300 focus:border-primary"
                     rows={3}
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800" size="lg">
+                <Button type="submit" className="w-full" size="lg">
                   Crear mi calendario
                 </Button>
               </form>
@@ -178,7 +178,7 @@ const ArmaTuMealPrep = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-black mx-auto mb-4 flex items-center justify-center">
+              <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
                 <Calendar className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-black">Planificación</h3>
@@ -188,7 +188,7 @@ const ArmaTuMealPrep = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-black mx-auto mb-4 flex items-center justify-center">
+              <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
                 <Heart className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-black">Comida con amor</h3>
@@ -198,7 +198,7 @@ const ArmaTuMealPrep = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-black mx-auto mb-4 flex items-center justify-center">
+              <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-black">Red de apoyo</h3>
@@ -211,15 +211,15 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             ¿Necesitas ayuda?
           </h2>
-          <p className="text-lg mb-8 text-white/80">
+          <p className="text-lg mb-8 text-white/90">
             Contáctanos si tienes dudas sobre cómo armar tu calendario
           </p>
-          <Button size="lg" className="bg-white text-black hover:bg-gray-100" asChild>
+          <Button size="lg" className="bg-white text-primary hover:bg-gray-100" asChild>
             <a href="/contacto">Contáctanos</a>
           </Button>
         </div>

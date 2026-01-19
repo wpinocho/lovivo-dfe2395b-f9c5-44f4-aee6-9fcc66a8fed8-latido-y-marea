@@ -24,7 +24,7 @@ const AcompanamientoParto = () => {
             <p className="text-lg md:text-xl mb-8">
               Presencia, contención y apoyo continuo durante tu trabajo de parto
             </p>
-            <Button size="lg" className="bg-white text-black hover:bg-gray-100" asChild>
+            <Button size="lg" className="bg-white text-primary hover:bg-gray-100" asChild>
               <a href="/contacto">Agenda una consulta</a>
             </Button>
           </div>
@@ -56,9 +56,9 @@ const AcompanamientoParto = () => {
             Etapas del Acompañamiento
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border border-gray-200 hover:border-black transition-all">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-black mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
                   <Baby className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-black">Prenatal</h3>
@@ -70,9 +70,9 @@ const AcompanamientoParto = () => {
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-black transition-all">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-black mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
                   <Heart className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-black">Durante el Parto</h3>
@@ -84,9 +84,9 @@ const AcompanamientoParto = () => {
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-black transition-all">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-black mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
                   <Sparkles className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-black">Postparto</h3>
@@ -108,19 +108,19 @@ const AcompanamientoParto = () => {
             Beneficios del Acompañamiento de una Doula
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="border-l-4 border-black pl-6">
+            <div className="border-l-4 border-primary pl-6">
               <h3 className="font-semibold text-lg mb-2 text-black">Reduce intervenciones</h3>
               <p className="text-gray-700">Menor probabilidad de cesárea, fórceps o epidural</p>
             </div>
-            <div className="border-l-4 border-black pl-6">
+            <div className="border-l-4 border-primary pl-6">
               <h3 className="font-semibold text-lg mb-2 text-black">Partos más cortos</h3>
               <p className="text-gray-700">El apoyo continuo acorta el tiempo del trabajo de parto</p>
             </div>
-            <div className="border-l-4 border-black pl-6">
+            <div className="border-l-4 border-primary pl-6">
               <h3 className="font-semibold text-lg mb-2 text-black">Mayor satisfacción</h3>
               <p className="text-gray-700">Las mujeres reportan experiencias más positivas</p>
             </div>
-            <div className="border-l-4 border-black pl-6">
+            <div className="border-l-4 border-primary pl-6">
               <h3 className="font-semibold text-lg mb-2 text-black">Empoderamiento</h3>
               <p className="text-gray-700">Te sentirás más segura y en control de tu parto</p>
             </div>
@@ -129,15 +129,15 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             ¿Lista para vivir tu parto acompañada?
           </h2>
-          <p className="text-lg mb-8 text-white/80">
+          <p className="text-lg mb-8 text-white/90">
             Agenda una consulta gratuita para conocernos
           </p>
-          <Button size="lg" className="bg-white text-black hover:bg-gray-100" asChild>
+          <Button size="lg" className="bg-white text-primary hover:bg-gray-100" asChild>
             <a href="/contacto">Contáctanos</a>
           </Button>
         </div>

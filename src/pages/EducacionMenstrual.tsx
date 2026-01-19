@@ -51,7 +51,7 @@ const EducacionMenstrual = () => {
             <p className="text-lg md:text-xl mb-8">
               Conecta con tu ciclo, reconoce tus fases y honra tu cuerpo cíclico
             </p>
-            <Button size="lg" className="bg-white text-black hover:bg-gray-100" asChild>
+            <Button size="lg" className="bg-white text-primary hover:bg-gray-100" asChild>
               <a href="/contacto">Agenda tu sesión</a>
             </Button>
           </div>
@@ -88,9 +88,9 @@ const EducacionMenstrual = () => {
             {fases.map((fase, idx) => {
               const Icon = fase.icon;
               return (
-                <Card key={idx} className="border border-gray-200 hover:border-black transition-all">
+                <Card key={idx} className="border border-gray-200 hover:border-primary transition-all">
                   <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 bg-black mx-auto mb-4 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
                       <Icon className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-black">{fase.fase}</h3>
@@ -111,7 +111,7 @@ const EducacionMenstrual = () => {
             Modalidades
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="border border-gray-200 hover:border-black transition-all">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-4 text-black">Sesiones Individuales</h3>
                 <p className="text-gray-700 mb-6">
@@ -135,7 +135,7 @@ const EducacionMenstrual = () => {
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-black transition-all">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-4 text-black">Talleres Grupales</h3>
                 <p className="text-gray-700 mb-6">
@@ -163,15 +163,15 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             ¿Lista para reconectar con tu ciclo?
           </h2>
-          <p className="text-lg mb-8 text-white/80">
+          <p className="text-lg mb-8 text-white/90">
             Agenda tu primera sesión o únete a nuestros talleres
           </p>
-          <Button size="lg" className="bg-white text-black hover:bg-gray-100" asChild>
+          <Button size="lg" className="bg-white text-primary hover:bg-gray-100" asChild>
             <a href="/contacto">Contáctanos</a>
           </Button>
         </div>

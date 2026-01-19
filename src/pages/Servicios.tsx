@@ -80,7 +80,7 @@ const Servicios = () => {
             {servicios.map((servicio, idx) => {
               const Icono = servicio.icono;
               return (
-                <Card key={idx} className="overflow-hidden border border-gray-200 hover:border-black transition-all">
+                <Card key={idx} className="overflow-hidden border border-gray-200 hover:border-primary transition-all">
                   <div className="relative h-64 overflow-hidden">
                     <img 
                       src={servicio.imagen}
@@ -90,7 +90,7 @@ const Servicios = () => {
                   </div>
                   <CardContent className="p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-3 bg-black">
+                      <div className="p-3 bg-primary">
                         <Icono className="h-6 w-6 text-white" />
                       </div>
                       <h2 className="text-2xl font-semibold text-black">
@@ -109,7 +109,7 @@ const Servicios = () => {
                         </p>
                       ))}
                     </div>
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800">
+                    <Button asChild className="w-full">
                       <a href="/contacto">Más información</a>
                     </Button>
                   </CardContent>
@@ -121,15 +121,15 @@ const Servicios = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             ¿Interesada en nuestros servicios?
           </h2>
-          <p className="text-lg mb-8 text-white/80">
+          <p className="text-lg mb-8 text-white/90">
             Contáctanos para una consulta gratuita
           </p>
-          <Button size="lg" asChild className="bg-white text-black hover:bg-gray-100">
+          <Button size="lg" asChild className="bg-white text-primary hover:bg-gray-100">
             <a href="/contacto">Contáctanos</a>
           </Button>
         </div>

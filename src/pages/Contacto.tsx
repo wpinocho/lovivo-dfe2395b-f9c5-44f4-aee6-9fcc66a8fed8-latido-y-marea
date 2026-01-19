@@ -50,9 +50,9 @@ const Contacto = () => {
               </p>
 
               <div className="space-y-6">
-                <Card className="border border-gray-200 hover:border-black transition-all">
+                <Card className="border border-gray-200 hover:border-primary transition-all">
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-black p-3">
+                    <div className="bg-primary p-3">
                       <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -65,9 +65,9 @@ const Contacto = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border border-gray-200 hover:border-black transition-all">
+                <Card className="border border-gray-200 hover:border-primary transition-all">
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-black p-3">
+                    <div className="bg-primary p-3">
                       <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -80,9 +80,9 @@ const Contacto = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border border-gray-200 hover:border-black transition-all">
+                <Card className="border border-gray-200 hover:border-primary transition-all">
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-black p-3">
+                    <div className="bg-primary p-3">
                       <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -97,9 +97,9 @@ const Contacto = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border border-gray-200 hover:border-black transition-all">
+                <Card className="border border-gray-200 hover:border-primary transition-all">
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-black p-3">
+                    <div className="bg-primary p-3">
                       <Clock className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -127,7 +127,7 @@ const Contacto = () => {
                         value={formData.nombre}
                         onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
                         required
-                        className="mt-2 border-gray-300 focus:border-black"
+                        className="mt-2 border-gray-300 focus:border-primary"
                       />
                     </div>
 
@@ -139,7 +139,7 @@ const Contacto = () => {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
-                        className="mt-2 border-gray-300 focus:border-black"
+                        className="mt-2 border-gray-300 focus:border-primary"
                       />
                     </div>
 
@@ -150,7 +150,7 @@ const Contacto = () => {
                         type="tel"
                         value={formData.telefono}
                         onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
-                        className="mt-2 border-gray-300 focus:border-black"
+                        className="mt-2 border-gray-300 focus:border-primary"
                       />
                     </div>
 
@@ -182,11 +182,11 @@ const Contacto = () => {
                         onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
                         required
                         rows={5}
-                        className="mt-2 border-gray-300 focus:border-black"
+                        className="mt-2 border-gray-300 focus:border-primary"
                       />
                     </div>
 
-                    <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800" size="lg">
+                    <Button type="submit" className="w-full" size="lg">
                       Enviar mensaje
                     </Button>
                   </form>

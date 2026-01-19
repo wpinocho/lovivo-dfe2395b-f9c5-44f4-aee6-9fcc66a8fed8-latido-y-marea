@@ -57,8 +57,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
           {/* Valores */}
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <div className="text-center p-8 bg-white border border-gray-200 hover:border-black transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-black mb-6">
+            <div className="text-center p-8 bg-white border border-gray-200 hover:border-primary transition-all">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary mb-6">
                 <Heart className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-black">Presencia</h3>
@@ -66,8 +66,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                 Acompañamiento consciente en cada etapa de tu proceso
               </p>
             </div>
-            <div className="text-center p-8 bg-white border border-gray-200 hover:border-black transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-black mb-6">
+            <div className="text-center p-8 bg-white border border-gray-200 hover:border-primary transition-all">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary mb-6">
                 <Leaf className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-black">Autoconocimiento</h3>
@@ -75,8 +75,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                 Educación menstrual para conectar con tu cuerpo cíclico
               </p>
             </div>
-            <div className="text-center p-8 bg-white border border-gray-200 hover:border-black transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-black mb-6">
+            <div className="text-center p-8 bg-white border border-gray-200 hover:border-primary transition-all">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary mb-6">
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-black">Respeto</h3>
@@ -92,12 +92,12 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <img 
                 src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-wfa31xxksr.png"
                 alt="Momento de parto acompañado"
-                className="w-full h-[400px] object-cover"
+                className="w-full h-[500px] object-cover rounded"
               />
               <img 
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-lgj9gjwe55e.png"
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-tyqtkdgb67g.png"
                 alt="Familia postparto"
-                className="w-full h-[400px] object-cover"
+                className="w-full h-[500px] object-cover rounded"
               />
             </div>
           </div>
@@ -153,7 +153,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-24 bg-black relative overflow-hidden">
+      <section className="py-24 bg-primary relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-white">
             ¿Lista para comenzar tu acompañamiento?
@@ -162,10 +162,10 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             Estamos aquí para acompañarte con presencia, información clara y contención amorosa
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="text-lg px-10 py-6 bg-white text-black hover:bg-gray-100" asChild>
+            <Button size="lg" className="text-lg px-10 py-6 bg-white text-primary hover:bg-gray-100" asChild>
               <a href="/contacto">Contáctanos</a>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white text-white hover:bg-white hover:text-black" asChild>
+            <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white text-white hover:bg-white hover:text-primary" asChild>
               <a href="/servicios">Nuestros servicios</a>
             </Button>
           </div>
