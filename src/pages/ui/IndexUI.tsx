@@ -26,7 +26,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         </div>
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="text-white max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-semibold mb-6">
+            <h1 className="text-5xl md:text-6xl font-semibold mb-6 text-white">
               Acompañamiento con presencia y amor
             </h1>
             <p className="text-xl md:text-2xl mb-8">

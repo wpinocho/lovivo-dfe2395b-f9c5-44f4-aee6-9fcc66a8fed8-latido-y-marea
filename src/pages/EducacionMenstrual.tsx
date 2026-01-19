@@ -45,7 +45,7 @@ const EducacionMenstrual = () => {
         </div>
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="text-white max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-white">
               Educación Menstrual
             </h1>
             <p className="text-lg md:text-xl mb-8">
