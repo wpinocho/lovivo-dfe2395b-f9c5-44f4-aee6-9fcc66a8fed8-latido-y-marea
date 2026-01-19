@@ -6,7 +6,7 @@ export const BrandLogoLeft = () => {
         alt="Latido y Marea Logo"
         className="h-12 w-12 object-contain" 
       />
-      <span className="text-xl font-semibold text-black">Latido y Marea</span>
+      <span className="text-xl font-semibold text-white">Latido y Marea</span>
     </a>
   )
 }
