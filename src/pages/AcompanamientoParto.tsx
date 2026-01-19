@@ -49,6 +49,33 @@ const AcompanamientoParto = () => {
         </div>
       </section>
 
+      {/* Beneficios */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
+            Beneficios del Acompañamiento de una Doula
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="border-l-4 border-primary pl-6">
+              <h3 className="font-semibold text-lg mb-2 text-black">Reduce intervenciones</h3>
+              <p className="text-gray-700">Menor probabilidad de cesárea, fórceps o epidural</p>
+            </div>
+            <div className="border-l-4 border-primary pl-6">
+              <h3 className="font-semibold text-lg mb-2 text-black">Partos más cortos</h3>
+              <p className="text-gray-700">El apoyo continuo acorta el tiempo del trabajo de parto</p>
+            </div>
+            <div className="border-l-4 border-primary pl-6">
+              <h3 className="font-semibold text-lg mb-2 text-black">Mayor satisfacción</h3>
+              <p className="text-gray-700">Las mujeres reportan experiencias más positivas</p>
+            </div>
+            <div className="border-l-4 border-primary pl-6">
+              <h3 className="font-semibold text-lg mb-2 text-black">Empoderamiento</h3>
+              <p className="text-gray-700">Te sentirás más segura y en control de tu parto</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Etapas del Acompañamiento */}
       <section className="py-20" style={{ backgroundColor: '#f4a07f' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,33 +218,6 @@ const AcompanamientoParto = () => {
               complementa el cuidado profesional de salud mental. Si necesitas atención psicológica 
               o psiquiátrica especializada, te ayudaremos a conectar con profesionales adecuados.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Beneficios */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
-            Beneficios del Acompañamiento de una Doula
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="font-semibold text-lg mb-2 text-black">Reduce intervenciones</h3>
-              <p className="text-gray-700">Menor probabilidad de cesárea, fórceps o epidural</p>
-            </div>
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="font-semibold text-lg mb-2 text-black">Partos más cortos</h3>
-              <p className="text-gray-700">El apoyo continuo acorta el tiempo del trabajo de parto</p>
-            </div>
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="font-semibold text-lg mb-2 text-black">Mayor satisfacción</h3>
-              <p className="text-gray-700">Las mujeres reportan experiencias más positivas</p>
-            </div>
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="font-semibold text-lg mb-2 text-black">Empoderamiento</h3>
-              <p className="text-gray-700">Te sentirás más segura y en control de tu parto</p>
-            </div>
           </div>
         </div>
       </section>
