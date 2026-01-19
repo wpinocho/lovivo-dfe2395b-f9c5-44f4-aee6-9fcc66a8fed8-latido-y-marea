@@ -47,7 +47,7 @@ export const EcommerceTemplate = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const header = (
-    <div className={`py-4 border-b border-white/20 bg-[#b8a8c4] ${headerClassName}`}>
+    <div className={`py-4 border-b border-white/20 bg-primary ${headerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -68,13 +68,6 @@ export const EcommerceTemplate = ({
                 className="text-white hover:text-white/80 transition-colors font-medium relative group"
               >
                 Servicios
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
-              </Link>
-              <Link 
-                to="/educacion-menstrual" 
-                className="text-white hover:text-white/80 transition-colors font-medium relative group"
-              >
-                Educación Menstrual
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
@@ -152,13 +145,6 @@ export const EcommerceTemplate = ({
                 className="text-white/80 hover:text-white transition-colors font-medium py-2"
               >
                 Servicios
-              </Link>
-              <Link 
-                to="/educacion-menstrual" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-white transition-colors font-medium py-2"
-              >
-                Educación Menstrual
               </Link>
               <Link 
                 to="/acompanamiento-parto" 
