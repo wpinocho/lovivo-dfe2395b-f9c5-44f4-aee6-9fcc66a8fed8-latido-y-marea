@@ -171,6 +171,15 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           </div>
         </div>
       </section>
+
+      {/* Espacio Seguro */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold text-black">
+            Espacio Seguro 🏳️‍🌈
+          </h2>
+        </div>
+      </section>
     </EcommerceTemplate>
   );
 };
