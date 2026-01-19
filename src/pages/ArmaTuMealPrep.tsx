@@ -7,8 +7,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Users, Heart, Salad, Copy, Check, User, Edit2, Plus } from 'lucide-react';
 import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { useToast } from '@/hooks/use-toast';
 
 const ArmaTuMealPrep = () => {
+  const { toast } = useToast();
   const [showCalendar, setShowCalendar] = useState(false);
   const [copied, setCopied] = useState(false);
   const [formData, setFormData] = useState({
@@ -18,6 +21,22 @@ const ArmaTuMealPrep = () => {
     preferencias: '',
     alergias: '',
     semanas: '2'
+  });
+  
+  // Estado para el modal de registro de voluntario
+  const [volunteerModal, setVolunteerModal] = useState(false);
+  const [selectedDayIndex, setSelectedDayIndex] = useState<number | null>(null);
+  const [volunteerForm, setVolunteerForm] = useState({
+    nombre: '',
+    email: '',
+    telefono: '',
+    mensaje: ''
+  });
+  
+  // Estado para los días con voluntarios registrados
+  const [registeredVolunteers, setRegisteredVolunteers] = useState<{[key: number]: string}>({
+    3: 'María G.',
+    7: 'Ana L.'
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -31,6 +50,48 @@ const ArmaTuMealPrep = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleVolunteerClick = (dayIndex: number) => {
+    setSelectedDayIndex(dayIndex);
+    setVolunteerModal(true);
+  };
+
+  const handleVolunteerSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!volunteerForm.nombre || !volunteerForm.email) {
+      toast({
+        title: "Campos requeridos",
+        description: "Por favor completa nombre y email",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Registrar voluntario
+    if (selectedDayIndex !== null) {
+      setRegisteredVolunteers({
+        ...registeredVolunteers,
+        [selectedDayIndex]: volunteerForm.nombre
+      });
+      
+      toast({
+        title: "¡Registro exitoso! 🎉",
+        description: `${volunteerForm.nombre}, quedaste registrad@ para llevar comida este día. ¡Gracias por tu apoyo!`,
+        duration: 5000
+      });
+      
+      // Cerrar modal y limpiar formulario
+      setVolunteerModal(false);
+      setVolunteerForm({
+        nombre: '',
+        email: '',
+        telefono: '',
+        mensaje: ''
+      });
+      setSelectedDayIndex(null);
+    }
+  };
+
   // Generar días basados en fecha de parto y semanas solicitadas
   const generateDays = () => {
     const days = [];
@@ -41,10 +102,11 @@ const ArmaTuMealPrep = () => {
     for (let i = 0; i < totalDays; i++) {
       const date = new Date(startDate);
       date.setDate(startDate.getDate() + i);
+      const volunteer = registeredVolunteers[i] || null;
       days.push({
         date: date,
-        available: i !== 3 && i !== 7, // Algunos días ya ocupados como ejemplo
-        volunteer: i === 3 ? 'María G.' : i === 7 ? 'Ana L.' : null
+        available: !volunteer, // Disponible solo si no hay voluntario
+        volunteer: volunteer
       });
     }
     return days;
@@ -205,6 +267,7 @@ const ArmaTuMealPrep = () => {
                           className="w-full mt-3" 
                           variant="outline"
                           size="sm"
+                          onClick={() => handleVolunteerClick(idx)}
                         >
                           Yo llevo comida este día
                         </Button>
@@ -285,6 +348,91 @@ const ArmaTuMealPrep = () => {
             Crear otro calendario
           </Button>
         </section>
+
+        {/* Modal de Registro de Voluntario */}
+        <Dialog open={volunteerModal} onOpenChange={setVolunteerModal}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="text-black">Registrarme para llevar comida</DialogTitle>
+              <DialogDescription>
+                {selectedDayIndex !== null && days[selectedDayIndex] && (
+                  <span className="text-gray-700">
+                    Te registrarás para el día {days[selectedDayIndex].date.toLocaleDateString('es-MX', { 
+                      weekday: 'long', 
+                      day: 'numeric', 
+                      month: 'long' 
+                    })}
+                  </span>
+                )}
+              </DialogDescription>
+            </DialogHeader>
+            
+            <form onSubmit={handleVolunteerSubmit} className="space-y-4">
+              <div>
+                <Label htmlFor="volunteer-nombre" className="text-black">Nombre completo *</Label>
+                <Input
+                  id="volunteer-nombre"
+                  value={volunteerForm.nombre}
+                  onChange={(e) => setVolunteerForm({...volunteerForm, nombre: e.target.value})}
+                  className="mt-2 border-gray-300 focus:border-primary"
+                  placeholder="Tu nombre"
+                  required
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="volunteer-email" className="text-black">Email *</Label>
+                <Input
+                  id="volunteer-email"
+                  type="email"
+                  value={volunteerForm.email}
+                  onChange={(e) => setVolunteerForm({...volunteerForm, email: e.target.value})}
+                  className="mt-2 border-gray-300 focus:border-primary"
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="volunteer-telefono" className="text-black">Teléfono</Label>
+                <Input
+                  id="volunteer-telefono"
+                  type="tel"
+                  value={volunteerForm.telefono}
+                  onChange={(e) => setVolunteerForm({...volunteerForm, telefono: e.target.value})}
+                  className="mt-2 border-gray-300 focus:border-primary"
+                  placeholder="55 1234 5678"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="volunteer-mensaje" className="text-black">Mensaje (opcional)</Label>
+                <Textarea
+                  id="volunteer-mensaje"
+                  value={volunteerForm.mensaje}
+                  onChange={(e) => setVolunteerForm({...volunteerForm, mensaje: e.target.value})}
+                  className="mt-2 border-gray-300 focus:border-primary"
+                  placeholder="Mensaje de apoyo para la mamá..."
+                  rows={3}
+                />
+              </div>
+
+              <div className="flex gap-3 pt-4">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="flex-1"
+                  onClick={() => setVolunteerModal(false)}
+                >
+                  Cancelar
+                </Button>
+                <Button type="submit" className="flex-1">
+                  Confirmar registro
+                </Button>
+              </div>
+            </form>
+          </DialogContent>
+        </Dialog>
       </EcommerceTemplate>
     );
   }
