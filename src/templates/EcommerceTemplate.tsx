@@ -47,7 +47,7 @@ export const EcommerceTemplate = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const header = (
-    <div className={`py-2 border-b border-white/20 ${headerClassName}`} style={{ backgroundColor: '#f4a07f' }}>
+    <div className={`py-2 border-b border-white/20 ${headerClassName}`} style={{ backgroundColor: '#e8a77c' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -198,16 +198,16 @@ export const EcommerceTemplate = ({
   )
 
   const footer = (
-    <div className={`text-white py-16 ${footerClassName}`} style={{ backgroundColor: '#f4a07f' }}>
+    <div className={`text-white py-16 ${footerClassName}`} style={{ backgroundColor: '#e8a77c' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <img 
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/dfe2395b-f9c5-44f4-aee6-9fcc66a8fed8/logo-adjusted.jpg"
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768844927811-aug74f9tpbw.jpg"
                 alt="Latido y Marea"
-                className="h-16 w-16"
+                className="h-16 w-16 object-contain"
               />
               <span className="text-xl font-semibold">Latido y Marea</span>
             </div>
