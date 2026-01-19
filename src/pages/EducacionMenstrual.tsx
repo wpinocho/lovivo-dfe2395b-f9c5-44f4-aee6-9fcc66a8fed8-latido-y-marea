@@ -79,7 +79,7 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* Fases del Ciclo */}
-      <section className="py-20" style={{ backgroundColor: '#b8a8c4' }}>
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
             Las 4 Fases del Ciclo Menstrual
@@ -88,14 +88,14 @@ const EducacionMenstrual = () => {
             {fases.map((fase, idx) => {
               const Icon = fase.icon;
               return (
-                <Card key={idx} className="border border-gray-200 hover:border-primary transition-all">
+                <Card key={idx} className="border border-gray-200 hover:border-white transition-all" style={{ backgroundColor: '#b8a8c4' }}>
                   <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
-                      <Icon className="h-8 w-8 text-white" />
+                    <div className="w-16 h-16 bg-white mx-auto mb-4 flex items-center justify-center rounded-full">
+                      <Icon className="h-8 w-8" style={{ color: '#b8a8c4' }} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-black">{fase.fase}</h3>
-                    <p className="text-gray-700 mb-2 font-medium">{fase.descripcion}</p>
-                    <p className="text-gray-600 text-sm">{fase.caracteristicas}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-white">{fase.fase}</h3>
+                    <p className="text-white mb-2 font-medium">{fase.descripcion}</p>
+                    <p className="text-white/90 text-sm">{fase.caracteristicas}</p>
                   </CardContent>
                 </Card>
               );
