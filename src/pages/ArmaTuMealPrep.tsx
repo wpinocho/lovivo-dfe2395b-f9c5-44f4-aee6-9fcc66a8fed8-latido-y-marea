@@ -637,36 +637,36 @@ const ArmaTuMealPrep = () => {
       {/* Beneficios */}
       <section className="py-20" style={{ backgroundColor: '#e8a77c' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 text-white">
             Beneficios
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
-                <Calendar className="h-8 w-8 text-white" />
+              <div className="w-32 h-32 rounded-full bg-white shadow-lg mx-auto mb-6 flex items-center justify-center">
+                <Calendar className="h-12 w-12 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-black">Planificación</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-white">Planificación</h3>
+              <p className="text-white/90">
                 Organiza todo desde antes y ten la tranquilidad de saber que tendrás comida lista
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
-                <Heart className="h-8 w-8 text-white" />
+              <div className="w-32 h-32 rounded-full bg-white shadow-lg mx-auto mb-6 flex items-center justify-center">
+                <Heart className="h-12 w-12 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-black">Comida con amor</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-white">Comida con amor</h3>
+              <p className="text-white/90">
                 Recibe comida casera hecha con cariño por las personas que te aman
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary mx-auto mb-4 flex items-center justify-center">
-                <Users className="h-8 w-8 text-white" />
+              <div className="w-32 h-32 rounded-full bg-white shadow-lg mx-auto mb-6 flex items-center justify-center">
+                <Users className="h-12 w-12 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-black">Red de apoyo</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-white">Red de apoyo</h3>
+              <p className="text-white/90">
                 Activa tu comunidad y permite que te cuiden en esta etapa tan importante
               </p>
             </div>
@@ -675,17 +675,21 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-white" style={{ backgroundColor: '#e8a77c' }}>
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white">
-            ¿Necesitas ayuda?
-          </h2>
-          <p className="text-lg mb-8 text-white/90">
-            Contáctanos si tienes dudas sobre cómo armar tu calendario
-          </p>
-          <Button size="lg" className="bg-white text-primary hover:bg-gray-100" asChild>
-            <a href="/contacto">Contáctanos</a>
-          </Button>
+          <Card className="border-2 border-primary shadow-xl">
+            <CardContent className="p-8 sm:p-12">
+              <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-black">
+                ¿Necesitas ayuda?
+              </h2>
+              <p className="text-lg mb-8 text-gray-700">
+                Contáctanos si tienes dudas sobre cómo armar tu calendario
+              </p>
+              <Button size="lg" asChild>
+                <a href="/contacto">Contáctanos</a>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </EcommerceTemplate>
