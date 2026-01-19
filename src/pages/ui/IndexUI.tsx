@@ -33,7 +33,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               Doulas y educadoras dedicadas al acompañamiento respetuoso de tu ciclo, embarazo y postparto
             </p>
             <Button size="lg" className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6" asChild>
-              <a href="/contacto">Conoce nuestros servicios</a>
+              <a href="/servicios">Conoce nuestros servicios</a>
             </Button>
           </div>
         </div>
