@@ -15,7 +15,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
-      <section className="relative h-[600px] overflow-hidden">
+      <section className="relative min-h-[500px] h-[600px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360979-e1ujhdhn2kl.png"
@@ -24,15 +24,15 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-16">
           <div className="text-white max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-semibold mb-6 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-6 text-white leading-tight">
               Acompañamiento con presencia y amor
             </h1>
-            <p className="text-xl md:text-2xl mb-8">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 leading-relaxed">
               Doulas y educadoras dedicadas al acompañamiento respetuoso de tu ciclo, embarazo y postparto
             </p>
-            <Button size="lg" className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6" asChild>
+            <Button size="lg" className="bg-white text-black hover:bg-gray-100 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6" asChild>
               <a href="/servicios">Conoce nuestros servicios</a>
             </Button>
           </div>
@@ -43,10 +43,10 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold text-black mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black mb-4 sm:mb-6">
               Sobre Latido y Marea
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Somos doulas y educadoras dedicadas a acompañar a mujeres y personas gestantes 
               en sus ciclos, embarazo y postparto con presencia, información clara y contención amorosa. 
               Facilitamos procesos de autoconocimiento a través de la educación menstrual, y en el parto 
@@ -92,19 +92,19 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <img 
                 src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-wfa31xxksr.png"
                 alt="Momento de parto acompañado"
-                className="w-full h-[500px] object-cover rounded"
+                className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded"
               />
               <img 
                 src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-tyqtkdgb67g.png"
                 alt="Familia postparto"
-                className="w-full h-[500px] object-cover rounded"
+                className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded"
               />
             </div>
           </div>
 
           {/* Nuestro Equipo */}
           <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 text-black">Nuestro Equipo</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12 sm:mb-16 text-black">Nuestro Equipo</h2>
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               {/* Renata */}
               <div className="text-center">
@@ -112,12 +112,12 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                   <img 
                     src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781183-2ajqkl4l3ag.png"
                     alt="Renata - Doula y Educadora Menstrual"
-                    className="w-full h-96 object-cover"
+                    className="w-full h-64 sm:h-80 md:h-96 object-cover"
                   />
                 </div>
-                <h3 className="text-2xl font-semibold mb-2 text-black">Renata</h3>
-                <p className="text-black font-medium mb-4">Doula & Educadora Menstrual y Perinatal</p>
-                <div className="text-left bg-white p-8 border border-gray-200">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-black">Renata</h3>
+                <p className="text-sm sm:text-base text-black font-medium mb-4">Doula & Educadora Menstrual y Perinatal</p>
+                <div className="text-left bg-white p-4 sm:p-6 md:p-8 border border-gray-200">
                   <p className="text-gray-700">
                     Doula y educadora menstrual y perinatal dedicada a acompañar a mujeres en sus ciclos, 
                     gestación y postparto con presencia, información clara y contención amorosa. Facilita 
@@ -135,12 +135,12 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                   <img 
                     src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781182-dnolm4ta4vo.png"
                     alt="Alejandra - Psicóloga y Doula"
-                    className="w-full h-96 object-cover"
+                    className="w-full h-64 sm:h-80 md:h-96 object-cover"
                   />
                 </div>
-                <h3 className="text-2xl font-semibold mb-2 text-black">Alejandra</h3>
-                <p className="text-black font-medium mb-4">Psicóloga & Doula</p>
-                <div className="text-left bg-white p-8 border border-gray-200">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-black">Alejandra</h3>
+                <p className="text-sm sm:text-base text-black font-medium mb-4">Psicóloga & Doula</p>
+                <div className="text-left bg-white p-4 sm:p-6 md:p-8 border border-gray-200">
                   <p className="text-gray-700">
                     Psicóloga y doula certificada. Ofrece acompañamiento emocional especializado 
                     en procesos perinatales. (Más información próximamente)
@@ -155,10 +155,10 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       {/* CTA Final */}
       <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#e8a77c' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-white">
             ¿Lista para comenzar tu acompañamiento?
           </h2>
-          <p className="text-lg md:text-xl text-white/90 mb-10">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-10">
             Estamos aquí para acompañarte con presencia, información clara y contención amorosa
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -175,7 +175,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       {/* Espacio Seguro */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black">
             Espacio Seguro 🏳️‍🌈
           </h2>
         </div>

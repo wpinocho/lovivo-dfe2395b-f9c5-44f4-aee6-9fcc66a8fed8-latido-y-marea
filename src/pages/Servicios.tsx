@@ -92,10 +92,10 @@ const Servicios = () => {
       {/* Hero Section */}
       <section className="relative bg-white py-24 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-semibold text-black mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black mb-4 sm:mb-6">
             Nuestros Servicios
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
             Acompañamiento personalizado en cada etapa de tu proceso
           </p>
         </div>

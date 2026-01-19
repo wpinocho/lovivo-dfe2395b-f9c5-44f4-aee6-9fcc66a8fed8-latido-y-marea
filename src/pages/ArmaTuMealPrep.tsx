@@ -121,10 +121,10 @@ const ArmaTuMealPrep = () => {
         <section className="py-16" style={{ backgroundColor: '#e8a77c' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
-              <h1 className="text-4xl md:text-5xl font-semibold mb-4 text-black">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 text-black">
                 ¡Tu calendario está listo! 🎉
               </h1>
-              <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-gray-800 max-w-2xl mx-auto">
                 Comparte este enlace con tu comunidad para que se organicen y te lleven comida
               </p>
             </div>
@@ -156,7 +156,7 @@ const ArmaTuMealPrep = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="mb-8 border border-gray-200">
               <CardContent className="p-6">
-                <h2 className="text-2xl font-semibold mb-4 text-black">Información del Calendario</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-black">Información del Calendario</h2>
                 <div className="grid md:grid-cols-2 gap-4 text-gray-700">
                   <div>
                     <span className="font-semibold text-black">Nombre:</span> {formData.nombre || 'María López'}
@@ -185,7 +185,7 @@ const ArmaTuMealPrep = () => {
             {/* Controles de Edición */}
             <Card className="mb-8 border border-gray-200">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-black flex items-center gap-2">
+                <h3 className="text-lg sm:text-xl font-semibold mb-4 text-black flex items-center gap-2">
                   <Edit2 className="h-5 w-5" />
                   Ajustar Calendario
                 </h3>
@@ -223,7 +223,7 @@ const ArmaTuMealPrep = () => {
 
             {/* Calendario de días */}
             <div>
-              <h2 className="text-3xl font-semibold mb-6 text-black text-center">
+              <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-black text-center">
                 Calendario de Comidas
               </h2>
               <p className="text-center text-gray-700 mb-8">
@@ -440,7 +440,7 @@ const ArmaTuMealPrep = () => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero */}
-      <section className="relative h-[500px] overflow-hidden">
+      <section className="relative min-h-[450px] h-[500px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/dfe2395b-f9c5-44f4-aee6-9fcc66a8fed8/meal-prep-hero-new.jpg"
@@ -449,12 +449,12 @@ const ArmaTuMealPrep = () => {
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-12">
           <div className="text-white max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-white leading-tight">
               Arma tu Meal Prep
             </h1>
-            <p className="text-lg md:text-xl mb-8">
+            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 leading-relaxed">
               Organiza un calendario para que tu comunidad te lleve comida casera en el postparto
             </p>
           </div>
@@ -464,7 +464,7 @@ const ArmaTuMealPrep = () => {
       {/* Intro */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black">
             ¿Qué es Meal Prep?
           </h2>
           <p className="text-lg text-gray-700 mb-8">
@@ -479,7 +479,7 @@ const ArmaTuMealPrep = () => {
       {/* Cómo Funciona */}
       <section className="py-20" style={{ backgroundColor: '#e8a77c' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
             ¿Cómo funciona?
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
@@ -537,7 +537,7 @@ const ArmaTuMealPrep = () => {
       {/* Formulario */}
       <section className="py-20 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
             Crea tu calendario
           </h2>
           <Card className="border border-gray-200">
@@ -637,7 +637,7 @@ const ArmaTuMealPrep = () => {
       {/* Beneficios */}
       <section className="py-20" style={{ backgroundColor: '#e8a77c' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
             Beneficios
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
