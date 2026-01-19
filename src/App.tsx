@@ -23,6 +23,7 @@ import MyOrders from "./pages/MyOrders";
 import Servicios from "./pages/Servicios";
 import EducacionMenstrual from "./pages/EducacionMenstrual";
 import AcompanamientoParto from "./pages/AcompanamientoParto";
+import ArmaTuMealPrep from "./pages/ArmaTuMealPrep";
 import Contacto from "./pages/Contacto";
 
 const queryClient = new QueryClient();
@@ -57,6 +58,7 @@ const App = () => (
                       <Route path="/servicios" element={<Servicios />} />
                       <Route path="/educacion-menstrual" element={<EducacionMenstrual />} />
                       <Route path="/acompanamiento-parto" element={<AcompanamientoParto />} />
+                      <Route path="/arma-tu-meal-prep" element={<ArmaTuMealPrep />} />
                       <Route path="/contacto" element={<Contacto />} />
                       <Route path="/productos/:slug" element={<Product />} />
                       <Route path="/carrito" element={<Cart />} />

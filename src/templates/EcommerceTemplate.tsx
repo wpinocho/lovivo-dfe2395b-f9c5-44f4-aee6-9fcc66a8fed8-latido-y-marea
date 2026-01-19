@@ -81,6 +81,12 @@ export const EcommerceTemplate = ({
                 Acompañamiento de Parto
               </Link>
               <Link 
+                to="/arma-tu-meal-prep" 
+                className="text-foreground/70 hover:text-primary transition-colors font-medium"
+              >
+                Arma tu Meal Prep
+              </Link>
+              <Link 
                 to="/contacto" 
                 className="text-foreground/70 hover:text-primary transition-colors font-medium"
               >
@@ -156,6 +162,13 @@ export const EcommerceTemplate = ({
                 Acompañamiento de Parto
               </Link>
               <Link 
+                to="/arma-tu-meal-prep" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
+              >
+                Arma tu Meal Prep
+              </Link>
+              <Link 
                 to="/contacto" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
@@ -225,6 +238,12 @@ export const EcommerceTemplate = ({
                 className="block text-white/70 hover:text-white transition-colors"
               >
                 Acompañamiento de Parto
+              </Link>
+              <Link 
+                to="/arma-tu-meal-prep" 
+                className="block text-white/70 hover:text-white transition-colors"
+              >
+                Arma tu Meal Prep
               </Link>
             </div>
           </div>

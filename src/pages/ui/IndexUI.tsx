@@ -102,14 +102,14 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                 <h3 className="text-2xl font-bold mb-2">Renata</h3>
                 <p className="text-primary font-medium mb-4">Doula & Educadora Menstrual y Perinatal</p>
                 <div className="text-left bg-muted/30 p-6 rounded-lg">
-                  <h4 className="font-semibold mb-3">Acompañamiento:</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Doula certificada</li>
-                    <li>• Educadora menstrual y perinatal</li>
-                    <li>• Facilitadora de rituales</li>
-                    <li>• Soporte emocional, físico y práctico</li>
-                    <li>• Enfoque en autonomía y respeto al cuerpo cíclico</li>
-                  </ul>
+                  <p className="text-muted-foreground">
+                    Doula y educadora menstrual y perinatal dedicada a acompañar a mujeres en sus ciclos, 
+                    gestación y postparto con presencia, información clara y contención amorosa. Facilita 
+                    procesos de autoconocimiento a través de la educación menstrual, y en el parto ofrece 
+                    soporte emocional, físico y práctico para que cada mujer viva su experiencia desde la 
+                    seguridad, la autonomía y el respeto. Su enfoque integra escucha, rituales y una visión 
+                    profunda del cuerpo cíclico.
+                  </p>
                 </div>
               </div>
 
@@ -125,13 +125,10 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                 <h3 className="text-2xl font-bold mb-2">Alejandra</h3>
                 <p className="text-primary font-medium mb-4">Psicóloga & Doula</p>
                 <div className="text-left bg-muted/30 p-6 rounded-lg">
-                  <h4 className="font-semibold mb-3">Acompañamiento:</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Psicóloga</li>
-                    <li>• Doula certificada</li>
-                    <li>• Acompañamiento emocional</li>
-                    <li>• Apoyo en procesos perinatales</li>
-                  </ul>
+                  <p className="text-muted-foreground">
+                    Psicóloga y doula certificada. Ofrece acompañamiento emocional especializado 
+                    en procesos perinatales. (Más información próximamente)
+                  </p>
                 </div>
               </div>
             </div>

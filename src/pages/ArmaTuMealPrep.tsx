@@ -20,8 +20,8 @@ const ArmaTuMealPrep = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Solicitud de meal prep:', formData);
-    alert('¡Gracias! Te contactaremos pronto para organizar tu plan de comidas.');
+    console.log('Solicitud de calendario comunitario:', formData);
+    alert('¡Gracias! Te enviaremos un enlace único que podrás compartir con tu comunidad para que se organicen y te lleven comida casera en tu postparto.');
   };
 
   return (
@@ -33,8 +33,8 @@ const ArmaTuMealPrep = () => {
             Arma tu Meal Prep
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Organiza tu calendario de comidas post parto. Nosotros nos encargamos de todo, 
-            tú solo disfruta de tu bebé.
+            Organiza un calendario comunitario para que tus amigas, familiares y seres queridos 
+            se turnen para llevarte comida casera en tu postparto. Para que nunca te olvides de comer.
           </p>
         </div>
       </section>
@@ -49,36 +49,40 @@ const ArmaTuMealPrep = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-2xl font-bold mb-4">
                 1
               </div>
-              <h3 className="text-lg font-semibold mb-2">Completa el formulario</h3>
-              <p className="text-muted-foreground">Cuéntanos sobre tus necesidades y preferencias</p>
+              <h3 className="text-lg font-semibold mb-2">Crea tu calendario</h3>
+              <p className="text-muted-foreground">Comparte tu fecha de parto y preferencias alimenticias</p>
             </div>
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-2xl font-bold mb-4">
                 2
               </div>
-              <h3 className="text-lg font-semibold mb-2">Creamos tu plan</h3>
-              <p className="text-muted-foreground">Diseñamos un menú personalizado para ti</p>
+              <h3 className="text-lg font-semibold mb-2">Comparte el enlace</h3>
+              <p className="text-muted-foreground">Envía el calendario a tu comunidad (familia, amigas, vecinas)</p>
             </div>
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-2xl font-bold mb-4">
                 3
               </div>
-              <h3 className="text-lg font-semibold mb-2">Organizamos entregas</h3>
-              <p className="text-muted-foreground">Coordinamos tu calendario de comidas</p>
+              <h3 className="text-lg font-semibold mb-2">Ellas se organizan</h3>
+              <p className="text-muted-foreground">Cada persona elige un día para llevarte comida casera</p>
             </div>
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-2xl font-bold mb-4">
                 4
               </div>
               <h3 className="text-lg font-semibold mb-2">¡Disfruta!</h3>
-              <p className="text-muted-foreground">Recibe comidas nutritivas en tu puerta</p>
+              <p className="text-muted-foreground">Recibe amor en forma de comida sin preocuparte</p>
             </div>
           </div>
 
           {/* Formulario */}
           <Card className="max-w-3xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6">Solicita tu Plan Personalizado</h3>
+              <h3 className="text-2xl font-bold mb-6">Crea tu Calendario Comunitario</h3>
+              <p className="text-muted-foreground mb-6">
+                Completa este formulario y te enviaremos un enlace único que podrás compartir 
+                con tu comunidad para que se organicen y te apoyen con comida casera.
+              </p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -166,7 +170,7 @@ const ArmaTuMealPrep = () => {
                 </div>
 
                 <Button type="submit" size="lg" className="w-full">
-                  Solicitar mi Plan Personalizado
+                  Crear mi Calendario
                 </Button>
               </form>
             </CardContent>
@@ -193,9 +197,9 @@ const ArmaTuMealPrep = () => {
             <Card>
               <CardContent className="p-6 text-center">
                 <ChefHat className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Comida Casera</h3>
+                <h3 className="font-semibold mb-2">Comida con Amor</h3>
                 <p className="text-sm text-muted-foreground">
-                  Preparada con amor e ingredientes frescos
+                  Recibe comida casera hecha por quienes te quieren
                 </p>
               </CardContent>
             </Card>
@@ -213,9 +217,9 @@ const ArmaTuMealPrep = () => {
             <Card>
               <CardContent className="p-6 text-center">
                 <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Apoyo Comunitario</h3>
+                <h3 className="font-semibold mb-2">Red de Apoyo</h3>
                 <p className="text-sm text-muted-foreground">
-                  Conecta con otras mamás en tu misma etapa
+                  Tu comunidad organizada para cuidarte
                 </p>
               </CardContent>
             </Card>
