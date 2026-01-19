@@ -1,6 +1,6 @@
 import { EcommerceTemplate } from '@/templates/EcommerceTemplate';
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, Moon, Sun, Baby } from 'lucide-react';
+import { Heart, Moon, Sun, Baby, Brain, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const servicios = [
@@ -55,6 +55,34 @@ const servicios = [
       'Red de apoyo y recursos'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768845283480-wzh6om1bf5h.png'
+  },
+  {
+    icono: Brain,
+    titulo: 'Sesiones Psicológicas Perinatales',
+    descripcion: 'Acompañamiento emocional especializado con Alejandra',
+    incluye: [
+      'Espacio seguro de escucha',
+      'Depresión prenatal y postparto',
+      'Ansiedad y miedos en el embarazo',
+      'Duelo gestacional y perinatal',
+      'Apoyo en el vínculo con tu bebé',
+      'Transición a la maternidad'
+    ],
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768859200681-9eudy877ys.png'
+  },
+  {
+    icono: Sparkles,
+    titulo: 'Baño Postparto y Cierre de Cadera',
+    descripcion: 'Ritual ancestral de sanación y celebración',
+    incluye: [
+      'Baño ceremonial con hierbas',
+      'Cierre de cadera con rebozo',
+      'Masaje relajante postparto',
+      'Momento de conexión y honra',
+      'Espacio de descanso y cuidado',
+      'Ritual personalizado'
+    ],
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768859200680-x4wy01kgj2g.png'
   }
 ];
 
