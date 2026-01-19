@@ -47,7 +47,7 @@ export const EcommerceTemplate = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const header = (
-    <div className={`py-4 border-b border-gray-200 bg-white ${headerClassName}`}>
+    <div className={`py-4 border-b border-white/20 bg-[#b8a8c4] ${headerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -58,45 +58,45 @@ export const EcommerceTemplate = ({
             <nav className="flex space-x-8">
               <Link 
                 to="/" 
-                className="text-foreground hover:text-primary transition-colors font-medium relative group"
+                className="text-white hover:text-white/80 transition-colors font-medium relative group"
               >
                 Nosotros
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/servicios" 
-                className="text-foreground hover:text-primary transition-colors font-medium relative group"
+                className="text-white hover:text-white/80 transition-colors font-medium relative group"
               >
                 Servicios
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/educacion-menstrual" 
-                className="text-foreground hover:text-primary transition-colors font-medium relative group"
+                className="text-white hover:text-white/80 transition-colors font-medium relative group"
               >
                 Educación Menstrual
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/acompanamiento-parto" 
-                className="text-foreground hover:text-primary transition-colors font-medium relative group"
+                className="text-white hover:text-white/80 transition-colors font-medium relative group"
               >
                 Acompañamiento
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/arma-tu-meal-prep" 
-                className="text-foreground hover:text-primary transition-colors font-medium relative group"
+                className="text-white hover:text-white/80 transition-colors font-medium relative group"
               >
                 Meal Prep
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/contacto" 
-                className="text-foreground hover:text-primary transition-colors font-medium relative group"
+                className="text-white hover:text-white/80 transition-colors font-medium relative group"
               >
                 Contacto
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
             </nav>
           </div>
@@ -137,47 +137,47 @@ export const EcommerceTemplate = ({
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t pt-4">
+          <div className="md:hidden mt-4 pb-4 border-t border-white/20 pt-4">
             <nav className="flex flex-col space-y-3">
               <Link 
                 to="/" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
+                className="text-white/80 hover:text-white transition-colors font-medium py-2"
               >
                 Nosotros
               </Link>
               <Link 
                 to="/servicios" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
+                className="text-white/80 hover:text-white transition-colors font-medium py-2"
               >
                 Servicios
               </Link>
               <Link 
                 to="/educacion-menstrual" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
+                className="text-white/80 hover:text-white transition-colors font-medium py-2"
               >
                 Educación Menstrual
               </Link>
               <Link 
                 to="/acompanamiento-parto" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
+                className="text-white/80 hover:text-white transition-colors font-medium py-2"
               >
                 Acompañamiento de Parto
               </Link>
               <Link 
                 to="/arma-tu-meal-prep" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
+                className="text-white/80 hover:text-white transition-colors font-medium py-2"
               >
                 Arma tu Meal Prep
               </Link>
               <Link 
                 to="/contacto" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
+                className="text-white/80 hover:text-white transition-colors font-medium py-2"
               >
                 Contáctanos
               </Link>
@@ -188,7 +188,7 @@ export const EcommerceTemplate = ({
         {/* Page Title */}
         {pageTitle && (
           <div className="mt-6">
-            <h1 className="text-3xl font-bold text-foreground">
+            <h1 className="text-3xl font-bold text-white">
               {pageTitle}
             </h1>
           </div>
