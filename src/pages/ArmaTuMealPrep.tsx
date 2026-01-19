@@ -118,7 +118,7 @@ const ArmaTuMealPrep = () => {
     return (
       <EcommerceTemplate showCart={false}>
         {/* Hero del Calendario */}
-        <section className="py-16" style={{ backgroundColor: '#e8a77c' }}>
+        <section className="py-16" style={{ backgroundColor: '#b8a8c4' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 text-black">
@@ -281,7 +281,7 @@ const ArmaTuMealPrep = () => {
         </section>
 
         {/* Instrucciones */}
-        <section className="py-16" style={{ backgroundColor: '#e8a77c' }}>
+        <section className="py-16" style={{ backgroundColor: '#b8a8c4' }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-semibold text-center mb-8 text-black">
               ¿Cómo funciona para quienes ayudan?
@@ -477,7 +477,7 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Cómo Funciona */}
-      <section className="py-20" style={{ backgroundColor: '#e8a77c' }}>
+      <section className="py-20" style={{ backgroundColor: '#b8a8c4' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
             ¿Cómo funciona?
@@ -635,7 +635,7 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Beneficios */}
-      <section className="py-20" style={{ backgroundColor: '#e8a77c' }}>
+      <section className="py-20" style={{ backgroundColor: '#b8a8c4' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 text-white">
             Beneficios

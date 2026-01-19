@@ -216,12 +216,12 @@ const PideTuComida = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary/5">
+      <section className="py-16" style={{ backgroundColor: '#b8a8c4' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-3xl font-bold mb-4 text-white">
             ¿Prefieres un plan personalizado?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-white/90 mb-8">
             Agenda una consulta gratuita y diseñamos el plan perfecto para ti
           </p>
           <div className="flex gap-4 justify-center">
