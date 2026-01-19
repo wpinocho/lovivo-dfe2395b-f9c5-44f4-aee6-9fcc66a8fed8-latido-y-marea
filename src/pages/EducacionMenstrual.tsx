@@ -79,7 +79,7 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* Fases del Ciclo */}
-      <section className="py-20 bg-[#a8b5a3]">
+      <section className="py-20 bg-[#b8a8c4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
             Las 4 Fases del Ciclo Menstrual
@@ -163,7 +163,7 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#a8b5a3] text-white">
+      <section className="py-20 bg-[#b8a8c4] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             ¿Lista para reconectar con tu ciclo?
