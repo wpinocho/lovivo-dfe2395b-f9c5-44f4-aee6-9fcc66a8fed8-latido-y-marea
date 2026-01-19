@@ -37,7 +37,7 @@ const EducacionMenstrual = () => {
       <section className="relative h-[500px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1616798002516-1a21f8f5f0e2?w=1600&h=900&fit=crop"
+            src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768841296127-b31xgo8m8gb.png"
             alt="Educación menstrual"
             className="w-full h-full object-cover"
           />
@@ -79,7 +79,7 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* Fases del Ciclo */}
-      <section className="py-20 bg-[#bba9aa]">
+      <section className="py-20 bg-[#a8b5a3]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
             Las 4 Fases del Ciclo Menstrual
@@ -163,7 +163,7 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#bba9aa] text-white">
+      <section className="py-20 bg-[#a8b5a3] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             ¿Lista para reconectar con tu ciclo?
