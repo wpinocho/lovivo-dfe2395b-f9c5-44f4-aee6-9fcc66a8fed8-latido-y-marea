@@ -115,6 +115,9 @@ const Contacto = () => {
                       <p className="text-sm text-gray-600 mt-1">
                         Sábados: 10:00 AM - 2:00 PM
                       </p>
+                      <p className="text-sm text-gray-600 mt-2 italic">
+                        *Estamos disponibles 24/7 una vez asegurado el acompañamiento para el parto
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
