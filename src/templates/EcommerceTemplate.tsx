@@ -212,7 +212,7 @@ export const EcommerceTemplate = ({
               <span className="text-xl font-semibold">Latido y Marea</span>
             </div>
             <p className="text-white/80 mb-6">
-              Doulas y educadoras menstruales dedicadas a acompañar tu ciclo, embarazo y 
+              Doulas y educadoras dedicadas a acompañar tu ciclo, embarazo y 
               postparto con presencia, información clara y contención amorosa.
             </p>
           </div>
