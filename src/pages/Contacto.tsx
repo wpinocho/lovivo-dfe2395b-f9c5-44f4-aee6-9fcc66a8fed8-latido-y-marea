@@ -73,7 +73,7 @@ const Contacto = () => {
                     <div>
                       <h3 className="font-semibold mb-1 text-black">Teléfono</h3>
                       <a 
-                        href="https://wa.me/5255965249494" 
+                        href="https://wa.me/525559652494" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-gray-700 hover:text-primary transition-colors underline"

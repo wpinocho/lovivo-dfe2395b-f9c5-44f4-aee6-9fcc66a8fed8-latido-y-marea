@@ -266,7 +266,7 @@ export const EcommerceTemplate = ({
               </Link>
               <p>contacto@latidoymarea.com</p>
               <a 
-                href="https://wa.me/5255965249494" 
+                href="https://wa.me/525559652494" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors underline"
