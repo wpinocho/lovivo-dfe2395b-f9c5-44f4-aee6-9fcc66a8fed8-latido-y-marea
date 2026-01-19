@@ -205,9 +205,9 @@ export const EcommerceTemplate = ({
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <img 
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/temp_1768834028649_833a3e6f/1768834028649-1nkanikp0x8.jpg"
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/dfe2395b-f9c5-44f4-aee6-9fcc66a8fed8/logo-adjusted.jpg"
                 alt="Latido y Marea"
-                className="h-12 w-12"
+                className="h-16 w-16"
               />
               <span className="text-xl font-semibold">Latido y Marea</span>
             </div>
