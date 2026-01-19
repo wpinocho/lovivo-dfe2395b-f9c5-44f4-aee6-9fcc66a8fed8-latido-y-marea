@@ -635,41 +635,47 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Beneficios */}
-      <section className="py-20" style={{ backgroundColor: '#b8a8c4' }}>
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 text-black">
             Beneficios
           </h2>
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <div className="w-32 h-32 rounded-full bg-white shadow-lg mx-auto mb-6 flex items-center justify-center">
-                <Calendar className="h-12 w-12 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Planificación</h3>
-              <p className="text-white/90">
-                Organiza todo desde antes y ten la tranquilidad de saber que tendrás comida lista
-              </p>
-            </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="border-0" style={{ backgroundColor: '#b8a8c4' }}>
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Calendar className="h-8 w-8" style={{ color: '#b8a8c4' }} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Planificación</h3>
+                <p className="text-white">
+                  Organiza todo desde antes y ten la tranquilidad de saber que tendrás comida lista
+                </p>
+              </CardContent>
+            </Card>
 
-            <div className="text-center">
-              <div className="w-32 h-32 rounded-full bg-white shadow-lg mx-auto mb-6 flex items-center justify-center">
-                <Heart className="h-12 w-12 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Comida con amor</h3>
-              <p className="text-white/90">
-                Recibe comida casera hecha con cariño por las personas que te aman
-              </p>
-            </div>
+            <Card className="border-0" style={{ backgroundColor: '#b8a8c4' }}>
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Heart className="h-8 w-8" style={{ color: '#b8a8c4' }} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Comida con amor</h3>
+                <p className="text-white">
+                  Recibe comida casera hecha con cariño por las personas que te aman
+                </p>
+              </CardContent>
+            </Card>
 
-            <div className="text-center">
-              <div className="w-32 h-32 rounded-full bg-white shadow-lg mx-auto mb-6 flex items-center justify-center">
-                <Users className="h-12 w-12 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Red de apoyo</h3>
-              <p className="text-white/90">
-                Activa tu comunidad y permite que te cuiden en esta etapa tan importante
-              </p>
-            </div>
+            <Card className="border-0" style={{ backgroundColor: '#b8a8c4' }}>
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Users className="h-8 w-8" style={{ color: '#b8a8c4' }} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Red de apoyo</h3>
+                <p className="text-white">
+                  Activa tu comunidad y permite que te cuiden en esta etapa tan importante
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
