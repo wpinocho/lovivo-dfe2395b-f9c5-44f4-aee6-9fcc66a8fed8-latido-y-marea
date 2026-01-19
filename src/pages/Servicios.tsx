@@ -15,7 +15,7 @@ const servicios = [
       'Rituales y prácticas de conexión',
       'Sesiones individuales o grupales'
     ],
-    imagen: 'https://images.unsplash.com/photo-1616798002516-1a21f8f5f0e2?w=800&h=600&fit=crop'
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768841296127-b31xgo8m8gb.png'
   },
   {
     icono: Baby,
