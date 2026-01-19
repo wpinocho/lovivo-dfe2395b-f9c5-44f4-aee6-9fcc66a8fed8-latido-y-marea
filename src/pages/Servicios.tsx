@@ -81,11 +81,11 @@ const Servicios = () => {
               const Icono = servicio.icono;
               return (
                 <Card key={idx} className="overflow-hidden border border-gray-200 hover:border-primary transition-all">
-                  <div className="relative h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
+                  <div className="relative h-64 overflow-hidden bg-gray-50">
                     <img 
                       src={servicio.imagen}
                       alt={servicio.titulo}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <CardContent className="p-8">
