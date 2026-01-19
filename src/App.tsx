@@ -20,9 +20,9 @@ import Checkout from "./pages/Checkout";
 import ThankYou from "./pages/ThankYou";
 import Cart from "./pages/Cart";
 import MyOrders from "./pages/MyOrders";
-import ArmaTuMealPrep from "./pages/ArmaTuMealPrep";
-import RecetasPostParto from "./pages/RecetasPostParto";
-import PideTuComida from "./pages/PideTuComida";
+import Servicios from "./pages/Servicios";
+import EducacionMenstrual from "./pages/EducacionMenstrual";
+import AcompanamientoParto from "./pages/AcompanamientoParto";
 import Contacto from "./pages/Contacto";
 
 const queryClient = new QueryClient();
@@ -54,9 +54,9 @@ const App = () => (
                     <PageViewTracker />
                     <Routes>
                       <Route path="/" element={<Index />} />
-                      <Route path="/arma-tu-meal-prep" element={<ArmaTuMealPrep />} />
-                      <Route path="/recetas-post-parto" element={<RecetasPostParto />} />
-                      <Route path="/pide-tu-comida" element={<PideTuComida />} />
+                      <Route path="/servicios" element={<Servicios />} />
+                      <Route path="/educacion-menstrual" element={<EducacionMenstrual />} />
+                      <Route path="/acompanamiento-parto" element={<AcompanamientoParto />} />
                       <Route path="/contacto" element={<Contacto />} />
                       <Route path="/productos/:slug" element={<Product />} />
                       <Route path="/carrito" element={<Cart />} />

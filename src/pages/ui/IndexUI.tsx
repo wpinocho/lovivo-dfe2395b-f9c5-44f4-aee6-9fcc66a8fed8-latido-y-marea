@@ -18,8 +18,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       <section className="relative h-[500px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/dfe2395b-f9c5-44f4-aee6-9fcc66a8fed8/hero-meals.jpg"
-            alt="Comidas saludables post parto"
+            src="/hero-doula.jpg"
+            alt="Acompañamiento de parto con doula"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30"></div>
@@ -27,13 +27,13 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="text-white max-w-2xl">
             <h1 className="text-5xl font-bold mb-4">
-              Nutrición con amor para tu post parto
+              Acompañamiento con presencia y amor
             </h1>
             <p className="text-xl mb-8">
-              Comidas nutritivas diseñadas especialmente para mamás en su etapa más importante
+              Doulas y educadoras menstruales dedicadas a tu ciclo, embarazo y postparto
             </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              Conoce nuestros planes
+            <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+              <a href="/contacto">Conoce nuestros servicios</a>
             </Button>
           </div>
         </div>
@@ -47,9 +47,11 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               Sobre Latido y Marea
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Somos un servicio especializado en nutrición post parto. Creemos que cada mamá merece 
-              alimentos que nutran su cuerpo y alma durante esta etapa transformadora. Nuestras comidas 
-              están diseñadas con amor, pensando en la recuperación y el bienestar de las mamás.
+              Somos doulas y educadoras menstruales dedicadas a acompañar a mujeres y personas gestantes 
+              en sus ciclos, embarazo y postparto con presencia, información clara y contención amorosa. 
+              Facilitamos procesos de autoconocimiento a través de la educación menstrual, y en el parto 
+              ofrecemos soporte emocional, físico y práctico para que cada experiencia se viva con seguridad, 
+              autonomía y profundo respeto por el cuerpo cíclico.
             </p>
           </div>
 
@@ -59,27 +61,27 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                 <Heart className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Con amor</h3>
+              <h3 className="text-xl font-semibold mb-2">Presencia</h3>
               <p className="text-muted-foreground">
-                Cada comida es preparada con dedicación y cariño
+                Acompañamiento consciente en cada etapa de tu proceso
               </p>
             </div>
             <div className="text-center p-6">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                 <Leaf className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Nutritivo</h3>
+              <h3 className="text-xl font-semibold mb-2">Autoconocimiento</h3>
               <p className="text-muted-foreground">
-                Ingredientes frescos y balanceados para tu recuperación
+                Educación menstrual para conectar con tu cuerpo cíclico
               </p>
             </div>
             <div className="text-center p-6">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                 <Users className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Comunidad</h3>
+              <h3 className="text-xl font-semibold mb-2">Respeto</h3>
               <p className="text-muted-foreground">
-                Construimos una red de apoyo entre mamás
+                Honramos tu autonomía y sabiduría corporal
               </p>
             </div>
           </div>
@@ -92,20 +94,21 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <div className="text-center">
                 <div className="mb-6 overflow-hidden rounded-2xl">
                   <img 
-                    src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/dfe2395b-f9c5-44f4-aee6-9fcc66a8fed8/team-member-1.jpg"
-                    alt="Fundadora"
+                    src="/renata-profile.jpg"
+                    alt="Renata - Doula y Educadora Menstrual"
                     className="w-full h-80 object-cover"
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Tu Nombre</h3>
-                <p className="text-primary font-medium mb-4">Cofundadora & Nutricionista</p>
+                <h3 className="text-2xl font-bold mb-2">Renata</h3>
+                <p className="text-primary font-medium mb-4">Doula & Educadora Menstrual y Perinatal</p>
                 <div className="text-left bg-muted/30 p-6 rounded-lg">
-                  <h4 className="font-semibold mb-3">Formación:</h4>
+                  <h4 className="font-semibold mb-3">Acompañamiento:</h4>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>• Licenciada en Nutrición</li>
-                    <li>• Especialización en Nutrición Maternal</li>
-                    <li>• Certificación en Lactancia</li>
-                    <li>• 10+ años de experiencia</li>
+                    <li>• Doula certificada</li>
+                    <li>• Educadora menstrual y perinatal</li>
+                    <li>• Facilitadora de rituales</li>
+                    <li>• Soporte emocional, físico y práctico</li>
+                    <li>• Enfoque en autonomía y respeto al cuerpo cíclico</li>
                   </ul>
                 </div>
               </div>
@@ -114,20 +117,20 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <div className="text-center">
                 <div className="mb-6 overflow-hidden rounded-2xl">
                   <img 
-                    src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/dfe2395b-f9c5-44f4-aee6-9fcc66a8fed8/team-member-2.jpg"
-                    alt="Alejandra"
+                    src="/alejandra-profile.jpg"
+                    alt="Alejandra - Psicóloga y Doula"
                     className="w-full h-80 object-cover"
                   />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Alejandra</h3>
-                <p className="text-primary font-medium mb-4">Cofundadora & Chef</p>
+                <p className="text-primary font-medium mb-4">Psicóloga & Doula</p>
                 <div className="text-left bg-muted/30 p-6 rounded-lg">
-                  <h4 className="font-semibold mb-3">Formación:</h4>
+                  <h4 className="font-semibold mb-3">Acompañamiento:</h4>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>• Chef Profesional</li>
-                    <li>• Especialización en Cocina Saludable</li>
-                    <li>• Nutrición Holística</li>
-                    <li>• 8+ años de experiencia</li>
+                    <li>• Psicóloga</li>
+                    <li>• Doula certificada</li>
+                    <li>• Acompañamiento emocional</li>
+                    <li>• Apoyo en procesos perinatales</li>
                   </ul>
                 </div>
               </div>
@@ -140,17 +143,17 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       <section className="py-16 bg-primary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            ¿Lista para comenzar?
+            ¿Lista para comenzar tu acompañamiento?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Descubre cómo podemos acompañarte en tu post parto con nuestros planes personalizados
+            Estamos aquí para acompañarte con presencia, información clara y contención amorosa
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" asChild>
-              <a href="/arma-tu-meal-prep">Arma tu plan</a>
+              <a href="/contacto">Contáctanos</a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="/contacto">Contáctanos</a>
+              <a href="/servicios">Nuestros servicios</a>
             </Button>
           </div>
         </div>

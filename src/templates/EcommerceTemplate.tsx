@@ -63,22 +63,22 @@ export const EcommerceTemplate = ({
                 Nosotros
               </Link>
               <Link 
-                to="/arma-tu-meal-prep" 
+                to="/servicios" 
                 className="text-foreground/70 hover:text-primary transition-colors font-medium"
               >
-                Arma tu Meal Prep
+                Servicios
               </Link>
               <Link 
-                to="/recetas-post-parto" 
+                to="/educacion-menstrual" 
                 className="text-foreground/70 hover:text-primary transition-colors font-medium"
               >
-                Recetas Post Parto
+                Educación Menstrual
               </Link>
               <Link 
-                to="/pide-tu-comida" 
+                to="/acompanamiento-parto" 
                 className="text-foreground/70 hover:text-primary transition-colors font-medium"
               >
-                Pide tu Comida
+                Acompañamiento de Parto
               </Link>
               <Link 
                 to="/contacto" 
@@ -135,25 +135,25 @@ export const EcommerceTemplate = ({
                 Nosotros
               </Link>
               <Link 
-                to="/arma-tu-meal-prep" 
+                to="/servicios" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
               >
-                Arma tu Meal Prep
+                Servicios
               </Link>
               <Link 
-                to="/recetas-post-parto" 
+                to="/educacion-menstrual" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
               >
-                Recetas Post Parto
+                Educación Menstrual
               </Link>
               <Link 
-                to="/pide-tu-comida" 
+                to="/acompanamiento-parto" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-foreground/70 hover:text-primary transition-colors font-medium py-2"
               >
-                Pide tu Comida
+                Acompañamiento de Parto
               </Link>
               <Link 
                 to="/contacto" 
@@ -193,8 +193,8 @@ export const EcommerceTemplate = ({
               <span className="text-xl font-bold">Latido y Marea</span>
             </div>
             <p className="text-white/70 mb-4">
-              Nutrición con amor para tu post parto. Comidas nutritivas diseñadas 
-              especialmente para mamás en su etapa más importante.
+              Doulas y educadoras menstruales dedicadas a acompañar tu ciclo, embarazo y 
+              postparto con presencia, información clara y contención amorosa.
             </p>
           </div>
 
@@ -209,22 +209,22 @@ export const EcommerceTemplate = ({
                 Nosotros
               </Link>
               <Link 
-                to="/arma-tu-meal-prep" 
+                to="/servicios" 
                 className="block text-white/70 hover:text-white transition-colors"
               >
-                Arma tu Meal Prep
+                Servicios
               </Link>
               <Link 
-                to="/recetas-post-parto" 
+                to="/educacion-menstrual" 
                 className="block text-white/70 hover:text-white transition-colors"
               >
-                Recetas Post Parto
+                Educación Menstrual
               </Link>
               <Link 
-                to="/pide-tu-comida" 
+                to="/acompanamiento-parto" 
                 className="block text-white/70 hover:text-white transition-colors"
               >
-                Pide tu Comida
+                Acompañamiento de Parto
               </Link>
             </div>
           </div>

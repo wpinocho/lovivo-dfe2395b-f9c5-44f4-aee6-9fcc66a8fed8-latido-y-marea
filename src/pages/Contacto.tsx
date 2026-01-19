@@ -162,10 +162,10 @@ const Contacto = () => {
                         required
                       >
                         <option value="">Selecciona un asunto</option>
-                        <option value="meal-prep">Consulta sobre Meal Prep</option>
-                        <option value="planes">Información de Planes</option>
-                        <option value="recetas">Recetas y Nutrición</option>
-                        <option value="entrega">Entregas y Logística</option>
+                        <option value="doula">Acompañamiento de Parto</option>
+                        <option value="educacion-menstrual">Educación Menstrual</option>
+                        <option value="prenatal">Acompañamiento Prenatal</option>
+                        <option value="postparto">Acompañamiento Postparto</option>
                         <option value="otro">Otro</option>
                       </select>
                     </div>
@@ -201,40 +201,40 @@ const Contacto = () => {
           <div className="space-y-6">
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">¿Cuánto tiempo antes del parto debo contactarlos?</h3>
+                <h3 className="font-semibold mb-2">¿Cuándo debo contratar una doula?</h3>
                 <p className="text-muted-foreground">
-                  Recomendamos contactarnos 4-6 semanas antes de tu fecha de parto para organizar 
-                  todo con anticipación, aunque también aceptamos solicitudes de último momento.
+                  Lo ideal es contactarnos en el segundo trimestre de embarazo, aunque también 
+                  podemos acompañarte si nos contactas más tarde. Nunca es demasiado pronto o tarde.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">¿Puedo cambiar mi plan después de contratarlo?</h3>
+                <h3 className="font-semibold mb-2">¿Qué diferencia hay entre una doula y una partera?</h3>
                 <p className="text-muted-foreground">
-                  ¡Por supuesto! Entendemos que las necesidades cambian. Puedes modificar tu plan 
-                  con 48 horas de anticipación.
+                  Las doulas brindamos apoyo emocional, físico e informativo, pero no realizamos 
+                  procedimientos médicos. Complementamos el trabajo del equipo de salud.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">¿Atienden alergias alimentarias?</h3>
+                <h3 className="font-semibold mb-2">¿Acompañan partos en hospital?</h3>
                 <p className="text-muted-foreground">
-                  Sí, adaptamos completamente nuestros menús a tus necesidades específicas, 
-                  incluyendo alergias, intolerancias y preferencias dietéticas.
+                  Sí, acompañamos partos en hospital, casa de parto y domicilio. Nos adaptamos 
+                  al lugar que elijas para tu parto.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">¿Cuál es la zona de entrega?</h3>
+                <h3 className="font-semibold mb-2">¿Ofrecen talleres de educación menstrual?</h3>
                 <p className="text-muted-foreground">
-                  Actualmente entregamos en toda la Ciudad de México. Contáctanos para confirmar 
-                  si llegamos a tu zona específica.
+                  Sí, facilitamos talleres individuales y grupales de educación menstrual. 
+                  Contáctanos para conocer las próximas fechas.
                 </p>
               </CardContent>
             </Card>
