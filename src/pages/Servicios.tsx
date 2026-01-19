@@ -28,7 +28,7 @@ const servicios = [
       'Apoyo emocional continuo',
       'Visitas prenatales'
     ],
-    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768845283480-x83ys2ehgid.png'
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768858670578-dkq6uaju8k.png'
   },
   {
     icono: Heart,
@@ -81,11 +81,11 @@ const Servicios = () => {
               const Icono = servicio.icono;
               return (
                 <Card key={idx} className="overflow-hidden border border-gray-200 hover:border-primary transition-all">
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden bg-gray-50 flex items-center justify-center">
                     <img 
                       src={servicio.imagen}
                       alt={servicio.titulo}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <CardContent className="p-8">
