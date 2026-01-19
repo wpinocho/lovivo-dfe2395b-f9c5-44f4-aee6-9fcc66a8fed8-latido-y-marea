@@ -213,7 +213,7 @@ const ArmaTuMealPrep = () => {
       {/* CTA */}
       <section className="py-20 text-white" style={{ backgroundColor: '#f4a07f' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white">
             ¿Necesitas ayuda?
           </h2>
           <p className="text-lg mb-8 text-white/90">
