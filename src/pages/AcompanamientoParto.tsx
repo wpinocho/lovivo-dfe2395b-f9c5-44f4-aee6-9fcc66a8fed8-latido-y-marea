@@ -1,7 +1,7 @@
 import { EcommerceTemplate } from '@/templates/EcommerceTemplate';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, Users, Sparkles, Baby } from 'lucide-react';
+import { Heart, Users, Sparkles, Baby, Brain } from 'lucide-react';
 
 const AcompanamientoParto = () => {
   return (
@@ -97,6 +97,100 @@ const AcompanamientoParto = () => {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Acompañamiento Emocional */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary mb-6">
+              <Brain className="h-10 w-10 text-white" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-black">
+              Acompañamiento Emocional Perinatal
+            </h2>
+            <p className="text-lg text-gray-700 mb-6">
+              Sabemos que el camino hacia la maternidad puede traer momentos de vulnerabilidad, 
+              dudas y emociones intensas. No estás sola. Ofrecemos un espacio seguro y amoroso 
+              para acompañarte en tu salud mental perinatal.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <Card className="border border-gray-200 hover:border-primary transition-all">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-black">
+                  Depresión Prenatal y Postparto
+                </h3>
+                <p className="text-gray-700">
+                  Te acompañamos con escucha empática, herramientas de autocuidado y 
+                  contención emocional durante momentos de tristeza, desesperanza o agotamiento. 
+                  Honramos tus emociones y te recordamos que pedir ayuda es un acto de amor.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-gray-200 hover:border-primary transition-all">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-black">
+                  Ansiedad y Miedos en el Embarazo
+                </h3>
+                <p className="text-gray-700">
+                  Si sientes miedo al parto, preocupación constante por tu bebé o ansiedad 
+                  sobre tu nueva vida, te ofrecemos un espacio de calma, información clara 
+                  y técnicas de regulación emocional para transitar estos momentos con más seguridad.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-gray-200 hover:border-primary transition-all">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-black">
+                  Duelo Gestacional y Perinatal
+                </h3>
+                <p className="text-gray-700">
+                  En momentos de pérdida, te acompañamos con respeto profundo, presencia silenciosa 
+                  y contención amorosa. Creamos rituales de despedida, honramos tu dolor y caminamos 
+                  a tu lado en este proceso de sanación tan personal.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-gray-200 hover:border-primary transition-all">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-black">
+                  Transición a la Maternidad
+                </h3>
+                <p className="text-gray-700">
+                  El postparto es un tiempo de transformación profunda. Te acompañamos en la 
+                  integración de tu nueva identidad como madre, te sostenemos en momentos de 
+                  duda y celebramos contigo cada pequeño logro. Tu maternidad es válida tal como es.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-gray-200 hover:border-primary transition-all">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-black">
+                  Apoyo en el Vínculo con tu Bebé
+                </h3>
+                <p className="text-gray-700">
+                  Si sientes dificultades para conectar con tu bebé, te acompañamos sin juicio, 
+                  con ternura y paciencia. El vínculo se construye día a día, y estamos aquí 
+                  para facilitar ese encuentro amoroso entre ustedes.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-10 p-8 bg-primary/10 border-l-4 border-primary">
+            <p className="text-gray-700 text-lg">
+              <strong className="text-black">Importante:</strong> Nuestro acompañamiento emocional 
+              complementa el cuidado profesional de salud mental. Si necesitas atención psicológica 
+              o psiquiátrica especializada, te ayudaremos a conectar con profesionales adecuados.
+            </p>
           </div>
         </div>
       </section>
