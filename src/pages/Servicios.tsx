@@ -121,7 +121,7 @@ const Servicios = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-[#bba9aa] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             ¿Interesada en nuestros servicios?

@@ -50,7 +50,7 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* Etapas del Acompañamiento */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#bba9aa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
             Etapas del Acompañamiento
@@ -129,7 +129,7 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-[#bba9aa] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             ¿Lista para vivir tu parto acompañada?

@@ -110,14 +110,14 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <div className="text-center">
                 <div className="mb-6 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&h=800&fit=crop&crop=faces"
+                    src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781183-2ajqkl4l3ag.png"
                     alt="Renata - Doula y Educadora Menstrual"
                     className="w-full h-96 object-cover"
                   />
                 </div>
                 <h3 className="text-2xl font-semibold mb-2 text-black">Renata</h3>
                 <p className="text-black font-medium mb-4">Doula & Educadora Menstrual y Perinatal</p>
-                <div className="text-left bg-gray-50 p-8 border border-gray-200">
+                <div className="text-left bg-white p-8 border border-gray-200">
                   <p className="text-gray-700">
                     Doula y educadora menstrual y perinatal dedicada a acompañar a mujeres en sus ciclos, 
                     gestación y postparto con presencia, información clara y contención amorosa. Facilita 
@@ -133,14 +133,14 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <div className="text-center">
                 <div className="mb-6 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=800&fit=crop&crop=faces"
+                    src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781182-dnolm4ta4vo.png"
                     alt="Alejandra - Psicóloga y Doula"
                     className="w-full h-96 object-cover"
                   />
                 </div>
                 <h3 className="text-2xl font-semibold mb-2 text-black">Alejandra</h3>
                 <p className="text-black font-medium mb-4">Psicóloga & Doula</p>
-                <div className="text-left bg-gray-50 p-8 border border-gray-200">
+                <div className="text-left bg-white p-8 border border-gray-200">
                   <p className="text-gray-700">
                     Psicóloga y doula certificada. Ofrece acompañamiento emocional especializado 
                     en procesos perinatales. (Más información próximamente)
@@ -153,7 +153,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-24 bg-[#bba9aa] relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-white">
             ¿Lista para comenzar tu acompañamiento?
