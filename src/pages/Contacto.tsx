@@ -72,7 +72,14 @@ const Contacto = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-black">Teléfono</h3>
-                      <p className="text-gray-700">+52 55 5965 2494</p>
+                      <a 
+                        href="https://wa.me/5255965249494" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-gray-700 hover:text-primary transition-colors underline"
+                      >
+                        +52 55 5965 2494
+                      </a>
                       <p className="text-sm text-gray-600 mt-1">
                         Lun - Vie: 9:00 AM - 6:00 PM
                       </p>
