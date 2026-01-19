@@ -116,15 +116,10 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                   />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-black">Renata</h3>
-                <p className="text-sm sm:text-base text-black font-medium mb-4">Doula & Educadora Menstrual y Perinatal</p>
+                <p className="text-sm sm:text-base text-black font-medium mb-4">Doula, Educadora Menstrual y Perinatal & Maestra de Yoga Prenatal</p>
                 <div className="text-left bg-white p-4 sm:p-6 md:p-8 border border-gray-200">
                   <p className="text-gray-700">
-                    Doula y educadora menstrual y perinatal dedicada a acompañar a mujeres en sus ciclos, 
-                    gestación y postparto con presencia, información clara y contención amorosa. Facilita 
-                    procesos de autoconocimiento a través de la educación menstrual, y en el parto ofrece 
-                    soporte emocional, físico y práctico para que cada mujer viva su experiencia desde la 
-                    seguridad, la autonomía y el respeto. Su enfoque integra escucha, rituales y una visión 
-                    profunda del cuerpo cíclico.
+                    Renata es doula, educadora menstrual y perinatal, y maestra de yoga prenatal. Acompaña a mujeres y familias en los procesos de gestación, parto, posparto y a lo largo del ciclo menstrual, desde un enfoque amoroso, informado y respetuoso. Su trabajo integra el cuerpo, la emoción y la conciencia, creando espacios seguros donde cada persona puede reconectar con su sabiduría interna y vivir sus procesos de manera plena, libre y sostenida.
                   </p>
                 </div>
               </div>
