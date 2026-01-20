@@ -38,7 +38,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             
             <Button 
               size="lg" 
-              className="rounded-full text-lg px-10 py-7 shadow-lg hover:shadow-xl transition-all hover:scale-105" 
+              className="rounded-full text-lg px-10 py-7 shadow-lg hover:shadow-2xl transition-all duration-200 hover:scale-110 active:scale-95 hover:-rotate-1" 
               style={{ backgroundColor: '#e8a77c' }}
               asChild
             >
@@ -189,7 +189,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
               size="lg" 
-              className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all" 
+              className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-200 hover:scale-110 active:scale-95 hover:rotate-1" 
               style={{ color: '#b8a8c4' }}
               asChild
             >
@@ -197,7 +197,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             </Button>
             <Button 
               size="lg" 
-              className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all" 
+              className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-200 hover:scale-110 active:scale-95 hover:-rotate-1" 
               style={{ color: '#b8a8c4' }}
               asChild
             >
