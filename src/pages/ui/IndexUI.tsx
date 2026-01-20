@@ -27,12 +27,12 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <span className="text-sm font-medium">Acompañamiento respetuoso</span>
             </div>
             
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 leading-[0.95] text-black">
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-8 leading-[0.9] text-black">
               Con presencia<br/>
-              y <span className="italic" style={{ color: '#e8a77c' }}>amor</span> ✨
+              y <span className="italic" style={{ color: '#e8a77c' }}>amor</span>
             </h1>
             
-            <p className="text-lg sm:text-xl mb-8 text-gray-700 max-w-lg leading-relaxed">
+            <p className="text-xl sm:text-2xl mb-10 text-gray-700 max-w-xl leading-relaxed">
               Doulas y educadoras dedicadas al acompañamiento de tu ciclo, embarazo y postparto
             </p>
             
