@@ -108,14 +108,18 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             </div>
           </div>
 
-          {/* Fotos de Partos */}
+          {/* Video y Foto de Partos */}
           <div className="mb-20">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="relative transform -rotate-2 hover:rotate-0 transition-transform duration-300">
-                <img 
-                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-wfa31xxksr.png"
-                  alt="Momento de parto acompañado"
+                <video 
+                  src="/videos/parto-latido.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="w-full h-[400px] md:h-[500px] object-cover rounded-[40px] shadow-2xl"
+                  aria-label="Video de momento de parto acompañado"
                 />
               </div>
               <div className="relative transform rotate-2 hover:rotate-0 transition-transform duration-300">
