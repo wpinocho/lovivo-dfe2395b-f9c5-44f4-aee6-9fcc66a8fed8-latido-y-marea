@@ -213,7 +213,7 @@ export const EcommerceTemplate = ({
 
           {/* Links */}
           <div>
-            <h3 className="font-semibold mb-6 text-white">Navegación</h3>
+            <h3 className="font-semibold mb-6 text-white tracking-wide">Navegación</h3>
             <div className="space-y-3">
               <Link 
                 to="/" 
@@ -250,7 +250,7 @@ export const EcommerceTemplate = ({
 
           {/* Contacto */}
           <div>
-            <h3 className="font-semibold mb-6 text-white">Contacto</h3>
+            <h3 className="font-semibold mb-6 text-white tracking-wide">Contacto</h3>
             <div className="space-y-3 text-white/80">
               <Link 
                 to="/contacto" 
