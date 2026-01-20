@@ -451,7 +451,7 @@ const ArmaTuMealPrep = () => {
         </div>
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-8 sm:py-12">
           <div className="text-white max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 sm:mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 sm:mb-6 text-white leading-tight tracking-wide">
               Arma tu Meal Prep
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-8 leading-relaxed">
@@ -464,7 +464,7 @@ const ArmaTuMealPrep = () => {
       {/* Intro */}
       <section className="py-8 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4 text-black tracking-wide">
             ¿Qué es Meal Prep?
           </h2>
           <p className="text-base sm:text-lg text-gray-700 mb-4">
@@ -479,7 +479,7 @@ const ArmaTuMealPrep = () => {
       {/* Cómo Funciona */}
       <section className="pb-8 sm:pb-16 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-8 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-8 text-black tracking-wide">
             ¿Cómo funciona?
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
@@ -537,7 +537,7 @@ const ArmaTuMealPrep = () => {
       {/* Formulario */}
       <section className="py-8 sm:py-16 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-8 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-8 text-black tracking-wide">
             Crea tu calendario
           </h2>
           <Card className="border border-gray-200">
@@ -681,21 +681,17 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-10 sm:py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <Card className="border-2 border-primary shadow-xl">
-            <CardContent className="p-6 sm:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black">
-                ¿Necesitas ayuda?
-              </h2>
-              <p className="text-base sm:text-lg mb-6 sm:mb-8 text-gray-700">
-                Contáctanos si tienes dudas sobre cómo armar tu calendario
-              </p>
-              <Button size="lg" asChild>
-                <a href="/contacto">Contáctanos</a>
-              </Button>
-            </CardContent>
-          </Card>
+      <section className="py-24 text-white" style={{ backgroundColor: '#b8a8c4' }}>
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white tracking-wide">
+            ¿Necesitas ayuda?
+          </h2>
+          <p className="text-lg mb-8 text-white/90">
+            Contáctanos si tienes dudas sobre cómo armar tu calendario
+          </p>
+          <Button size="lg" className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all" style={{ color: '#b8a8c4' }} asChild>
+            <a href="/contacto">Contáctanos</a>
+          </Button>
         </div>
       </section>
     </EcommerceTemplate>

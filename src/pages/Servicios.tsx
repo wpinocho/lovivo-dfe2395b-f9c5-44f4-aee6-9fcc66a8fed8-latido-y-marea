@@ -92,7 +92,7 @@ const Servicios = () => {
       {/* Hero Section */}
       <section className="relative bg-white py-24 border-b border-gray-200">
         <div className="w-full px-8 md:px-12 lg:px-16 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black mb-4 sm:mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black mb-4 sm:mb-6 tracking-wide">
             Nuestros Servicios
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
@@ -149,7 +149,7 @@ const Servicios = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-white" style={{ backgroundColor: '#b8a8c4' }}>
+      <section className="py-24 text-white" style={{ backgroundColor: '#b8a8c4' }}>
         <div className="w-full px-8 md:px-12 lg:px-16 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white">
             ¿Interesada en nuestros servicios?

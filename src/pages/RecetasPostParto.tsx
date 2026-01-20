@@ -1,6 +1,7 @@
 import { EcommerceTemplate } from '@/templates/EcommerceTemplate';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Clock, Users, Flame } from 'lucide-react';
 
 const recetas = [
@@ -78,7 +79,7 @@ const RecetasPostParto = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary/10 to-accent/10 py-16">
         <div className="w-full px-8 md:px-12 lg:px-16 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-wide">
             Recetas Post Parto
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -162,20 +163,17 @@ const RecetasPostParto = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16" style={{ backgroundColor: '#b8a8c4' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-white">
+      <section className="py-24" style={{ backgroundColor: '#b8a8c4' }}>
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white tracking-wide">
             ¿Quieres recibir estas recetas en tu puerta?
           </h2>
           <p className="text-lg text-white/90 mb-8">
             Organiza tu meal prep y recibe comidas preparadas con estas recetas nutritivas
           </p>
-          <a 
-            href="/arma-tu-meal-prep"
-            className="inline-flex items-center justify-center rounded-md bg-primary text-white px-8 py-3 text-lg font-medium hover:bg-primary/90 transition-colors"
-          >
-            Arma tu plan ahora
-          </a>
+          <Button size="lg" className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all" style={{ color: '#b8a8c4' }} asChild>
+            <a href="/arma-tu-meal-prep">Arma tu plan ahora</a>
+          </Button>
         </div>
       </section>
     </EcommerceTemplate>

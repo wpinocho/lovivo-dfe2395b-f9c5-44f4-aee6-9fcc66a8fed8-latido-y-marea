@@ -59,7 +59,7 @@ const PideTuComida = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary/10 to-accent/10 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-wide">
             Pide tu Comida
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -120,7 +120,7 @@ const PideTuComida = () => {
       {/* Como Funciona */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">¿Cómo funciona?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 tracking-wide">¿Cómo funciona?</h2>
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -169,7 +169,7 @@ const PideTuComida = () => {
       {/* Beneficios */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">¿Por qué elegirnos?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 tracking-wide">¿Por qué elegirnos?</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
@@ -216,19 +216,19 @@ const PideTuComida = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16" style={{ backgroundColor: '#b8a8c4' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-white">
+      <section className="py-24" style={{ backgroundColor: '#b8a8c4' }}>
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white tracking-wide">
             ¿Prefieres un plan personalizado?
           </h2>
           <p className="text-lg text-white/90 mb-8">
             Agenda una consulta gratuita y diseñamos el plan perfecto para ti
           </p>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button size="lg" className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all" style={{ color: '#b8a8c4' }} asChild>
               <a href="/contacto">Contáctanos</a>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all" style={{ color: '#b8a8c4' }} asChild>
               <a href="/arma-tu-meal-prep">Ver Meal Prep</a>
             </Button>
           </div>

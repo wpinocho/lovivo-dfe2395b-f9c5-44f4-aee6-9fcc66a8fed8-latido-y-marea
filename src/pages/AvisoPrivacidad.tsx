@@ -6,7 +6,7 @@ const AvisoPrivacidad = () => {
       {/* Hero Section */}
       <section className="relative bg-white py-12 border-b border-gray-200">
         <div className="w-full px-8 md:px-12 lg:px-16 text-center max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-semibold text-black mb-4">
+          <h1 className="text-4xl md:text-5xl font-semibold text-black mb-4 tracking-wide">
             Aviso de Privacidad
           </h1>
           <p className="text-lg text-gray-700">
@@ -22,7 +22,7 @@ const AvisoPrivacidad = () => {
             
             {/* Identidad y Domicilio */}
             <div>
-              <h2 className="text-2xl font-semibold text-black mb-4">Identidad y Domicilio del Responsable</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Identidad y Domicilio del Responsable</h2>
               <p className="text-gray-700">
                 <strong>Latido y Marea</strong>, con domicilio en Ciudad de México, México, es responsable del uso y protección de sus datos personales, en cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).
               </p>
@@ -30,7 +30,7 @@ const AvisoPrivacidad = () => {
 
             {/* Datos Personales */}
             <div>
-              <h2 className="text-2xl font-semibold text-black mb-4">Datos Personales que Recabamos</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Datos Personales que Recabamos</h2>
               <p className="text-gray-700 mb-3">
                 Para las finalidades señaladas en el presente aviso de privacidad, podemos recabar sus datos personales de las siguientes formas:
               </p>
@@ -54,7 +54,7 @@ const AvisoPrivacidad = () => {
 
             {/* Finalidades */}
             <div>
-              <h2 className="text-2xl font-semibold text-black mb-4">Finalidades del Tratamiento de Datos</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Finalidades del Tratamiento de Datos</h2>
               <p className="text-gray-700 mb-3">
                 Sus datos personales serán utilizados para las siguientes finalidades principales:
               </p>
@@ -95,7 +95,7 @@ const AvisoPrivacidad = () => {
 
             {/* Opciones y Derechos ARCO */}
             <div>
-              <h2 className="text-2xl font-semibold text-black mb-4">Derechos ARCO</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Derechos ARCO</h2>
               <p className="text-gray-700 mb-3">
                 Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos 
                 y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección 
@@ -112,7 +112,7 @@ const AvisoPrivacidad = () => {
 
             {/* Revocación del Consentimiento */}
             <div>
-              <h2 className="text-2xl font-semibold text-black mb-4">Revocación del Consentimiento</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Revocación del Consentimiento</h2>
               <p className="text-gray-700">
                 Usted puede revocar el consentimiento que, en su caso, nos haya otorgado para el tratamiento de sus 
                 datos personales. Sin embargo, es importante que tenga en cuenta que no en todos los casos podremos 
@@ -123,7 +123,7 @@ const AvisoPrivacidad = () => {
 
             {/* Limitación de Uso y Divulgación */}
             <div>
-              <h2 className="text-2xl font-semibold text-black mb-4">Limitación de Uso y Divulgación de Datos</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Limitación de Uso y Divulgación de Datos</h2>
               <p className="text-gray-700">
                 Si desea limitar el uso o divulgación de sus datos personales, puede solicitarlo enviando un correo a 
                 <strong> contacto@latidoymarea.com</strong>. En caso de que su solicitud sea procedente, se registrará 
@@ -133,7 +133,7 @@ const AvisoPrivacidad = () => {
 
             {/* Transferencias */}
             <div>
-              <h2 className="text-2xl font-semibold text-black mb-4">Transferencia de Datos Personales</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Transferencia de Datos Personales</h2>
               <p className="text-gray-700">
                 Le informamos que sus datos personales pueden ser compartidos dentro del país con las siguientes personas, 
                 empresas, organizaciones o autoridades distintas a nosotros, para los siguientes fines:
@@ -150,7 +150,7 @@ const AvisoPrivacidad = () => {
 
             {/* Cookies */}
             <div>
-              <h2 className="text-2xl font-semibold text-black mb-4">Uso de Cookies y Tecnologías Similares</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Uso de Cookies y Tecnologías Similares</h2>
               <p className="text-gray-700">
                 Le informamos que en nuestra página web utilizamos cookies y otras tecnologías para mejorar su experiencia 
                 de navegación, analizar el tráfico del sitio y personalizar el contenido. Puede configurar su navegador 
@@ -160,7 +160,7 @@ const AvisoPrivacidad = () => {
 
             {/* Cambios al Aviso */}
             <div>
-              <h2 className="text-2xl font-semibold text-black mb-4">Modificaciones al Aviso de Privacidad</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Modificaciones al Aviso de Privacidad</h2>
               <p className="text-gray-700">
                 Nos reservamos el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente 
                 aviso de privacidad. Estas modificaciones estarán disponibles a través de nuestra página web, en la sección 
@@ -170,7 +170,7 @@ const AvisoPrivacidad = () => {
 
             {/* Contacto */}
             <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mt-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Contacto</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4 tracking-wide">Contacto</h2>
               <p className="text-gray-700 mb-4">
                 Si tiene alguna duda o comentario sobre este aviso de privacidad, puede contactarnos a través de:
               </p>

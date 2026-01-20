@@ -45,7 +45,7 @@ const EducacionMenstrual = () => {
         </div>
         <div className="relative h-full w-full px-8 md:px-12 lg:px-16 flex items-center">
           <div className="text-white max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-white">
+            <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-white tracking-wide">
               Educación Menstrual
             </h1>
             <p className="text-lg md:text-xl mb-8">
@@ -61,7 +61,7 @@ const EducacionMenstrual = () => {
       {/* Qué es */}
       <section className="py-20 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-black">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-black tracking-wide">
             ¿Qué es la Educación Menstrual?
           </h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -81,7 +81,7 @@ const EducacionMenstrual = () => {
       {/* Fases del Ciclo */}
       <section className="py-20 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
+          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black tracking-wide">
             Las 4 Fases del Ciclo Menstrual
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -107,7 +107,7 @@ const EducacionMenstrual = () => {
       {/* Modalidades */}
       <section className="py-20 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
+          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black tracking-wide">
             Modalidades
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -163,7 +163,7 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-white" style={{ backgroundColor: '#b8a8c4' }}>
+      <section className="py-24 text-white" style={{ backgroundColor: '#b8a8c4' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white">
             ¿Lista para reconectar con tu ciclo?

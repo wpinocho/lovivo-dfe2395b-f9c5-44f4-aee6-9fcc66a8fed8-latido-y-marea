@@ -18,7 +18,7 @@ const AcompanamientoParto = () => {
         </div>
         <div className="relative h-full w-full px-8 md:px-12 lg:px-16 flex items-center py-12">
           <div className="text-white max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-white leading-tight tracking-wide">
               Acompañamiento de Parto
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 leading-relaxed">
@@ -34,7 +34,7 @@ const AcompanamientoParto = () => {
       {/* Qué es una Doula */}
       <section className="py-20 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black tracking-wide">
             ¿Qué es una Doula?
           </h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -52,7 +52,7 @@ const AcompanamientoParto = () => {
       {/* Beneficios */}
       <section className="py-20 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black tracking-wide">
             Beneficios del Acompañamiento de una Doula
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -79,7 +79,7 @@ const AcompanamientoParto = () => {
       {/* Etapas del Acompañamiento */}
       <section className="py-20 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black tracking-wide">
             Etapas del Acompañamiento
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -129,7 +129,7 @@ const AcompanamientoParto = () => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-primary mb-6">
               <Brain className="h-10 w-10 text-white" />
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black tracking-wide">
               Acompañamiento Emocional Perinatal
             </h2>
             <p className="text-lg text-gray-700 mb-6">
@@ -209,7 +209,7 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-white" style={{ backgroundColor: '#b8a8c4' }}>
+      <section className="py-24 text-white" style={{ backgroundColor: '#b8a8c4' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white">
             ¿Lista para vivir tu parto acompañada?
