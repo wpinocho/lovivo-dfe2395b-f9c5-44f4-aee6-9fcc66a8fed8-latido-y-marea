@@ -12,7 +12,7 @@ const fases = [
   },
   {
     icon: Sunrise,
-    fase: 'Preovulatoria',
+    fase: 'Fase Folicular',
     descripcion: 'Fase de renovación y energía',
     caracteristicas: 'Momento de iniciar proyectos y socializar'
   },
@@ -24,7 +24,7 @@ const fases = [
   },
   {
     icon: Sunset,
-    fase: 'Premenstrual',
+    fase: 'Fase Lútea',
     descripcion: 'Fase de evaluación y creatividad',
     caracteristicas: 'Momento de organizar y preparar el descanso'
   }
