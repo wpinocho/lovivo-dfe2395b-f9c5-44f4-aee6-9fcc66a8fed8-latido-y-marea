@@ -90,14 +90,14 @@ const servicios = [
     titulo: 'Terapia Placentaria',
     descripcion: 'Encapsulación de placenta para tu bienestar postparto',
     incluye: [
-      'Recolección y preparación segura',
-      'Encapsulación profesional',
-      'Apoyo hormonal natural',
-      'Aumento de energía y lactancia',
-      'Recuperación postparto acelerada',
+      'Cápsulas',
+      'Tintura',
+      'Cordón disecado',
+      'Membranas disecadas',
+      'Impresión',
       'Instrucciones de consumo personalizadas'
     ],
-    imagen: '/terapia-placentaria.jpg'
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768947102460-ozt4li5q40r.png'
   },
   {
     icono: Heart,
@@ -111,7 +111,7 @@ const servicios = [
       'Celebración del nacimiento',
       'Creación de recuerdos significativos'
     ],
-    imagen: '/baby-blessing.jpg'
+    imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768947102464-0mi1ic77qk4.jpg'
   }
 ];
 
