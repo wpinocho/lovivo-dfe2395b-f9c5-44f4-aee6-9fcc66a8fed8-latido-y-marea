@@ -203,7 +203,7 @@ export const EcommerceTemplate = ({
                 alt="Latido y Marea"
                 className="h-16 w-16 object-contain"
               />
-              <span className="text-xl font-semibold">Latido y Marea</span>
+              <span className="text-xl font-display">Latido y Marea</span>
             </div>
             <p className="text-white/80 mb-6">
               Doulas y educadoras dedicadas a acompañar tu ciclo, embarazo y 
