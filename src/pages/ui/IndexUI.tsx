@@ -112,17 +112,11 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           <div className="mb-20">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="relative transform -rotate-2 hover:rotate-0 transition-transform duration-300">
-                <video 
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                <img 
+                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768942156359-o400uv0u3ym.png"
+                  alt="Doula acompañando durante el trabajo de parto"
                   className="w-full h-[400px] md:h-[500px] object-cover rounded-[40px] shadow-2xl"
-                  aria-label="Video de momento de parto acompañado"
-                >
-                  <source src="https://drive.google.com/uc?export=download&id=1AgepXM0EGTCaYxxXY7n68MrrEvFMTgcV" type="video/mp4" />
-                  Tu navegador no soporta videos HTML5
-                </video>
+                />
               </div>
               <div className="relative transform rotate-2 hover:rotate-0 transition-transform duration-300">
                 <img 
