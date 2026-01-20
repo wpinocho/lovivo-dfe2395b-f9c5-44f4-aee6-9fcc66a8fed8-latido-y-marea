@@ -52,7 +52,8 @@ const servicios = [
       'Apoyo en lactancia',
       'Escucha y contención emocional',
       'Rituales de cierre',
-      'Red de apoyo y recursos'
+      'Red de apoyo y recursos',
+      'Orientación para la organización de actividades, tareas, quehaceres y gestión de apoyos'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768845283480-wzh6om1bf5h.png'
   },

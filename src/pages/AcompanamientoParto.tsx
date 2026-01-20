@@ -115,8 +115,9 @@ const AcompanamientoParto = () => {
               <h3 className="text-xl font-semibold mb-3 text-white">Postparto</h3>
               <p className="text-white">
                 Visita postparto para integrar la experiencia del parto, resolver 
-                dudas sobre lactancia y cuidados del bebé, y ofrecer contención 
-                emocional en esta nueva etapa.
+                dudas sobre lactancia y cuidados del bebé, ofrecer contención 
+                emocional en esta nueva etapa, y orientación para la organización 
+                de actividades, tareas, quehaceres y gestión de apoyos.
               </p>
             </div>
           </div>
