@@ -42,9 +42,9 @@ const AcompanamientoParto = () => {
             brindando apoyo emocional, físico e informativo de manera continua y respetuosa.
           </p>
           <p className="text-lg text-gray-700">
-            No reemplazamos al personal médico, sino que complementamos su labor ofreciendo 
-            presencia amorosa, técnicas de confort, información clara y contención para que 
-            vivas tu parto desde la seguridad, el empoderamiento y la confianza en tu cuerpo.
+            No reemplazamos al equipo médico, equipo de parteras, equipo paramédico, complementamos tu parto 
+            ofreciendo presencia amorosa, técnicas de confort, información clara y contención para que 
+            vivas tu parto desde la seguridad, el placer, y la confianza en tu cuerpo y sus poderosas capacidades.
           </p>
         </div>
       </section>
@@ -61,16 +61,20 @@ const AcompanamientoParto = () => {
               <p className="text-gray-700">Menor probabilidad de cesárea, fórceps o epidural</p>
             </div>
             <div className="border-l-4 border-primary pl-6">
-              <h3 className="font-semibold text-lg mb-2 text-black">Partos más cortos</h3>
-              <p className="text-gray-700">El apoyo continuo acorta el tiempo del trabajo de parto</p>
+              <h3 className="font-semibold text-lg mb-2 text-black">Respeto al tiempo de tu parto fisiológico</h3>
+              <p className="text-gray-700">Sosteniéndote en todo momento</p>
             </div>
             <div className="border-l-4 border-primary pl-6">
               <h3 className="font-semibold text-lg mb-2 text-black">Mayor satisfacción</h3>
               <p className="text-gray-700">Las mujeres reportan experiencias más positivas</p>
             </div>
             <div className="border-l-4 border-primary pl-6">
-              <h3 className="font-semibold text-lg mb-2 text-black">Empoderamiento</h3>
+              <h3 className="font-semibold text-lg mb-2 text-black">Plenitud en tu proceso</h3>
               <p className="text-gray-700">Te sentirás más segura y en control de tu parto</p>
+            </div>
+            <div className="border-l-4 border-primary pl-6">
+              <h3 className="font-semibold text-lg mb-2 text-black">Acompañamiento en cesáreas</h3>
+              <p className="text-gray-700">También te acompañamos si tu parto es por cesárea, brindando presencia y contención</p>
             </div>
           </div>
         </div>
