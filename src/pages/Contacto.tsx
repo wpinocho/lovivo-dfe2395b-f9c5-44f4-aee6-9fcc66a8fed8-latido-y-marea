@@ -27,7 +27,7 @@ const Contacto = () => {
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
       <section className="relative bg-white py-20 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black mb-4 sm:mb-6">
             Contáctanos
           </h1>
@@ -39,7 +39,7 @@ const Contacto = () => {
 
       {/* Contacto Grid */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Información de Contacto */}
             <div>

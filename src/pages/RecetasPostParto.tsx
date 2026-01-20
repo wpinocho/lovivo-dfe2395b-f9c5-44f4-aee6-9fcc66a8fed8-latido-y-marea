@@ -77,7 +77,7 @@ const RecetasPostParto = () => {
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary/10 to-accent/10 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Recetas Post Parto
           </h1>
@@ -90,7 +90,7 @@ const RecetasPostParto = () => {
 
       {/* Filtros */}
       <section className="py-8 bg-background border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16">
           <div className="flex flex-wrap gap-3 justify-center">
             <Badge variant="outline" className="cursor-pointer hover:bg-primary hover:text-white transition-colors">
               Todas
@@ -116,7 +116,7 @@ const RecetasPostParto = () => {
 
       {/* Recetas Grid */}
       <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recetas.map((receta) => (
               <Card key={receta.id} className="overflow-hidden hover:shadow-lg transition-shadow">

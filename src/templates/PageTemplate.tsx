@@ -28,7 +28,7 @@ export const PageTemplate = ({
   layout = 'default'
 }: PageTemplateProps) => {
   const layoutClasses = {
-    'default': 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
+    'default': 'w-full',
     'full-width': 'w-full',
     'sidebar-left': 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 gap-8',
     'sidebar-right': 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 gap-8',
@@ -83,7 +83,7 @@ export const PageTemplate = ({
         </header>
       )}
       
-      <div className="flex-1 py-6">
+      <div className="flex-1">
         {renderContent()}
       </div>
 

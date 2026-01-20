@@ -5,7 +5,7 @@ const AvisoPrivacidad = () => {
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
       <section className="relative bg-white py-12 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-semibold text-black mb-4">
             Aviso de Privacidad
           </h1>

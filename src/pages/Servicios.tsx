@@ -91,7 +91,7 @@ const Servicios = () => {
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
       <section className="relative bg-white py-24 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black mb-4 sm:mb-6">
             Nuestros Servicios
           </h1>
@@ -103,7 +103,7 @@ const Servicios = () => {
 
       {/* Servicios Grid */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16">
           <div className="grid md:grid-cols-2 gap-8">
             {servicios.map((servicio, idx) => {
               const Icono = servicio.icono;
@@ -150,7 +150,7 @@ const Servicios = () => {
 
       {/* CTA */}
       <section className="py-20 text-white" style={{ backgroundColor: '#b8a8c4' }}>
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white">
             ¿Interesada en nuestros servicios?
           </h2>

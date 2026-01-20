@@ -19,7 +19,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       <section className="relative min-h-[500px] h-[80vh] overflow-hidden bg-gradient-to-br from-[#fef5f0] to-[#f5f0f8]">
         <DecorativeShapes variant="hero" />
         
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 items-center py-12">
+        <div className="relative h-full w-full px-8 md:px-12 lg:px-16 grid md:grid-cols-2 gap-8 items-center py-12">
           {/* Left - Text */}
           <div className="z-10">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-sm">
@@ -63,7 +63,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       <section className="py-20 bg-white relative overflow-hidden">
         <DecorativeShapes variant="section" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-8 md:px-12 lg:px-16 relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-black mb-6">
               Sobre <span className="italic" style={{ color: '#b8a8c4' }}>Latido y Marea</span>
@@ -179,7 +179,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#b8a8c4' }}>
         <DecorativeShapes variant="subtle" />
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center relative z-10">
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl mb-6 text-white leading-tight">
             ¿Lista para comenzar tu <span className="italic">acompañamiento?</span>
           </h2>
@@ -209,7 +209,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
       {/* Espacio Seguro */}
       <section className="py-16 bg-gradient-to-br from-white to-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full px-8 md:px-12 lg:px-16 text-center">
           <div className="inline-block bg-white rounded-full px-8 py-4 shadow-lg">
             <h2 className="font-display text-xl sm:text-2xl text-black italic">
               Espacio Seguro 🏳️‍🌈

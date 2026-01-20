@@ -119,7 +119,7 @@ const ArmaTuMealPrep = () => {
       <EcommerceTemplate showCart={false}>
         {/* Hero del Calendario */}
         <section className="py-16" style={{ backgroundColor: '#b8a8c4' }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-8 md:px-12 lg:px-16">
             <div className="text-center mb-8">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 text-black">
                 ¡Tu calendario está listo! 🎉
@@ -153,7 +153,7 @@ const ArmaTuMealPrep = () => {
 
         {/* Información del calendario */}
         <section className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-8 md:px-12 lg:px-16">
             <Card className="mb-8 border border-gray-200">
               <CardContent className="p-6">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-black">Información del Calendario</h2>
@@ -478,7 +478,7 @@ const ArmaTuMealPrep = () => {
 
       {/* Cómo Funciona */}
       <section className="pb-8 sm:pb-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-8 text-black">
             ¿Cómo funciona?
           </h2>
@@ -636,7 +636,7 @@ const ArmaTuMealPrep = () => {
 
       {/* Beneficios */}
       <section className="py-8 sm:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-10 text-black">
             Beneficios
           </h2>

@@ -16,7 +16,7 @@ const AcompanamientoParto = () => {
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-12">
+        <div className="relative h-full w-full px-8 md:px-12 lg:px-16 flex items-center py-12">
           <div className="text-white max-w-2xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-white leading-tight">
               Acompañamiento de Parto
@@ -33,7 +33,7 @@ const AcompanamientoParto = () => {
 
       {/* Qué es una Doula */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black">
             ¿Qué es una Doula?
           </h2>
@@ -51,7 +51,7 @@ const AcompanamientoParto = () => {
 
       {/* Beneficios */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
             Beneficios del Acompañamiento de una Doula
           </h2>
@@ -78,7 +78,7 @@ const AcompanamientoParto = () => {
 
       {/* Etapas del Acompañamiento */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black">
             Etapas del Acompañamiento
           </h2>
@@ -124,7 +124,7 @@ const AcompanamientoParto = () => {
 
       {/* Acompañamiento Emocional */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-primary mb-6">
               <Brain className="h-10 w-10 text-white" />

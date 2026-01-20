@@ -43,7 +43,7 @@ const EducacionMenstrual = () => {
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        <div className="relative h-full w-full px-8 md:px-12 lg:px-16 flex items-center">
           <div className="text-white max-w-2xl">
             <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-white">
               Educación Menstrual
@@ -60,7 +60,7 @@ const EducacionMenstrual = () => {
 
       {/* Qué es */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-black">
             ¿Qué es la Educación Menstrual?
           </h2>
@@ -80,7 +80,7 @@ const EducacionMenstrual = () => {
 
       {/* Fases del Ciclo */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
             Las 4 Fases del Ciclo Menstrual
           </h2>
@@ -106,7 +106,7 @@ const EducacionMenstrual = () => {
 
       {/* Modalidades */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-8 md:px-12 lg:px-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black">
             Modalidades
           </h2>
