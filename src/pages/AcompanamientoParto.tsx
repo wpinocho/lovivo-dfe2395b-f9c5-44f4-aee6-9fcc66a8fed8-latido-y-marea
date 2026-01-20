@@ -103,7 +103,8 @@ const AcompanamientoParto = () => {
               <p className="text-white">
                 Presencia continua desde el trabajo de parto hasta el nacimiento. 
                 Apoyo físico con masajes y posturas, apoyo emocional constante y 
-                recordatorios de tu poder y sabiduría corporal.
+                recordatorios de tu poder y sabiduría corporal. Conexión con tu pareja, 
+                familia o acompañantes/as que tú elijas. Soporte y atención a tu tribu.
               </p>
             </div>
 
