@@ -1,6 +1,7 @@
 import { EcommerceTemplate } from '@/templates/EcommerceTemplate';
 import { Button } from '@/components/ui/button';
-import { Heart, Leaf, Users } from 'lucide-react';
+import { Heart, Leaf, Users, Sparkles } from 'lucide-react';
+import { DecorativeShapes } from '@/components/DecorativeShapes';
 import type { UseIndexLogicReturn } from '@/components/headless/HeadlessIndex';
 
 /**
@@ -15,38 +16,59 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
   return (
     <EcommerceTemplate showCart={false}>
       {/* Hero Section */}
-      <section className="relative min-h-[500px] h-[600px] overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360979-e1ujhdhn2kl.png"
-            alt="Acompañamiento de parto con doula"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center py-16">
-          <div className="text-white max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-6 text-white leading-tight">
-              Acompañamiento con presencia y amor
+      <section className="relative min-h-[500px] h-[80vh] overflow-hidden bg-gradient-to-br from-[#fef5f0] to-[#f5f0f8]">
+        <DecorativeShapes variant="hero" />
+        
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 items-center py-12">
+          {/* Left - Text */}
+          <div className="z-10">
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-sm">
+              <Sparkles className="h-4 w-4" style={{ color: '#e8a77c' }} />
+              <span className="text-sm font-medium">Acompañamiento respetuoso</span>
+            </div>
+            
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 leading-[0.95] text-black">
+              Con presencia<br/>
+              y <span className="italic" style={{ color: '#e8a77c' }}>amor</span> ✨
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 leading-relaxed">
-              Doulas y educadoras dedicadas al acompañamiento respetuoso de tu ciclo, embarazo y postparto
+            
+            <p className="text-lg sm:text-xl mb-8 text-gray-700 max-w-lg leading-relaxed">
+              Doulas y educadoras dedicadas al acompañamiento de tu ciclo, embarazo y postparto
             </p>
-            <Button size="lg" className="bg-white text-black hover:bg-gray-100 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6" asChild>
-              <a href="/servicios">Conoce nuestros servicios</a>
+            
+            <Button 
+              size="lg" 
+              className="rounded-full text-lg px-10 py-7 shadow-lg hover:shadow-xl transition-all hover:scale-105" 
+              style={{ backgroundColor: '#e8a77c' }}
+              asChild
+            >
+              <a href="/servicios">Descubre nuestros servicios</a>
             </Button>
+          </div>
+
+          {/* Right - Image */}
+          <div className="relative z-10 hidden md:block">
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
+              <img 
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360979-e1ujhdhn2kl.png"
+                alt="Acompañamiento de parto con doula"
+                className="w-full h-[600px] object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Sobre Nosotros */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <DecorativeShapes variant="section" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black mb-4 sm:mb-6">
-              Sobre Latido y Marea
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-black mb-6">
+              Sobre <span className="italic" style={{ color: '#b8a8c4' }}>Latido y Marea</span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Somos un equipo de doulas y educadoras dedicadas a acompañar a mujeres y personas gestantes 
               en sus ciclos, embarazo y postparto con presencia, información clara y contención amorosa. 
               Facilitamos procesos de autoconocimiento a través de la educación menstrual, y en el parto 
@@ -57,30 +79,30 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
           {/* Valores */}
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <div className="text-center p-8 border border-gray-200 hover:border-primary transition-all" style={{ backgroundColor: '#b8a8c4' }}>
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white mb-6 rounded-full">
-                <Heart className="h-8 w-8" style={{ color: '#b8a8c4' }} />
+            <div className="text-center p-10 rounded-[40px] shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300" style={{ backgroundColor: '#b8a8c4' }}>
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white mb-6 rounded-full shadow-lg">
+                <Heart className="h-10 w-10" style={{ color: '#b8a8c4' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Presencia</h3>
-              <p className="text-white">
+              <h3 className="font-display text-2xl mb-3 text-white">Presencia</h3>
+              <p className="text-white/90 leading-relaxed">
                 Acompañamiento consciente en cada etapa de tu proceso
               </p>
             </div>
-            <div className="text-center p-8 border border-gray-200 hover:border-primary transition-all" style={{ backgroundColor: '#b8a8c4' }}>
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white mb-6 rounded-full">
-                <Leaf className="h-8 w-8" style={{ color: '#b8a8c4' }} />
+            <div className="text-center p-10 rounded-[40px] shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300" style={{ backgroundColor: '#e8a77c' }}>
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white mb-6 rounded-full shadow-lg">
+                <Leaf className="h-10 w-10" style={{ color: '#e8a77c' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Autoconocimiento</h3>
-              <p className="text-white">
+              <h3 className="font-display text-2xl mb-3 text-white">Autoconocimiento</h3>
+              <p className="text-white/90 leading-relaxed">
                 Educación menstrual para conectar con tu cuerpo cíclico
               </p>
             </div>
-            <div className="text-center p-8 border border-gray-200 hover:border-primary transition-all" style={{ backgroundColor: '#b8a8c4' }}>
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white mb-6 rounded-full">
-                <Users className="h-8 w-8" style={{ color: '#b8a8c4' }} />
+            <div className="text-center p-10 rounded-[40px] shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300" style={{ backgroundColor: '#b8a8c4' }}>
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white mb-6 rounded-full shadow-lg">
+                <Users className="h-10 w-10" style={{ color: '#b8a8c4' }} />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Respeto</h3>
-              <p className="text-white">
+              <h3 className="font-display text-2xl mb-3 text-white">Respeto</h3>
+              <p className="text-white/90 leading-relaxed">
                 Honramos tu autonomía y sabiduría corporal
               </p>
             </div>
@@ -88,37 +110,43 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
           {/* Fotos de Partos */}
           <div className="mb-20">
-            <div className="grid md:grid-cols-2 gap-4">
-              <img 
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-wfa31xxksr.png"
-                alt="Momento de parto acompañado"
-                className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded"
-              />
-              <img 
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-tyqtkdgb67g.png"
-                alt="Familia postparto"
-                className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded"
-              />
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="relative transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                <img 
+                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-wfa31xxksr.png"
+                  alt="Momento de parto acompañado"
+                  className="w-full h-[400px] md:h-[500px] object-cover rounded-[40px] shadow-2xl"
+                />
+              </div>
+              <div className="relative transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                <img 
+                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360980-tyqtkdgb67g.png"
+                  alt="Familia postparto"
+                  className="w-full h-[400px] md:h-[500px] object-cover rounded-[40px] shadow-2xl"
+                />
+              </div>
             </div>
           </div>
 
           {/* Nuestro Equipo */}
           <div className="mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12 sm:mb-16 text-black">Nuestro Equipo</h2>
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-center mb-16 text-black">
+              Nuestro <span className="italic" style={{ color: '#e8a77c' }}>Equipo</span>
+            </h2>
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               {/* Renata */}
               <div className="text-center">
-                <div className="mb-6 overflow-hidden">
+                <div className="mb-6 overflow-hidden rounded-[40px] shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img 
                     src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781183-2ajqkl4l3ag.png"
                     alt="Renata - Doula y Educadora Menstrual"
-                    className="w-full h-64 sm:h-80 md:h-96 object-cover"
+                    className="w-full h-80 md:h-96 object-cover"
                   />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-black">Renata</h3>
-                <p className="text-sm sm:text-base text-black font-medium mb-4">Doula, Educadora Menstrual y Perinatal & Maestra de Yoga Prenatal</p>
-                <div className="text-left bg-white p-4 sm:p-6 md:p-8 border border-gray-200">
-                  <p className="text-gray-700">
+                <h3 className="font-display text-2xl sm:text-3xl mb-2 text-black">Renata</h3>
+                <p className="text-sm sm:text-base text-gray-600 font-medium mb-4">Doula, Educadora Menstrual y Perinatal & Maestra de Yoga Prenatal</p>
+                <div className="text-left bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-[30px] shadow-lg">
+                  <p className="text-gray-700 leading-relaxed">
                     Renata es doula, educadora menstrual y perinatal, y maestra de yoga prenatal. Acompaña a mujeres y familias en los procesos de gestación, parto, posparto y a lo largo del ciclo menstrual, desde un enfoque amoroso, informado y respetuoso. Su trabajo integra el cuerpo, la emoción y la conciencia, creando espacios seguros donde cada persona puede reconectar con su sabiduría interna y vivir sus procesos de manera plena, libre y sostenida.
                   </p>
                 </div>
@@ -126,17 +154,17 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
               {/* Alejandra */}
               <div className="text-center">
-                <div className="mb-6 overflow-hidden">
+                <div className="mb-6 overflow-hidden rounded-[40px] shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img 
                     src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781182-dnolm4ta4vo.png"
                     alt="Alejandra - Psicóloga y Doula"
-                    className="w-full h-64 sm:h-80 md:h-96 object-cover"
+                    className="w-full h-80 md:h-96 object-cover"
                   />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-black">Alejandra</h3>
-                <p className="text-sm sm:text-base text-black font-medium mb-4">Psicóloga & Doula</p>
-                <div className="text-left bg-white p-4 sm:p-6 md:p-8 border border-gray-200">
-                  <p className="text-gray-700">
+                <h3 className="font-display text-2xl sm:text-3xl mb-2 text-black">Alejandra</h3>
+                <p className="text-sm sm:text-base text-gray-600 font-medium mb-4">Psicóloga & Doula</p>
+                <div className="text-left bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-[30px] shadow-lg">
+                  <p className="text-gray-700 leading-relaxed">
                     Psicóloga y doula certificada. Ofrece acompañamiento emocional especializado 
                     en procesos perinatales. (Más información próximamente)
                   </p>
@@ -149,18 +177,30 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
       {/* CTA Final */}
       <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#b8a8c4' }}>
+        <DecorativeShapes variant="subtle" />
+        
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-white">
-            ¿Lista para comenzar tu acompañamiento?
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl mb-6 text-white leading-tight">
+            ¿Lista para comenzar tu <span className="italic">acompañamiento?</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-10">
+          <p className="text-lg sm:text-xl text-white/90 mb-10 leading-relaxed">
             Estamos aquí para acompañarte con presencia, información clara y contención amorosa
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="text-lg px-10 py-6 bg-white text-primary hover:bg-gray-100" asChild>
+            <Button 
+              size="lg" 
+              className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all" 
+              style={{ color: '#b8a8c4' }}
+              asChild
+            >
               <a href="/contacto">Contáctanos</a>
             </Button>
-            <Button size="lg" className="text-lg px-10 py-6 bg-white text-primary hover:bg-gray-100" asChild>
+            <Button 
+              size="lg" 
+              className="rounded-full text-lg px-12 py-7 bg-white hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all" 
+              style={{ color: '#b8a8c4' }}
+              asChild
+            >
               <a href="/servicios">Nuestros servicios</a>
             </Button>
           </div>
@@ -168,11 +208,13 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       </section>
 
       {/* Espacio Seguro */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-white to-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xl sm:text-2xl font-medium text-black italic">
-            Espacio Seguro 🏳️‍🌈
-          </h2>
+          <div className="inline-block bg-white rounded-full px-8 py-4 shadow-lg">
+            <h2 className="font-display text-xl sm:text-2xl text-black italic">
+              Espacio Seguro 🏳️‍🌈
+            </h2>
+          </div>
         </div>
       </section>
     </EcommerceTemplate>

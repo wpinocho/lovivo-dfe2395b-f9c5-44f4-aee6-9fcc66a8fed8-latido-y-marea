@@ -47,7 +47,7 @@ export const EcommerceTemplate = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const header = (
-    <div className={`py-2 border-b border-white/20 ${headerClassName}`} style={{ backgroundColor: '#e8a77c' }}>
+    <div className={`py-3 border-b-2 border-white/20 ${headerClassName} shadow-md`} style={{ backgroundColor: '#e8a77c' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -58,45 +58,39 @@ export const EcommerceTemplate = ({
             <nav className="flex space-x-8">
               <Link 
                 to="/" 
-                className="text-white hover:text-white/80 transition-colors font-medium relative group"
+                className="text-white hover:text-white transition-all font-medium relative group px-3 py-2 rounded-full hover:bg-white/10"
               >
                 Nosotros
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/servicios" 
-                className="text-white hover:text-white/80 transition-colors font-medium relative group"
+                className="text-white hover:text-white transition-all font-medium relative group px-3 py-2 rounded-full hover:bg-white/10"
               >
                 Servicios
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/acompanamiento-parto" 
-                className="text-white hover:text-white/80 transition-colors font-medium relative group"
+                className="text-white hover:text-white transition-all font-medium relative group px-3 py-2 rounded-full hover:bg-white/10"
               >
                 Acompañamiento
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/educacion-menstrual" 
-                className="text-white hover:text-white/80 transition-colors font-medium relative group"
+                className="text-white hover:text-white transition-all font-medium relative group px-3 py-2 rounded-full hover:bg-white/10"
               >
                 Educación Menstrual
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/arma-tu-meal-prep" 
-                className="text-white hover:text-white/80 transition-colors font-medium relative group"
+                className="text-white hover:text-white transition-all font-medium relative group px-3 py-2 rounded-full hover:bg-white/10"
               >
                 Meal Prep
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link 
                 to="/contacto" 
-                className="text-white hover:text-white/80 transition-colors font-medium relative group"
+                className="text-white hover:text-white transition-all font-medium relative group px-3 py-2 rounded-full hover:bg-white/10"
               >
                 Contacto
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
             </nav>
           </div>

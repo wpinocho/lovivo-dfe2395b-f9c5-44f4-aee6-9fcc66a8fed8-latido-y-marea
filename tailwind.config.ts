@@ -19,9 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Montserrat', 'sans-serif'],
+				sans: ['"Space Grotesk"', 'Montserrat', 'sans-serif'],
 				serif: ['"Cormorant Garamond"', 'serif'],
-				display: ['"Playfair Display"', 'serif'],
+				display: ['"DM Serif Display"', '"Playfair Display"', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

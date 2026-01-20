@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital,wght@0,400;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -100,12 +100,35 @@ All colors MUST be HSL.
 
   body {
     @apply bg-white text-black;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-family: 'Space Grotesk', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-    font-weight: 600;
+    font-family: 'DM Serif Display', 'Playfair Display', serif;
+    font-weight: 400;
     color: #000;
+    letter-spacing: -0.02em;
+  }
+
+  /* Decorative shapes */
+  .decorative-blob {
+    position: absolute;
+    border-radius: 50% 40% 60% 50%;
+    opacity: 0.15;
+    z-index: 0;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  .decorative-arc {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    z-index: 0;
   }
 }
