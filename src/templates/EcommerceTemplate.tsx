@@ -199,7 +199,7 @@ export const EcommerceTemplate = ({
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <img 
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/dfe2395b-f9c5-44f4-aee6-9fcc66a8fed8/logo-coral-match.png"
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768931663918-onl26f7wplp.png"
                 alt="Latido y Marea"
                 className="h-16 w-16 object-contain"
               />
