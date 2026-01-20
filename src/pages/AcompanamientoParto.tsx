@@ -32,9 +32,9 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* Qué es una Doula */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-black tracking-wide">
             ¿Qué es una Doula?
           </h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -50,9 +50,9 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* Beneficios */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 text-black tracking-wide">
             Beneficios del Acompañamiento de una Doula
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -81,9 +81,9 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* Etapas del Acompañamiento */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-black tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 text-black tracking-wide">
             Etapas del Acompañamiento
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -129,13 +129,13 @@ const AcompanamientoParto = () => {
       </section>
 
       {/* Acompañamiento Emocional */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-primary mb-6">
               <Brain className="h-10 w-10 text-white" />
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-black tracking-wide">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-black tracking-wide">
               Acompañamiento Emocional Perinatal
             </h2>
             <p className="text-lg text-gray-700 mb-6">
