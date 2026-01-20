@@ -121,7 +121,7 @@ const Servicios = () => {
                       <div className="p-3 bg-primary">
                         <Icono className="h-6 w-6 text-white" />
                       </div>
-                      <h2 className="text-2xl font-semibold text-black">
+                      <h2 className="text-2xl font-semibold text-black break-words">
                         {servicio.titulo}
                       </h2>
                     </div>

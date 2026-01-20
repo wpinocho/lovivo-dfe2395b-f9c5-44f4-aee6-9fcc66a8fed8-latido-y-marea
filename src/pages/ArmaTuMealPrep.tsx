@@ -462,12 +462,12 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-8 sm:py-12 bg-white">
+      <section className="py-8 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-6 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4 text-black">
             ¿Qué es Meal Prep?
           </h2>
-          <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-8">
+          <p className="text-base sm:text-lg text-gray-700 mb-4">
             Es una herramienta comunitaria que te permite crear un calendario donde familiares, 
             amigas y seres queridos pueden organizarse para llevarte comida casera durante tu postparto. 
             De esta manera, no tienes que preocuparte por cocinar y puedes enfocarte en descansar 
@@ -477,9 +477,9 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Cómo Funciona */}
-      <section className="pb-8 sm:pb-12 bg-white">
+      <section className="pb-8 sm:pb-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-8 text-black">
             ¿Cómo funciona?
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
@@ -535,9 +535,9 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Formulario */}
-      <section className="py-8 sm:py-12 bg-white">
+      <section className="py-8 sm:py-16 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-12 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-8 text-black">
             Crea tu calendario
           </h2>
           <Card className="border border-gray-200">
@@ -635,9 +635,9 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* Beneficios */}
-      <section className="py-8 sm:py-20 bg-white">
+      <section className="py-8 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-16 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-10 text-black">
             Beneficios
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -681,7 +681,7 @@ const ArmaTuMealPrep = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-10 sm:py-20 bg-white">
+      <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <Card className="border-2 border-primary shadow-xl">
             <CardContent className="p-6 sm:p-12">
