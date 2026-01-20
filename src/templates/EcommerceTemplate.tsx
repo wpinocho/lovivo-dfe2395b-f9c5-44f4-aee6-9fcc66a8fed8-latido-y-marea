@@ -263,9 +263,27 @@ export const EcommerceTemplate = ({
                 href="https://wa.me/525559652494" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors underline"
+                className="hover:text-white transition-colors underline flex items-center gap-2"
               >
+                <img 
+                  src="/social-icons/whatsapp.svg" 
+                  alt="WhatsApp" 
+                  className="w-5 h-5 inline-block"
+                />
                 +52 55 5965 2494
+              </a>
+              <a 
+                href="https://www.instagram.com/latidoymarea" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors underline flex items-center gap-2"
+              >
+                <img 
+                  src="/social-icons/instagram.svg" 
+                  alt="Instagram" 
+                  className="w-5 h-5 inline-block"
+                />
+                latidoymarea
               </a>
               <div className="mt-6">
                 <SocialLinks />
