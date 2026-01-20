@@ -110,7 +110,7 @@ const EducacionMenstrual = () => {
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black tracking-wide">
             Modalidades
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="border border-gray-200 hover:border-primary transition-all">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-4 text-black">Sesiones Individuales</h3>
@@ -154,6 +154,30 @@ const EducacionMenstrual = () => {
                   <li className="flex gap-2">
                     <span>•</span>
                     <span>Rituales y prácticas grupales</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-gray-200 hover:border-primary transition-all">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-semibold mb-4 text-black">Talleres Escolares</h3>
+                <p className="text-gray-700 mb-6">
+                  Talleres adaptados para espacios educativos, dirigidos a infancias, 
+                  pubertades y adolescencias. Educación menstrual con enfoque respetuoso y claro.
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex gap-2">
+                    <span>•</span>
+                    <span>Adaptado por edades</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span>•</span>
+                    <span>Espacios escolares seguros</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span>•</span>
+                    <span>Información clara y accesible</span>
                   </li>
                 </ul>
               </CardContent>
