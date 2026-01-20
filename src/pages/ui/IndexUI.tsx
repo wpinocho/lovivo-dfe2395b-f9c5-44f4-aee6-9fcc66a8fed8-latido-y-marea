@@ -113,14 +113,16 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="relative transform -rotate-2 hover:rotate-0 transition-transform duration-300">
                 <video 
-                  src="/videos/parto-latido.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="w-full h-[400px] md:h-[500px] object-cover rounded-[40px] shadow-2xl"
                   aria-label="Video de momento de parto acompañado"
-                />
+                >
+                  <source src="https://drive.google.com/uc?export=download&id=1BAoNBSRMPMuaxsB0kBThv6QWwX0h6uwq" type="video/mp4" />
+                  Tu navegador no soporta videos HTML5
+                </video>
               </div>
               <div className="relative transform rotate-2 hover:rotate-0 transition-transform duration-300">
                 <img 
