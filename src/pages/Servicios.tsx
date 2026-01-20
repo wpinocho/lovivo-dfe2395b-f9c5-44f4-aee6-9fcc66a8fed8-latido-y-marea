@@ -84,6 +84,34 @@ const servicios = [
       'Ritual personalizado'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768859200680-x4wy01kgj2g.png'
+  },
+  {
+    icono: Sparkles,
+    titulo: 'Terapia Placentaria',
+    descripcion: 'Encapsulación de placenta para tu bienestar postparto',
+    incluye: [
+      'Recolección y preparación segura',
+      'Encapsulación profesional',
+      'Apoyo hormonal natural',
+      'Aumento de energía y lactancia',
+      'Recuperación postparto acelerada',
+      'Instrucciones de consumo personalizadas'
+    ],
+    imagen: '/terapia-placentaria.jpg'
+  },
+  {
+    icono: Heart,
+    titulo: 'Ceremonia de Baby Blessing',
+    descripcion: 'Ritual de bienvenida y bendición para tu bebé',
+    incluye: [
+      'Ceremonia personalizada',
+      'Espacio íntimo con tus seres queridos',
+      'Rituales de bienvenida y protección',
+      'Momento de conexión familiar',
+      'Celebración del nacimiento',
+      'Creación de recuerdos significativos'
+    ],
+    imagen: '/baby-blessing.jpg'
   }
 ];
 
