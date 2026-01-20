@@ -261,7 +261,7 @@ const Contacto = () => {
                 <ul className="text-gray-700 space-y-2">
                   <li className="flex gap-2">
                     <span>•</span>
-                    <span><strong>Visitas prenatales:</strong> Conocernos, crear tu plan de parto y aprender técnicas de respiración y relajación</span>
+                    <span><strong>Visitas prenatales:</strong> Conocernos, crear tu plan de parto y aprender técnicas para manejo del dolor</span>
                   </li>
                   <li className="flex gap-2">
                     <span>•</span>

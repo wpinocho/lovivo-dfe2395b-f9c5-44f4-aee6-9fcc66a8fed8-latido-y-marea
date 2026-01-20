@@ -90,8 +90,8 @@ const AcompanamientoParto = () => {
               <h3 className="text-xl font-semibold mb-3 text-white">Prenatal</h3>
               <p className="text-white">
                 Visitas de preparación donde conversamos sobre tus deseos, miedos y 
-                construimos tu plan de parto. Aprenderemos técnicas de respiración, 
-                posiciones y métodos de alivio del dolor.
+                construimos tu plan de parto. Aprenderemos técnicas para manejo del dolor, 
+                posiciones y métodos de alivio.
               </p>
             </div>
 

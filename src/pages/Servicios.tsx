@@ -24,7 +24,7 @@ const servicios = [
     incluye: [
       'Información clara sobre el proceso',
       'Plan de parto personalizado',
-      'Técnicas de respiración y relajación',
+      'Técnicas para manejo del dolor',
       'Apoyo emocional continuo',
       'Visitas prenatales'
     ],
