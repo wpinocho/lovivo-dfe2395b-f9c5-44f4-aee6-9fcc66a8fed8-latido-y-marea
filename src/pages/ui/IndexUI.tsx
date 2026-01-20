@@ -120,7 +120,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                   className="w-full h-[400px] md:h-[500px] object-cover rounded-[40px] shadow-2xl"
                   aria-label="Video de momento de parto acompañado"
                 >
-                  <source src="https://drive.google.com/uc?export=download&id=1BAoNBSRMPMuaxsB0kBThv6QWwX0h6uwq" type="video/mp4" />
+                  <source src="https://drive.google.com/uc?export=download&id=1AgepXM0EGTCaYxxXY7n68MrrEvFMTgcV" type="video/mp4" />
                   Tu navegador no soporta videos HTML5
                 </video>
               </div>
