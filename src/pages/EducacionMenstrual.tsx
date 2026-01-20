@@ -59,7 +59,7 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* Qué es */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-black tracking-wide">
             ¿Qué es la Educación Menstrual?
@@ -79,7 +79,7 @@ const EducacionMenstrual = () => {
       </section>
 
       {/* Fases del Ciclo */}
-      <section className="py-20 bg-white">
+      <section className="pt-8 pb-20 bg-white">
         <div className="w-full px-8 md:px-12 lg:px-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-black tracking-wide">
             Las 4 Fases del Ciclo Menstrual
