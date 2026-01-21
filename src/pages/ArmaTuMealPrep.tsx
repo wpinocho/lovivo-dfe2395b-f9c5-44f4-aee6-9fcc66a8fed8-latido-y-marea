@@ -5,15 +5,37 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Users, Heart, Salad, Copy, Check, User, Edit2, Plus } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { LoginModal } from '@/components/auth/LoginModal';
+import { useParams } from 'react-router-dom';
+import {
+  createMealPrepCalendar,
+  getMealPrepCalendar,
+  updateMealPrepCalendar,
+  registerVolunteer,
+  getCalendarVolunteers,
+  sendVolunteerEmails,
+  type MealPrepCalendar,
+  type MealPrepVolunteer
+} from '@/lib/mealPrepDb';
 
 const ArmaTuMealPrep = () => {
   const { toast } = useToast();
+  const { user } = useAuth();
+  const { slug } = useParams();
+  
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const [showCalendar, setShowCalendar] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [calendar, setCalendar] = useState<MealPrepCalendar | null>(null);
+  const [volunteers, setVolunteers] = useState<MealPrepVolunteer[]>([]);
+  const [isOwner, setIsOwner] = useState(false);
+  
   const [formData, setFormData] = useState({
     nombre: '',
     fecha: '',
@@ -32,22 +54,114 @@ const ArmaTuMealPrep = () => {
     telefono: '',
     mensaje: ''
   });
-  
-  // Estado para los días con voluntarios registrados
-  const [registeredVolunteers, setRegisteredVolunteers] = useState<{[key: number]: string}>({
-    3: 'María G.',
-    7: 'Ana L.'
-  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Cargar calendario si hay slug en la URL
+  useEffect(() => {
+    if (slug) {
+      loadCalendar(slug);
+    }
+  }, [slug]);
+
+  // Verificar si el usuario es dueño del calendario
+  useEffect(() => {
+    if (calendar && user) {
+      setIsOwner(calendar.user_id === user.id);
+    }
+  }, [calendar, user]);
+
+  const loadCalendar = async (calendarSlug: string) => {
+    setLoading(true);
+    try {
+      const cal = await getMealPrepCalendar(calendarSlug);
+      if (cal) {
+        setCalendar(cal);
+        setFormData({
+          nombre: cal.nombre,
+          fecha: cal.fecha_inicio,
+          personas: cal.personas.toString(),
+          preferencias: cal.preferencias,
+          alergias: cal.alergias,
+          semanas: cal.semanas.toString()
+        });
+        
+        // Cargar voluntarios
+        const vols = await getCalendarVolunteers(cal.id);
+        setVolunteers(vols);
+        setShowCalendar(true);
+      } else {
+        toast({
+          title: 'Calendario no encontrado',
+          description: 'El calendario que buscas no existe.',
+          variant: 'destructive'
+        });
+      }
+    } catch (error) {
+      console.error('Error loading calendar:', error);
+      toast({
+        title: 'Error',
+        description: 'No pudimos cargar el calendario.',
+        variant: 'destructive'
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setShowCalendar(true);
+    
+    // Verificar autenticación
+    if (!user) {
+      setShowLoginModal(true);
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const newCalendar = await createMealPrepCalendar({
+        user_id: user.id,
+        nombre: formData.nombre,
+        fecha_inicio: formData.fecha,
+        personas: parseInt(formData.personas),
+        semanas: parseInt(formData.semanas),
+        preferencias: formData.preferencias,
+        alergias: formData.alergias,
+        user_email: user.email || ''
+      });
+
+      setCalendar(newCalendar);
+      setIsOwner(true);
+      setShowCalendar(true);
+      setVolunteers([]);
+
+      toast({
+        title: '¡Calendario creado!',
+        description: 'Ahora puedes compartir el enlace con tu comunidad.',
+      });
+
+      // Actualizar la URL sin recargar
+      window.history.pushState({}, '', `/arma-tu-meal-prep/${newCalendar.slug}`);
+    } catch (error) {
+      console.error('Error creating calendar:', error);
+      toast({
+        title: 'Error',
+        description: 'No pudimos crear el calendario. Intenta de nuevo.',
+        variant: 'destructive'
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href + '?id=example123');
+    const link = `${window.location.origin}/arma-tu-meal-prep/${calendar?.slug}`;
+    navigator.clipboard.writeText(link);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+    toast({
+      title: 'Enlace copiado',
+      description: 'Compártelo con tu comunidad'
+    });
   };
 
   const handleVolunteerClick = (dayIndex: number) => {
@@ -55,28 +169,48 @@ const ArmaTuMealPrep = () => {
     setVolunteerModal(true);
   };
 
-  const handleVolunteerSubmit = (e: React.FormEvent) => {
+  const handleVolunteerSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!volunteerForm.nombre || !volunteerForm.email) {
+    if (!volunteerForm.nombre || !volunteerForm.email || !calendar || selectedDayIndex === null) {
       toast({
-        title: "Campos requeridos",
-        description: "Por favor completa nombre y email",
-        variant: "destructive"
+        title: 'Campos requeridos',
+        description: 'Por favor completa nombre y email',
+        variant: 'destructive'
       });
       return;
     }
 
-    // Registrar voluntario
-    if (selectedDayIndex !== null) {
-      setRegisteredVolunteers({
-        ...registeredVolunteers,
-        [selectedDayIndex]: volunteerForm.nombre
+    setLoading(true);
+    try {
+      // Calcular fecha de comida
+      const startDate = new Date(calendar.fecha_inicio + 'T00:00:00');
+      const fechaComida = new Date(startDate);
+      fechaComida.setDate(startDate.getDate() + selectedDayIndex);
+
+      // Registrar voluntario
+      const newVolunteer = await registerVolunteer({
+        calendar_id: calendar.id,
+        day_index: selectedDayIndex,
+        volunteer_name: volunteerForm.nombre,
+        volunteer_email: volunteerForm.email,
+        volunteer_phone: volunteerForm.telefono,
+        mensaje: volunteerForm.mensaje,
+        fecha_comida: fechaComida.toISOString()
       });
+
+      // Enviar emails (confirmación + notificación a creadora)
+      await sendVolunteerEmails({
+        calendar: calendar,
+        volunteer: newVolunteer
+      });
+
+      // Actualizar lista de voluntarios
+      setVolunteers([...volunteers, newVolunteer]);
       
       toast({
-        title: "¡Registro exitoso! 🎉",
-        description: `${volunteerForm.nombre}, quedaste registrad@ para llevar comida este día. ¡Gracias por tu apoyo!`,
+        title: '¡Registro exitoso!',
+        description: `${volunteerForm.nombre}, quedaste registrad@ para llevar comida este día. Recibirás un email de confirmación.`,
         duration: 5000
       });
       
@@ -89,24 +223,67 @@ const ArmaTuMealPrep = () => {
         mensaje: ''
       });
       setSelectedDayIndex(null);
+    } catch (error) {
+      console.error('Error registering volunteer:', error);
+      toast({
+        title: 'Error',
+        description: 'No pudimos registrar tu participación. Intenta de nuevo.',
+        variant: 'destructive'
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleUpdateCalendar = async () => {
+    if (!calendar || !user || !isOwner) return;
+
+    setLoading(true);
+    try {
+      await updateMealPrepCalendar(calendar.id, user.id, {
+        fecha_inicio: formData.fecha,
+        semanas: parseInt(formData.semanas)
+      });
+
+      toast({
+        title: 'Calendario actualizado',
+        description: 'Los cambios se guardaron correctamente.'
+      });
+
+      // Recargar calendario
+      await loadCalendar(calendar.slug);
+    } catch (error) {
+      console.error('Error updating calendar:', error);
+      toast({
+        title: 'Error',
+        description: 'No pudimos actualizar el calendario.',
+        variant: 'destructive'
+      });
+    } finally {
+      setLoading(false);
     }
   };
 
   // Generar días basados en fecha de parto y semanas solicitadas
   const generateDays = () => {
+    if (!calendar) return [];
+    
     const days = [];
-    const startDate = formData.fecha ? new Date(formData.fecha + 'T00:00:00') : new Date();
-    const numWeeks = parseInt(formData.semanas) || 2;
+    const startDate = new Date(calendar.fecha_inicio + 'T00:00:00');
+    const numWeeks = calendar.semanas;
     const totalDays = numWeeks * 7;
     
     for (let i = 0; i < totalDays; i++) {
       const date = new Date(startDate);
       date.setDate(startDate.getDate() + i);
-      const volunteer = registeredVolunteers[i] || null;
+      
+      // Buscar si hay voluntario para este día
+      const volunteer = volunteers.find(v => v.day_index === i);
+      
       days.push({
         date: date,
-        available: !volunteer, // Disponible solo si no hay voluntario
-        volunteer: volunteer
+        available: !volunteer,
+        volunteer: volunteer?.volunteer_name || null
       });
     }
     return days;
@@ -114,7 +291,17 @@ const ArmaTuMealPrep = () => {
 
   const days = generateDays();
 
-  if (showCalendar) {
+  if (loading && !calendar) {
+    return (
+      <EcommerceTemplate showCart={false}>
+        <div className="min-h-screen flex items-center justify-center">
+          <p className="text-lg text-gray-600">Cargando...</p>
+        </div>
+      </EcommerceTemplate>
+    );
+  }
+
+  if (showCalendar && calendar) {
     return (
       <EcommerceTemplate showCart={false}>
         {/* Hero del Calendario */}
@@ -122,32 +309,37 @@ const ArmaTuMealPrep = () => {
           <div className="w-full px-8 md:px-12 lg:px-16">
             <div className="text-center mb-8">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 text-black">
-                ¡Tu calendario está listo! 🎉
+                {isOwner ? '¡Tu calendario está listo! 🎉' : `Calendario de ${calendar.nombre}`}
               </h1>
               <p className="text-base sm:text-lg text-gray-800 max-w-2xl mx-auto">
-                Comparte este enlace con tu comunidad para que se organicen y te lleven comida
+                {isOwner 
+                  ? 'Comparte este enlace con tu comunidad para que se organicen y te lleven comida'
+                  : 'Elige un día disponible para llevar comida y apoyar'
+                }
               </p>
             </div>
 
-            {/* Enlace para compartir */}
-            <Card className="max-w-2xl mx-auto border border-gray-200">
-              <CardContent className="p-6">
-                <Label className="text-black mb-2 block">Enlace para compartir</Label>
-                <div className="flex gap-2">
-                  <Input 
-                    value="https://latidoymarea.com/meal-prep/maria-lopez"
-                    readOnly
-                    className="flex-1 border-gray-300"
-                  />
-                  <Button onClick={handleCopyLink} variant="outline">
-                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                  </Button>
-                </div>
-                <p className="text-sm text-gray-600 mt-2">
-                  Comparte este enlace por WhatsApp, email o redes sociales
-                </p>
-              </CardContent>
-            </Card>
+            {/* Enlace para compartir - solo visible para la dueña */}
+            {isOwner && (
+              <Card className="max-w-2xl mx-auto border border-gray-200">
+                <CardContent className="p-6">
+                  <Label className="text-black mb-2 block">Enlace para compartir</Label>
+                  <div className="flex gap-2">
+                    <Input 
+                      value={`${window.location.origin}/arma-tu-meal-prep/${calendar.slug}`}
+                      readOnly
+                      className="flex-1 border-gray-300"
+                    />
+                    <Button onClick={handleCopyLink} variant="outline">
+                      {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    </Button>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-2">
+                    Comparte este enlace por WhatsApp, email o redes sociales
+                  </p>
+                </CardContent>
+              </Card>
+            )}
           </div>
         </section>
 
@@ -159,67 +351,74 @@ const ArmaTuMealPrep = () => {
                 <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-black">Información del Calendario</h2>
                 <div className="grid md:grid-cols-2 gap-4 text-gray-700">
                   <div>
-                    <span className="font-semibold text-black">Nombre:</span> {formData.nombre || 'María López'}
+                    <span className="font-semibold text-black">Nombre:</span> {calendar.nombre}
                   </div>
                   <div>
-                    <span className="font-semibold text-black">Fecha de inicio:</span> {formData.fecha ? new Date(formData.fecha + 'T00:00:00').toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' }) : '15 de Marzo, 2025'}
+                    <span className="font-semibold text-black">Fecha de inicio:</span> {new Date(calendar.fecha_inicio + 'T00:00:00').toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' })}
                   </div>
                   <div>
-                    <span className="font-semibold text-black">Personas en casa:</span> {formData.personas || '3'}
+                    <span className="font-semibold text-black">Personas en casa:</span> {calendar.personas}
                   </div>
                   <div>
-                    <span className="font-semibold text-black">Duración:</span> {formData.semanas || '2'} semanas
+                    <span className="font-semibold text-black">Duración:</span> {calendar.semanas} semanas
                   </div>
                   <div>
-                    <span className="font-semibold text-black">Preferencias:</span> {formData.preferencias || 'Sin gluten, vegetariana'}
+                    <span className="font-semibold text-black">Preferencias:</span> {calendar.preferencias}
                   </div>
-                  {(formData.alergias || 'Nueces') && (
+                  {calendar.alergias && (
                     <div>
-                      <span className="font-semibold text-black">Alergias/Restricciones:</span> {formData.alergias || 'Nueces'}
+                      <span className="font-semibold text-black">Alergias/Restricciones:</span> {calendar.alergias}
                     </div>
                   )}
                 </div>
               </CardContent>
             </Card>
 
-            {/* Controles de Edición */}
-            <Card className="mb-8 border border-gray-200">
-              <CardContent className="p-6">
-                <h3 className="text-lg sm:text-xl font-semibold mb-4 text-black flex items-center gap-2">
-                  <Edit2 className="h-5 w-5" />
-                  Ajustar Calendario
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  ¿El bebé llegó antes o necesitas más tiempo? Puedes modificar tu calendario aquí.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <Label className="text-black mb-2 block">Nueva fecha de inicio</Label>
-                    <Input
-                      type="date"
-                      value={formData.fecha}
-                      onChange={(e) => setFormData({...formData, fecha: e.target.value})}
-                      className="border-gray-300 focus:border-primary"
-                    />
+            {/* Controles de Edición - SOLO VISIBLE PARA LA DUEÑA */}
+            {isOwner && (
+              <Card className="mb-8 border border-gray-200">
+                <CardContent className="p-6">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-4 text-black flex items-center gap-2">
+                    <Edit2 className="h-5 w-5" />
+                    Ajustar Calendario
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    ¿El bebé llegó antes o necesitas más tiempo? Puedes modificar tu calendario aquí.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <Label className="text-black mb-2 block">Nueva fecha de inicio</Label>
+                      <Input
+                        type="date"
+                        value={formData.fecha}
+                        onChange={(e) => setFormData({...formData, fecha: e.target.value})}
+                        className="border-gray-300 focus:border-primary"
+                      />
+                    </div>
+                    <div>
+                      <Label className="text-black mb-2 block">Semanas de comida</Label>
+                      <Input
+                        type="number"
+                        min="1"
+                        max="8"
+                        value={formData.semanas}
+                        onChange={(e) => setFormData({...formData, semanas: e.target.value})}
+                        className="border-gray-300 focus:border-primary"
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <Label className="text-black mb-2 block">Semanas de comida</Label>
-                    <Input
-                      type="number"
-                      min="1"
-                      max="8"
-                      value={formData.semanas}
-                      onChange={(e) => setFormData({...formData, semanas: e.target.value})}
-                      className="border-gray-300 focus:border-primary"
-                    />
-                  </div>
-                </div>
-                <Button className="mt-4 w-full md:w-auto" variant="outline">
-                  <Plus className="h-4 w-4 mr-2" />
-                  Actualizar Calendario
-                </Button>
-              </CardContent>
-            </Card>
+                  <Button 
+                    className="mt-4 w-full md:w-auto" 
+                    variant="outline"
+                    onClick={handleUpdateCalendar}
+                    disabled={loading}
+                  >
+                    <Plus className="h-4 w-4 mr-2" />
+                    {loading ? 'Actualizando...' : 'Actualizar Calendario'}
+                  </Button>
+                </CardContent>
+              </Card>
+            )}
 
             {/* Calendario de días */}
             <div>
@@ -338,16 +537,31 @@ const ArmaTuMealPrep = () => {
           </div>
         </section>
 
-        {/* Botón para crear otro */}
-        <section className="py-12 bg-white text-center">
-          <Button 
-            onClick={() => setShowCalendar(false)} 
-            variant="outline" 
-            size="lg"
-          >
-            Crear otro calendario
-          </Button>
-        </section>
+        {/* Botón para crear otro - solo si es la dueña */}
+        {isOwner && (
+          <section className="py-12 bg-white text-center">
+            <Button 
+              onClick={() => {
+                setShowCalendar(false);
+                setCalendar(null);
+                setVolunteers([]);
+                setFormData({
+                  nombre: '',
+                  fecha: '',
+                  personas: '',
+                  preferencias: '',
+                  alergias: '',
+                  semanas: '2'
+                });
+                window.history.pushState({}, '', '/arma-tu-meal-prep');
+              }} 
+              variant="outline" 
+              size="lg"
+            >
+              Crear otro calendario
+            </Button>
+          </section>
+        )}
 
         {/* Modal de Registro de Voluntario */}
         <Dialog open={volunteerModal} onOpenChange={setVolunteerModal}>
@@ -426,13 +640,23 @@ const ArmaTuMealPrep = () => {
                 >
                   Cancelar
                 </Button>
-                <Button type="submit" className="flex-1">
-                  Confirmar registro
+                <Button type="submit" className="flex-1" disabled={loading}>
+                  {loading ? 'Registrando...' : 'Confirmar registro'}
                 </Button>
               </div>
             </form>
           </DialogContent>
         </Dialog>
+
+        {/* Modal de Login */}
+        <LoginModal 
+          open={showLoginModal} 
+          onOpenChange={setShowLoginModal}
+          onSuccess={() => {
+            // Después del login, reintenta crear el calendario
+            handleSubmit(new Event('submit') as any);
+          }}
+        />
       </EcommerceTemplate>
     );
   }
@@ -625,9 +849,15 @@ const ArmaTuMealPrep = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full" size="lg">
-                  Crear mi calendario
+                <Button type="submit" className="w-full" size="lg" disabled={loading}>
+                  {loading ? 'Creando...' : 'Crear mi calendario'}
                 </Button>
+                
+                {!user && (
+                  <p className="text-sm text-gray-600 text-center">
+                    Al crear el calendario, te pediremos que inicies sesión o crees una cuenta
+                  </p>
+                )}
               </form>
             </CardContent>
           </Card>
@@ -694,6 +924,19 @@ const ArmaTuMealPrep = () => {
           </Button>
         </div>
       </section>
+
+      {/* Modal de Login */}
+      <LoginModal 
+        open={showLoginModal} 
+        onOpenChange={setShowLoginModal}
+        onSuccess={() => {
+          // Después del login exitoso, reintenta el submit
+          const form = document.querySelector('form');
+          if (form) {
+            form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+          }
+        }}
+      />
     </EcommerceTemplate>
   );
 };
