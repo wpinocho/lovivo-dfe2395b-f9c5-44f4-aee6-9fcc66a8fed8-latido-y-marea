@@ -269,6 +269,7 @@ export const EcommerceTemplate = ({
                   src="/social-icons/whatsapp.svg" 
                   alt="WhatsApp" 
                   className="w-5 h-5 inline-block"
+                  style={{ filter: 'brightness(0) invert(1)' }}
                 />
                 +52 55 5965 2494
               </a>
@@ -282,6 +283,7 @@ export const EcommerceTemplate = ({
                   src="/social-icons/instagram.svg" 
                   alt="Instagram" 
                   className="w-5 h-5 inline-block"
+                  style={{ filter: 'brightness(0) invert(1)' }}
                 />
                 latidoymarea
               </a>
