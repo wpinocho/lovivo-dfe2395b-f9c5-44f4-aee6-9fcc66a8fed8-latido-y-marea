@@ -39,7 +39,7 @@ const Contacto = () => {
     
     try {
       // Construir mensaje de WhatsApp
-      const whatsappMessage = `*NUEVO CONTACTO - Latido y Marea* 🌊
+      const whatsappMessage = `*NUEVO CONTACTO - Latido y Marea*
 
 *Nombre:* ${formData.nombre}
 *Email:* ${formData.email}
