@@ -49,17 +49,31 @@ ${formData.asunto ? `*Asunto:* ${formData.asunto}` : ''}
 *Mensaje:*
 ${formData.mensaje}`;
 
-      // Abrir WhatsApp con el mensaje pre-llenado
+      // Abrir WhatsApp - usar location.href para mejor compatibilidad
       const whatsappURL = `https://wa.me/525559652494?text=${encodeURIComponent(whatsappMessage)}`;
-      window.open(whatsappURL, '_blank');
+      
+      // Detectar si es móvil o desktop para mejor experiencia
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // En móvil, navegar directamente
+        window.location.href = whatsappURL;
+      } else {
+        // En desktop, abrir en nueva pestaña
+        const newWindow = window.open(whatsappURL, '_blank');
+        if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+          // Si el pop-up fue bloqueado, usar location.href
+          window.location.href = whatsappURL;
+        }
+      }
 
       toast({
-        title: '¡Abriendo WhatsApp! 📱',
-        description: 'Se abrirá WhatsApp con tu mensaje. Solo presiona enviar.',
-        duration: 5000
+        title: '¡Redirigiendo a WhatsApp! 📱',
+        description: 'Abriendo WhatsApp con tu mensaje pre-llenado...',
+        duration: 3000
       });
 
-      // Limpiar formulario después de 2 segundos
+      // Limpiar formulario después de 1 segundo
       setTimeout(() => {
         setFormData({
           nombre: '',
@@ -68,7 +82,8 @@ ${formData.mensaje}`;
           asunto: '',
           mensaje: ''
         });
-      }, 2000);
+        setIsSubmitting(false);
+      }, 1000);
     } catch (error) {
       console.error('Error al abrir WhatsApp:', error);
       toast({
@@ -77,7 +92,6 @@ ${formData.mensaje}`;
         variant: 'destructive',
         duration: 7000
       });
-    } finally {
       setIsSubmitting(false);
     }
   };
