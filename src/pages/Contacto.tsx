@@ -26,10 +26,10 @@ const Contacto = () => {
     e.preventDefault();
     
     // Validaciones básicas
-    if (!formData.nombre || !formData.email || !formData.mensaje) {
+    if (!formData.nombre || !formData.email || !formData.telefono || !formData.mensaje) {
       toast({
         title: 'Campos requeridos',
-        description: 'Por favor completa nombre, email y mensaje',
+        description: 'Por favor completa nombre, email, teléfono y mensaje',
         variant: 'destructive'
       });
       return;
@@ -42,7 +42,7 @@ const Contacto = () => {
         store_id: STORE_ID,
         name: formData.nombre,
         email: formData.email,
-        phone: formData.telefono || undefined,
+        phone: formData.telefono,
         subject: formData.asunto || 'Consulta general',
         message: formData.mensaje,
         recipient_email: 'contacto@latidoymarea.com'
@@ -212,6 +212,7 @@ const Contacto = () => {
                         type="tel"
                         value={formData.telefono}
                         onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
+                        required
                         className="mt-2 border-gray-300 focus:border-primary"
                       />
                     </div>
