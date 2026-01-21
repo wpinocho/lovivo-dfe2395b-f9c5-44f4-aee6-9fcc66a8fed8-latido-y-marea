@@ -7,8 +7,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { callEdge } from '@/lib/edge';
+import { STORE_ID } from '@/lib/config';
 
 const Contacto = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -16,11 +20,59 @@ const Contacto = () => {
     asunto: '',
     mensaje: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Mensaje de contacto:', formData);
-    alert('¡Gracias por contactarnos! Te responderemos pronto.');
+    
+    // Validaciones básicas
+    if (!formData.nombre || !formData.email || !formData.mensaje) {
+      toast({
+        title: 'Campos requeridos',
+        description: 'Por favor completa nombre, email y mensaje',
+        variant: 'destructive'
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      await callEdge('contact-submit', {
+        store_id: STORE_ID,
+        name: formData.nombre,
+        email: formData.email,
+        phone: formData.telefono || undefined,
+        subject: formData.asunto || 'Consulta general',
+        message: formData.mensaje,
+        recipient_email: 'contacto@latidoymarea.com'
+      });
+
+      toast({
+        title: '¡Mensaje enviado! ✅',
+        description: 'Gracias por contactarnos. Te responderemos pronto.',
+        duration: 5000
+      });
+
+      // Limpiar formulario
+      setFormData({
+        nombre: '',
+        email: '',
+        telefono: '',
+        asunto: '',
+        mensaje: ''
+      });
+    } catch (error) {
+      console.error('Error al enviar mensaje:', error);
+      toast({
+        title: 'Error al enviar',
+        description: 'Hubo un problema al enviar tu mensaje. Por favor intenta nuevamente o contáctanos por WhatsApp.',
+        variant: 'destructive',
+        duration: 7000
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -196,8 +248,13 @@ const Contacto = () => {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full" size="lg">
-                      Enviar mensaje
+                    <Button 
+                      type="submit" 
+                      className="w-full" 
+                      size="lg"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
                     </Button>
                   </form>
                 </CardContent>
