@@ -38,35 +38,42 @@ const Contacto = () => {
     setIsSubmitting(true);
     
     try {
-      await callEdge('contact-submit', {
-        store_id: STORE_ID,
-        name: formData.nombre,
-        email: formData.email,
-        phone: formData.telefono,
-        subject: formData.asunto || 'Consulta general',
-        message: formData.mensaje,
-        recipient_email: 'contacto@latidoymarea.com'
-      });
+      // Construir mensaje de WhatsApp
+      const whatsappMessage = `*NUEVO CONTACTO - Latido y Marea* 🌊
+
+*Nombre:* ${formData.nombre}
+*Email:* ${formData.email}
+*Teléfono:* ${formData.telefono}
+${formData.asunto ? `*Asunto:* ${formData.asunto}` : ''}
+
+*Mensaje:*
+${formData.mensaje}`;
+
+      // Abrir WhatsApp con el mensaje pre-llenado
+      const whatsappURL = `https://wa.me/525559652494?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappURL, '_blank');
 
       toast({
-        title: '¡Mensaje enviado! ✅',
-        description: 'Gracias por contactarnos. Te responderemos pronto.',
+        title: '¡Abriendo WhatsApp! 📱',
+        description: 'Se abrirá WhatsApp con tu mensaje. Solo presiona enviar.',
         duration: 5000
       });
 
-      // Limpiar formulario
-      setFormData({
-        nombre: '',
-        email: '',
-        telefono: '',
-        asunto: '',
-        mensaje: ''
-      });
+      // Limpiar formulario después de 2 segundos
+      setTimeout(() => {
+        setFormData({
+          nombre: '',
+          email: '',
+          telefono: '',
+          asunto: '',
+          mensaje: ''
+        });
+      }, 2000);
     } catch (error) {
-      console.error('Error al enviar mensaje:', error);
+      console.error('Error al abrir WhatsApp:', error);
       toast({
-        title: 'Error al enviar',
-        description: 'Hubo un problema al enviar tu mensaje. Por favor intenta nuevamente o contáctanos por WhatsApp.',
+        title: 'Error',
+        description: 'No se pudo abrir WhatsApp. Por favor contacta directamente al +52 55 5965 2494',
         variant: 'destructive',
         duration: 7000
       });
