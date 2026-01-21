@@ -60,12 +60,10 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     phone?: string
   ) => {
     try {
-      const redirectUrl = `${window.location.origin}/`
-      
+      // NO incluir emailRedirectTo para que envíe código OTP en lugar de magic link
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: redirectUrl,
           data: {
             store_id: STORE_ID,
             first_name: firstName,
