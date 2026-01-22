@@ -829,7 +829,7 @@ const ArmaTuMealPrep = () => {
                   <Label htmlFor="preferencias" className="text-black">Preferencias alimenticias</Label>
                   <Textarea 
                     id="preferencias" 
-                    placeholder="Ej: Vegetariana, sin gluten, alergias, etc." 
+                    placeholder="Ej: Vegetariana, vegana, pescetariana, sin gluten, etc." 
                     className="mt-2 border-gray-300 focus:border-primary"
                     rows={4}
                     value={formData.preferencias}
