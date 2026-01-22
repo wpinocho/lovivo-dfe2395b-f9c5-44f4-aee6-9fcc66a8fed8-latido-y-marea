@@ -3,7 +3,7 @@
  * TIPO B - El agente de IA puede editar libremente este componente
  */
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { User } from '@supabase/supabase-js'
 import { EcommerceTemplate } from '@/templates/EcommerceTemplate'
 import { HeadlessMyOrders } from '@/components/headless/HeadlessMyOrders'
@@ -12,11 +12,12 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { AuthDialog } from '@/components/AuthDialog'
-import { Package, Calendar, DollarSign, RefreshCw, ShoppingBag, AlertCircle, LogIn } from 'lucide-react'
+import { Package, Calendar, DollarSign, RefreshCw, ShoppingBag, AlertCircle, LogIn, Utensils, ExternalLink } from 'lucide-react'
 import { formatMoney } from '@/lib/money'
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
 import { useNavigate } from 'react-router-dom'
+import { getUserCalendars, type MealPrepCalendar } from '@/lib/mealPrepDb'
 
 interface MyOrdersUIProps {
   user: User | null
@@ -26,6 +27,24 @@ interface MyOrdersUIProps {
 export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
   const navigate = useNavigate()
   const [showAuthDialog, setShowAuthDialog] = useState(false)
+  const [mealPrepCalendars, setMealPrepCalendars] = useState<MealPrepCalendar[]>([])
+  const [loadingCalendars, setLoadingCalendars] = useState(true)
+
+  useEffect(() => {
+    const loadCalendars = async () => {
+      if (user) {
+        setLoadingCalendars(true)
+        const calendars = await getUserCalendars(user.id)
+        setMealPrepCalendars(calendars)
+        setLoadingCalendars(false)
+      } else {
+        setMealPrepCalendars([])
+        setLoadingCalendars(false)
+      }
+    }
+
+    loadCalendars()
+  }, [user])
 
   return (
     <EcommerceTemplate layout="centered">
@@ -36,6 +55,76 @@ export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
             Aquí puedes ver el historial de todos tus pedidos
           </p>
         </div>
+
+        {/* Sección de Meal Prep Calendar */}
+        {user && !loadingCalendars && mealPrepCalendars.length > 0 && (
+          <div className="mb-8">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+              <Utensils className="h-5 w-5 text-primary" />
+              Mi Calendario de Meal Prep
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              {mealPrepCalendars.map((calendar) => (
+                <Card key={calendar.id} className="border-2 hover:shadow-lg transition-shadow" style={{ borderColor: '#b8a8c4' }}>
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <CardTitle className="text-lg">{calendar.nombre}</CardTitle>
+                        <CardDescription className="mt-2">
+                          <div className="flex flex-col gap-1 text-sm">
+                            <span className="flex items-center gap-1">
+                              <Calendar className="h-3 w-3" />
+                              Inicio: {format(new Date(calendar.fecha_inicio + 'T00:00:00'), "d 'de' MMMM, yyyy", { locale: es })}
+                            </span>
+                            <span>Duración: {calendar.semanas} semanas</span>
+                          </div>
+                        </CardDescription>
+                      </div>
+                      <Badge style={{ backgroundColor: '#b8a8c4', color: 'white' }}>
+                        Activo
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <Button 
+                      onClick={() => navigate(`/arma-tu-meal-prep/${calendar.slug}`)}
+                      className="w-full"
+                      style={{ backgroundColor: '#b8a8c4' }}
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Ver mi calendario
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            <div className="mt-4">
+              <Button 
+                variant="outline" 
+                onClick={() => navigate('/arma-tu-meal-prep')}
+                className="w-full md:w-auto"
+              >
+                <Utensils className="h-4 w-4 mr-2" />
+                Crear otro calendario
+              </Button>
+            </div>
+          </div>
+        )}
+
+        {/* Separador visual */}
+        {user && !loadingCalendars && mealPrepCalendars.length > 0 && (
+          <div className="mb-8">
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-200"></div>
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-4 bg-background text-muted-foreground">Historial de Compras</span>
+              </div>
+            </div>
+          </div>
+        )}
 
         {authLoading ? (
           <div className="space-y-4">

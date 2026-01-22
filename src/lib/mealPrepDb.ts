@@ -172,3 +172,21 @@ export const sendVolunteerEmails = async (params: {
     // No lanzar error para no bloquear el registro
   }
 };
+
+/**
+ * Obtener calendarios del usuario autenticado
+ */
+export const getUserCalendars = async (userId: string) => {
+  const { data, error } = await supabase
+    .from('meal_prep_calendars')
+    .select('*')
+    .eq('user_id', userId)
+    .order('created_at', { ascending: false });
+
+  if (error) {
+    console.error('Error fetching user calendars:', error);
+    return [];
+  }
+
+  return data as MealPrepCalendar[];
+};
