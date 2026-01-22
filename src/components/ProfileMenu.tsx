@@ -26,7 +26,7 @@ export const ProfileMenu = () => {
 
   const handleSignOut = async () => {
     await signOut()
-    toast.success('Signed out')
+    toast.success('Sesión cerrada')
   }
 
   const handleMyOrders = () => {
@@ -48,7 +48,7 @@ export const ProfileMenu = () => {
           variant="ghost" 
           size="icon"
           onClick={() => setShowAuthDialog(true)}
-          aria-label="Sign in"
+          aria-label="Iniciar sesión"
         >
           <User className="h-5 w-5" />
         </Button>
@@ -72,7 +72,7 @@ export const ProfileMenu = () => {
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuLabel>
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium">My Account</p>
+            <p className="text-sm font-medium">Mi Cuenta</p>
             <p className="text-xs text-muted-foreground truncate">
               {user.email}
             </p>
@@ -83,14 +83,14 @@ export const ProfileMenu = () => {
         
         <DropdownMenuItem onClick={handleMyOrders}>
           <Package className="mr-2 h-4 w-4" />
-          My Orders
+          Mi Panel
         </DropdownMenuItem>
         
         <DropdownMenuSeparator />
         
         <DropdownMenuItem onClick={handleSignOut}>
           <LogOut className="mr-2 h-4 w-4" />
-          Sign Out
+          Cerrar Sesión
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
