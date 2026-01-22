@@ -190,3 +190,36 @@ export const getUserCalendars = async (userId: string) => {
 
   return data as MealPrepCalendar[];
 };
+
+/**
+ * Eliminar calendario (solo dueña)
+ */
+export const deleteMealPrepCalendar = async (
+  id: string,
+  user_id: string
+) => {
+  // Primero eliminar todos los voluntarios asociados
+  const { error: volunteersError } = await supabase
+    .from('meal_prep_volunteers')
+    .delete()
+    .eq('calendar_id', id);
+
+  if (volunteersError) {
+    console.error('Error deleting volunteers:', volunteersError);
+    throw volunteersError;
+  }
+
+  // Luego eliminar el calendario
+  const { error } = await supabase
+    .from('meal_prep_calendars')
+    .delete()
+    .eq('id', id)
+    .eq('user_id', user_id); // Asegurar que solo la dueña pueda eliminar
+
+  if (error) {
+    console.error('Error deleting calendar:', error);
+    throw error;
+  }
+
+  return { success: true };
+};

@@ -12,12 +12,14 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { AuthDialog } from '@/components/AuthDialog'
-import { Package, Calendar, DollarSign, RefreshCw, ShoppingBag, AlertCircle, LogIn, Utensils, ExternalLink } from 'lucide-react'
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog'
+import { Package, Calendar, DollarSign, RefreshCw, ShoppingBag, AlertCircle, LogIn, Utensils, ExternalLink, Trash2 } from 'lucide-react'
 import { formatMoney } from '@/lib/money'
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
 import { useNavigate } from 'react-router-dom'
-import { getUserCalendars, type MealPrepCalendar } from '@/lib/mealPrepDb'
+import { getUserCalendars, deleteMealPrepCalendar, type MealPrepCalendar } from '@/lib/mealPrepDb'
+import { useToast } from '@/hooks/use-toast'
 
 interface MyOrdersUIProps {
   user: User | null
@@ -26,9 +28,12 @@ interface MyOrdersUIProps {
 
 export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
   const navigate = useNavigate()
+  const { toast } = useToast()
   const [showAuthDialog, setShowAuthDialog] = useState(false)
   const [mealPrepCalendars, setMealPrepCalendars] = useState<MealPrepCalendar[]>([])
   const [loadingCalendars, setLoadingCalendars] = useState(true)
+  const [calendarToDelete, setCalendarToDelete] = useState<MealPrepCalendar | null>(null)
+  const [deletingCalendar, setDeletingCalendar] = useState(false)
 
   useEffect(() => {
     const loadCalendars = async () => {
@@ -45,6 +50,33 @@ export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
 
     loadCalendars()
   }, [user])
+
+  const handleDeleteCalendar = async () => {
+    if (!calendarToDelete || !user) return
+
+    setDeletingCalendar(true)
+    try {
+      await deleteMealPrepCalendar(calendarToDelete.id, user.id)
+      
+      // Actualizar lista de calendarios
+      setMealPrepCalendars(prev => prev.filter(c => c.id !== calendarToDelete.id))
+      
+      toast({
+        title: 'Calendario eliminado',
+        description: 'El calendario se eliminó correctamente',
+      })
+    } catch (error) {
+      console.error('Error deleting calendar:', error)
+      toast({
+        title: 'Error',
+        description: 'No se pudo eliminar el calendario. Intenta de nuevo.',
+        variant: 'destructive'
+      })
+    } finally {
+      setDeletingCalendar(false)
+      setCalendarToDelete(null)
+    }
+  }
 
   return (
     <EcommerceTemplate layout="centered">
@@ -86,14 +118,24 @@ export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <Button 
-                      onClick={() => navigate(`/arma-tu-meal-prep/${calendar.slug}`)}
-                      className="w-full"
-                      style={{ backgroundColor: '#b8a8c4' }}
-                    >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Ver mi calendario
-                    </Button>
+                    <div className="flex gap-2">
+                      <Button 
+                        onClick={() => navigate(`/arma-tu-meal-prep/${calendar.slug}`)}
+                        className="flex-1"
+                        style={{ backgroundColor: '#b8a8c4' }}
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Ver calendario
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={() => setCalendarToDelete(calendar)}
+                        className="border-destructive text-destructive hover:bg-destructive hover:text-white"
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -315,6 +357,32 @@ export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
       </div>
 
       <AuthDialog open={showAuthDialog} onOpenChange={setShowAuthDialog} />
+      
+      {/* AlertDialog para confirmar eliminación */}
+      <AlertDialog open={!!calendarToDelete} onOpenChange={(open) => !open && setCalendarToDelete(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>¿Eliminar calendario?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Esta acción eliminará permanentemente el calendario "{calendarToDelete?.nombre}" y todos los registros de voluntarios asociados.
+              <br /><br />
+              Esta acción no se puede deshacer.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={deletingCalendar}>
+              Cancelar
+            </AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleDeleteCalendar}
+              disabled={deletingCalendar}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              {deletingCalendar ? 'Eliminando...' : 'Eliminar calendario'}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </EcommerceTemplate>
   )
 }
