@@ -154,6 +154,59 @@ export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
           </div>
         )}
 
+        {/* Estado vacío: Sin calendarios */}
+        {user && !loadingCalendars && mealPrepCalendars.length === 0 && (
+          <Card className="border-2" style={{ borderColor: '#b8a8c4' }}>
+            <CardContent className="py-16">
+              <div className="text-center space-y-6">
+                <div className="flex justify-center">
+                  <div className="rounded-full p-6" style={{ backgroundColor: 'rgba(184, 168, 196, 0.1)' }}>
+                    <Utensils className="h-16 w-16" style={{ color: '#b8a8c4' }} />
+                  </div>
+                </div>
+                
+                <div className="space-y-2 max-w-md mx-auto">
+                  <h3 className="text-2xl font-semibold">Aún no tienes calendarios</h3>
+                  <p className="text-muted-foreground text-lg">
+                    Organiza tus comidas semanales y coordina voluntarios para tu postparto.
+                    Crea tu primer calendario de Meal Prep ahora.
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
+                  <Button 
+                    size="lg"
+                    onClick={() => navigate('/arma-tu-meal-prep')}
+                    style={{ backgroundColor: '#b8a8c4' }}
+                    className="text-base px-8"
+                  >
+                    <Utensils className="h-5 w-5 mr-2" />
+                    Crear mi primer calendario
+                  </Button>
+                </div>
+
+                <div className="mt-8 pt-8 border-t">
+                  <p className="text-sm text-muted-foreground">
+                    💜 Comparte tu calendario con familiares y amigos para que se coordinen fácilmente
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Estado de carga */}
+        {user && loadingCalendars && (
+          <Card>
+            <CardContent className="py-8">
+              <div className="flex items-center justify-center gap-2">
+                <RefreshCw className="h-5 w-5 animate-spin text-primary" />
+                <span className="text-muted-foreground">Cargando tus calendarios...</span>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
         {/* Historial de compras - oculto por ahora ya que no hay productos configurados */}
       </div>
 
