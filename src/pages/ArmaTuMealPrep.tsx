@@ -308,10 +308,10 @@ const ArmaTuMealPrep = () => {
         <section className="py-16" style={{ backgroundColor: '#b8a8c4' }}>
           <div className="w-full px-8 md:px-12 lg:px-16">
             <div className="text-center mb-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 text-black">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 text-white">
                 {isOwner ? '¡Tu calendario está listo! 🎉' : `Calendario de ${calendar.nombre}`}
               </h1>
-              <p className="text-base sm:text-lg text-gray-800 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-white max-w-2xl mx-auto">
                 {isOwner 
                   ? 'Comparte este enlace con tu comunidad para que se organicen y te lleven comida'
                   : 'Elige un día disponible para llevar comida y apoyar'
@@ -323,7 +323,7 @@ const ArmaTuMealPrep = () => {
             {isOwner && (
               <Card className="max-w-2xl mx-auto border border-gray-200">
                 <CardContent className="p-6">
-                  <Label className="text-black mb-2 block">Enlace para compartir</Label>
+                  <Label className="text-white mb-2 block">Enlace para compartir</Label>
                   <div className="flex gap-2">
                     <Input 
                       value={`${window.location.origin}/arma-tu-meal-prep/${calendar.slug}`}
@@ -334,7 +334,7 @@ const ArmaTuMealPrep = () => {
                       {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                     </Button>
                   </div>
-                  <p className="text-sm text-gray-600 mt-2">
+                  <p className="text-sm text-white/80 mt-2">
                     Comparte este enlace por WhatsApp, email o redes sociales
                   </p>
                 </CardContent>
