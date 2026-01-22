@@ -28,6 +28,55 @@ export interface MealPrepVolunteer {
 }
 
 /**
+ * Normalizar texto para slug (quitar acentos, convertir a minúsculas, etc.)
+ */
+const normalizeSlug = (text: string): string => {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Quitar acentos
+    .replace(/[^a-z0-9]+/g, '-') // Solo letras, números y guiones
+    .replace(/^-+|-+$/g, ''); // Quitar guiones al inicio/final
+};
+
+/**
+ * Generar slug único para calendario
+ */
+const generateUniqueSlug = async (nombre: string): Promise<string> => {
+  const baseSlug = normalizeSlug(nombre);
+  
+  // Intentar primero con el nombre solo
+  const { data: existing } = await supabase
+    .from('meal_prep_calendars')
+    .select('slug')
+    .eq('slug', baseSlug)
+    .single();
+  
+  if (!existing) {
+    return baseSlug;
+  }
+  
+  // Si ya existe, intentar con números incrementales
+  let counter = 2;
+  while (counter < 100) { // Límite de seguridad
+    const newSlug = `${baseSlug}-${counter}`;
+    const { data: exists } = await supabase
+      .from('meal_prep_calendars')
+      .select('slug')
+      .eq('slug', newSlug)
+      .single();
+    
+    if (!exists) {
+      return newSlug;
+    }
+    counter++;
+  }
+  
+  // Fallback: usar timestamp si llegamos al límite
+  return `${baseSlug}-${Date.now()}`;
+};
+
+/**
  * Crear un calendario de meal prep
  */
 export const createMealPrepCalendar = async (data: {
@@ -40,8 +89,8 @@ export const createMealPrepCalendar = async (data: {
   alergias: string;
   user_email: string;
 }) => {
-  // Generar slug único basado en nombre + timestamp
-  const slug = `${data.nombre.toLowerCase().replace(/\s+/g, '-')}-${Date.now()}`;
+  // Generar slug único y limpio
+  const slug = await generateUniqueSlug(data.nombre);
 
   const { data: calendar, error } = await supabase
     .from('meal_prep_calendars')
