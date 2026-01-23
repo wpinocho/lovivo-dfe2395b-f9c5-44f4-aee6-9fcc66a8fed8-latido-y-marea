@@ -16,7 +16,7 @@ const servicios = [
       'Sesiones individuales o grupales'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768841296127-b31xgo8m8gb.png',
-    whatsappMensaje: 'Hola 💜 Me gustaría conocer más sobre *Educación Menstrual*. Estoy interesada en reconectar con mi ciclo y aprender herramientas de autoconocimiento. ¿Me pueden compartir información sobre las sesiones?'
+    whatsappMensaje: 'Hola 🐚 Me gustaría conocer más sobre *Educación Menstrual*. Estoy interesada en reconectar con mi ciclo y aprender herramientas de autoconocimiento. ¿Me pueden compartir información sobre las sesiones?'
   },
   {
     icono: Baby,
@@ -30,7 +30,7 @@ const servicios = [
       'Visitas prenatales'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768858670578-dkq6uaju8k.png',
-    whatsappMensaje: 'Hola 🤰 Me encantaría saber más sobre el *Acompañamiento Prenatal*. Quiero prepararme para mi parto de manera integral y sentirme segura. ¿Me pueden contar cómo funciona?'
+    whatsappMensaje: 'Hola 🐚 Me encantaría saber más sobre el *Acompañamiento Prenatal*. Quiero prepararme para mi parto de manera integral y sentirme segura. ¿Me pueden contar cómo funciona?'
   },
   {
     icono: Heart,
@@ -44,7 +44,7 @@ const servicios = [
       'Conexión con tu pareja/familia'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768836360979-e1ujhdhn2kl.png',
-    whatsappMensaje: 'Hola 💖 Me interesa mucho el *Acompañamiento en el Parto*. Me gustaría vivir mi parto con presencia amorosa y apoyo continuo. ¿Cuándo podemos agendar una consulta?'
+    whatsappMensaje: 'Hola 🐚 Me interesa mucho el *Acompañamiento en el Parto*. Me gustaría vivir mi parto con presencia amorosa y apoyo continuo. ¿Cuándo podemos agendar una consulta?'
   },
   {
     icono: Sun,
@@ -59,7 +59,7 @@ const servicios = [
       'Orientación para la organización de actividades, tareas, quehaceres y gestión de apoyos'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768845283480-wzh6om1bf5h.png',
-    whatsappMensaje: 'Hola 🌅 Quisiera información sobre el *Acompañamiento Postparto*. Siento que necesito contención y apoyo en esta etapa. ¿Me cuentan más sobre las visitas y el apoyo emocional?'
+    whatsappMensaje: 'Hola 🐚 Quisiera información sobre el *Acompañamiento Postparto*. Siento que necesito contención y apoyo en esta etapa. ¿Me cuentan más sobre las visitas y el apoyo emocional?'
   },
   {
     icono: Brain,
@@ -74,7 +74,7 @@ const servicios = [
       'Transición a la maternidad'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768859200681-9eudy877ys.png',
-    whatsappMensaje: 'Hola 💜 Me gustaría saber más sobre las *Sesiones Psicológicas Perinatales* con Alejandra. Necesito un espacio seguro para procesar mis emociones en esta etapa. ¿Me pueden dar más información?'
+    whatsappMensaje: 'Hola 🐚 Me gustaría saber más sobre las *Sesiones Psicológicas Perinatales* con Alejandra. Necesito un espacio seguro para procesar mis emociones en esta etapa. ¿Me pueden dar más información?'
   },
   {
     icono: Sparkles,
@@ -89,7 +89,7 @@ const servicios = [
       'Ritual personalizado'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768859200680-x4wy01kgj2g.png',
-    whatsappMensaje: 'Hola ✨ Me llama mucho el *Baño Postparto y Cierre de Cadera*. Quiero honrar mi cuerpo y vivir este ritual de sanación. ¿Me explican cómo se realiza?'
+    whatsappMensaje: 'Hola 🐚 Me llama mucho el *Baño Postparto y Cierre de Cadera*. Quiero honrar mi cuerpo y vivir este ritual de sanación. ¿Me explican cómo se realiza?'
   },
   {
     icono: Sparkles,
@@ -104,7 +104,7 @@ const servicios = [
       'Instrucciones de consumo personalizadas'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768947102460-ozt4li5q40r.png',
-    whatsappMensaje: 'Hola 🌸 Quisiera saber más sobre la *Terapia Placentaria*. Me interesa aprovechar los beneficios de mi placenta en el postparto. ¿Cómo funciona el proceso de encapsulación?'
+    whatsappMensaje: 'Hola 🐚 Quisiera saber más sobre la *Terapia Placentaria*. Me interesa aprovechar los beneficios de mi placenta en el postparto. ¿Cómo funciona el proceso de encapsulación?'
   },
   {
     icono: Heart,
@@ -119,7 +119,7 @@ const servicios = [
       'Creación de recuerdos significativos'
     ],
     imagen: 'https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768947102464-0mi1ic77qk4.jpg',
-    whatsappMensaje: 'Hola 💕 Me encantaría conocer más sobre la *Ceremonia de Baby Blessing*. Quiero dar la bienvenida a mi bebé con un ritual significativo. ¿Me cuentan cómo lo diseñan?'
+    whatsappMensaje: 'Hola 🐚 Me encantaría conocer más sobre la *Ceremonia de Baby Blessing*. Quiero dar la bienvenida a mi bebé con un ritual significativo. ¿Me cuentan cómo lo diseñan?'
   }
 ];
 
