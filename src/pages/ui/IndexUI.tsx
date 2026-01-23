@@ -29,14 +29,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             
             <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-8 leading-[0.9] text-black">
               Con presencia<br/>
-              y <span className="italic inline-flex items-center gap-3" style={{ color: '#e8a77c' }}>
-                amor
-                <img 
-                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1769190303598-1sm4swaaeh9.png"
-                  alt="Logo Latido y Marea"
-                  className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto inline-block"
-                />
-              </span>
+              y <span className="italic" style={{ color: '#e8a77c' }}>amor</span>
             </h1>
             
             <p className="text-xl sm:text-2xl mb-10 text-gray-700 max-w-xl leading-relaxed">
