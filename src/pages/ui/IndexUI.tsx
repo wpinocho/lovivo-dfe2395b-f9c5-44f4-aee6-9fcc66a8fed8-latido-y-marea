@@ -135,35 +135,35 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             </h2>
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               {/* Renata */}
-              <div className="text-center">
+              <div>
                 <div className="mb-6 overflow-hidden rounded-[40px] shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img 
                     src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781183-2ajqkl4l3ag.png"
-                    alt="Renata - Doula y Educadora Menstrual"
+                    alt="Renata Martínez - Doula y Educadora Menstrual"
                     className="w-full h-80 md:h-96 object-cover"
                   />
                 </div>
-                <h3 className="font-display text-2xl sm:text-3xl mb-2 text-black">Renata Martínez</h3>
-                <p className="text-sm sm:text-base text-gray-600 font-medium mb-4">Doula, Educadora Menstrual y Perinatal & Maestra de Yoga Prenatal</p>
                 <div className="text-left bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-[30px] shadow-lg">
+                  <h3 className="font-display text-2xl sm:text-3xl mb-3 text-black">Renata Martínez</h3>
+                  <p className="text-sm sm:text-base text-gray-600 font-medium mb-4">Doula, Educadora Menstrual y Perinatal & Maestra de Yoga Prenatal</p>
                   <p className="text-gray-700 leading-relaxed">
-                    Renata es doula, educadora menstrual y perinatal, y maestra de yoga prenatal. Acompaña a mujeres y familias en los procesos de gestación, parto, posparto y a lo largo del ciclo menstrual, desde un enfoque amoroso, informado y respetuoso. Su trabajo integra el cuerpo, la emoción y la conciencia, creando espacios seguros donde cada persona puede reconectar con su sabiduría interna y vivir sus procesos de manera plena, libre y sostenida.
+                    Doula, educadora menstrual y perinatal, y maestra de yoga prenatal. Acompaño a mujeres y familias en los procesos de gestación, parto, posparto y a lo largo del ciclo menstrual. Ofrezco un acompañamiento amoroso, informado y respetuoso, integrando el cuerpo, la emoción y la conciencia. Mi enfoque es cálido y sin juicios, creando espacios seguros para honrar cada proceso y acompañarlo de forma libre, plena y sostenida.
                   </p>
                 </div>
               </div>
 
               {/* Alejandra */}
-              <div className="text-center">
+              <div>
                 <div className="mb-6 overflow-hidden rounded-[40px] shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img 
                     src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781182-dnolm4ta4vo.png"
-                    alt="Alejandra - Psicóloga y Doula"
+                    alt="Alejandra Guevara - Psicóloga y Doula"
                     className="w-full h-80 md:h-96 object-cover"
                   />
                 </div>
-                <h3 className="font-display text-2xl sm:text-3xl mb-2 text-black">Alejandra Guevara</h3>
-                <p className="text-sm sm:text-base text-gray-600 font-medium mb-4">Psicóloga Clínica & Doula</p>
                 <div className="text-left bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-[30px] shadow-lg">
+                  <h3 className="font-display text-2xl sm:text-3xl mb-3 text-black">Alejandra Guevara</h3>
+                  <p className="text-sm sm:text-base text-gray-600 font-medium mb-4">Psicóloga Clínica & Doula</p>
                   <p className="text-gray-700 leading-relaxed">
                     Psicóloga clínica y Doula, experiencia en clínica privada, ejerzo la psicología en ambientes hospitalarios y acompañamiento de parto en casa. Te puedo ofrecer un acompañamiento profesional, cálido, sin juicios, abierto a tus deseos y cuidando honrar tu proceso.
                   </p>
