@@ -136,7 +136,6 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               {/* Renata */}
               <div>
-                <h3 className="font-display text-2xl sm:text-3xl mb-4 text-black">Renata Martínez</h3>
                 <div className="mb-6 overflow-hidden rounded-[40px] shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img 
                     src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781183-2ajqkl4l3ag.png"
@@ -144,6 +143,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                     className="w-full h-80 md:h-96 object-cover"
                   />
                 </div>
+                <h3 className="font-display text-2xl sm:text-3xl mb-4 text-black text-center">Renata Martínez</h3>
                 <div className="text-left bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-[30px] shadow-lg">
                   <p className="text-gray-700 leading-relaxed">
                     Doula, educadora menstrual y perinatal, y maestra de yoga prenatal. Acompaño a mujeres y familias en los procesos de gestación, parto, posparto y a lo largo del ciclo menstrual. Ofrezco un acompañamiento amoroso, informado y respetuoso, integrando el cuerpo, la emoción y la conciencia. Mi enfoque es cálido y sin juicios, creando espacios seguros para honrar cada proceso y acompañarlo de forma libre, plena y sostenida.
@@ -153,7 +153,6 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
 
               {/* Alejandra */}
               <div>
-                <h3 className="font-display text-2xl sm:text-3xl mb-4 text-black">Alejandra Guevara</h3>
                 <div className="mb-6 overflow-hidden rounded-[40px] shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <img 
                     src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1768838781182-dnolm4ta4vo.png"
@@ -161,6 +160,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                     className="w-full h-80 md:h-96 object-cover"
                   />
                 </div>
+                <h3 className="font-display text-2xl sm:text-3xl mb-4 text-black text-center">Alejandra Guevara</h3>
                 <div className="text-left bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-[30px] shadow-lg">
                   <p className="text-gray-700 leading-relaxed">
                     Psicóloga clínica y Doula, experiencia en clínica privada, ejerzo la psicología en ambientes hospitalarios y acompañamiento de parto en casa. Te puedo ofrecer un acompañamiento profesional, cálido, sin juicios, abierto a tus deseos y cuidando honrar tu proceso.
