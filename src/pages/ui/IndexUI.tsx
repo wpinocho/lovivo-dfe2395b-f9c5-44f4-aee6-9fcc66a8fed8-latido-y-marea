@@ -32,8 +32,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               y <span className="italic inline-flex items-center gap-3" style={{ color: '#e8a77c' }}>
                 amor
                 <img 
-                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1769190039495-uwjvu81dyx.png"
-                  alt="Latido y Marea"
+                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/8fd9d699-54b2-4e17-ace8-1d402755d17f/1769190303598-1sm4swaaeh9.png"
+                  alt="Logo Latido y Marea"
                   className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto inline-block"
                 />
               </span>
