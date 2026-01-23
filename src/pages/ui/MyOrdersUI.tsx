@@ -97,13 +97,13 @@ export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
               {mealPrepCalendars.map((calendar) => (
-                <Card key={calendar.id} className="border-0 hover:shadow-xl transition-shadow" style={{ backgroundColor: '#b8a8c4' }}>
+                <Card key={calendar.id} className="border-2 hover:shadow-xl transition-shadow" style={{ borderColor: '#b8a8c4' }}>
                   <CardHeader>
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <CardTitle className="text-lg text-white">{calendar.nombre}</CardTitle>
+                        <CardTitle className="text-lg">{calendar.nombre}</CardTitle>
                         <CardDescription className="mt-2">
-                          <div className="flex flex-col gap-1 text-sm text-white/90">
+                          <div className="flex flex-col gap-1 text-sm">
                             <span className="flex items-center gap-1">
                               <Calendar className="h-3 w-3" />
                               Inicio: {format(new Date(calendar.fecha_inicio + 'T00:00:00'), "d 'de' MMMM, yyyy", { locale: es })}
@@ -112,7 +112,7 @@ export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
                           </div>
                         </CardDescription>
                       </div>
-                      <Badge className="bg-white/20 text-white border-0">
+                      <Badge style={{ backgroundColor: '#b8a8c4', color: 'white' }}>
                         Activo
                       </Badge>
                     </div>
@@ -121,7 +121,8 @@ export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
                     <div className="flex gap-2">
                       <Button 
                         onClick={() => navigate(`/arma-tu-meal-prep/${calendar.slug}`)}
-                        className="flex-1 bg-white text-[#b8a8c4] hover:bg-white/90 font-semibold"
+                        className="flex-1"
+                        style={{ backgroundColor: '#b8a8c4' }}
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Ver calendario
@@ -130,7 +131,7 @@ export default function MyOrdersUI({ user, authLoading }: MyOrdersUIProps) {
                         variant="outline"
                         size="icon"
                         onClick={() => setCalendarToDelete(calendar)}
-                        className="border-white/30 text-white hover:bg-white/20 hover:text-white hover:border-white/50"
+                        style={{ borderColor: '#b8a8c4', color: '#b8a8c4' }}
                       >
                         <Trash2 className="h-4 w-4" />
                       </Button>
