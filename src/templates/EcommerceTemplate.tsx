@@ -260,7 +260,7 @@ export const EcommerceTemplate = ({
               </Link>
               <p>contacto@latidoymarea.com</p>
               <a 
-                href="https://wa.me/525559652494" 
+                href="https://wa.me/525522644419" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors underline flex items-center gap-2"
@@ -271,7 +271,7 @@ export const EcommerceTemplate = ({
                   className="w-5 h-5 inline-block"
                   style={{ filter: 'brightness(0) invert(1)' }}
                 />
-                +52 55 5965 2494
+                +52 55 2264 4419
               </a>
               <a 
                 href="https://www.instagram.com/latidoymarea" 

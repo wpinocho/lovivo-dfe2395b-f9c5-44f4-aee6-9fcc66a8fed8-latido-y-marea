@@ -176,7 +176,7 @@ const AvisoPrivacidad = () => {
               </p>
               <ul className="text-gray-700 space-y-2">
                 <li><strong>Email:</strong> contacto@latidoymarea.com</li>
-                <li><strong>Teléfono:</strong> +52 55 5965 2494</li>
+                <li><strong>Teléfono:</strong> +52 55 2264 4419</li>
                 <li><strong>Ubicación:</strong> Ciudad de México, México</li>
               </ul>
             </div>

@@ -176,7 +176,7 @@ const Servicios = () => {
                     </div>
                     <Button asChild className="w-full">
                       <a 
-                        href={`https://wa.me/${servicio.titulo === 'Sesiones Psicológicas Perinatales' ? '525531061144' : '525559652494'}?text=${encodeURIComponent(servicio.whatsappMensaje)}`}
+                        href={`https://wa.me/525522644419?text=${encodeURIComponent(servicio.whatsappMensaje)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

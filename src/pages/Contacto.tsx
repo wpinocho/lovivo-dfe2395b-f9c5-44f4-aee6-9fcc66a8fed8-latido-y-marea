@@ -50,7 +50,7 @@ ${formData.asunto ? `*Asunto:* ${formData.asunto}` : ''}
 ${formData.mensaje}`;
 
       // Abrir WhatsApp - usar location.href para mejor compatibilidad
-      const whatsappURL = `https://wa.me/525559652494?text=${encodeURIComponent(whatsappMessage)}`;
+      const whatsappURL = `https://wa.me/525522644419?text=${encodeURIComponent(whatsappMessage)}`;
       
       // Detectar si es móvil o desktop para mejor experiencia
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -88,7 +88,7 @@ ${formData.mensaje}`;
       console.error('Error al abrir WhatsApp:', error);
       toast({
         title: 'Error',
-        description: 'No se pudo abrir WhatsApp. Por favor contacta directamente al +52 55 5965 2494',
+        description: 'No se pudo abrir WhatsApp. Por favor contacta directamente al +52 55 2264 4419',
         variant: 'destructive',
         duration: 7000
       });
@@ -146,12 +146,12 @@ ${formData.mensaje}`;
                     <div>
                       <h3 className="font-semibold mb-1 text-black">Teléfono</h3>
                       <a 
-                        href="https://wa.me/525559652494" 
+                        href="https://wa.me/525522644419" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-gray-700 hover:text-primary transition-colors underline"
                       >
-                        +52 55 5965 2494
+                        +52 55 2264 4419
                       </a>
                       <p className="text-sm text-gray-600 mt-1">
                         Lun - Vie: 9:00 AM - 6:00 PM
