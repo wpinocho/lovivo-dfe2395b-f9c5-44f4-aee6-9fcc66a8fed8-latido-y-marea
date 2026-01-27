@@ -143,7 +143,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                     className="w-full h-80 md:h-96 object-cover"
                   />
                 </div>
-                <h3 className="font-display text-2xl sm:text-3xl mb-4 text-black text-center">Renata Martínez</h3>
+                <h3 className="font-display text-2xl sm:text-3xl mb-2 text-black text-center">Renata Martínez</h3>
+                <p className="text-center text-gray-600 mb-4 italic">Doula y Co-fundadora</p>
                 <div className="text-left bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-[30px] shadow-lg">
                   <p className="text-gray-700 leading-relaxed">
                     Doula, educadora menstrual y perinatal, y maestra de yoga prenatal. Acompaño a mujeres y familias en los procesos de gestación, parto, posparto y a lo largo del ciclo menstrual. Ofrezco un acompañamiento amoroso, informado y respetuoso, integrando el cuerpo, la emoción y la conciencia. Mi enfoque es cálido y sin juicios, creando espacios seguros para honrar cada proceso y acompañarlo de forma libre, plena y sostenida.
@@ -160,7 +161,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                     className="w-full h-80 md:h-96 object-cover"
                   />
                 </div>
-                <h3 className="font-display text-2xl sm:text-3xl mb-4 text-black text-center">Alejandra Guevara</h3>
+                <h3 className="font-display text-2xl sm:text-3xl mb-2 text-black text-center">Alejandra Guevara</h3>
+                <p className="text-center text-gray-600 mb-4 italic">Doula y Co-fundadora</p>
                 <div className="text-left bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-[30px] shadow-lg">
                   <p className="text-gray-700 leading-relaxed">
                     Psicóloga clínica y Doula, experiencia en clínica privada, ejerzo la psicología en ambientes hospitalarios y acompañamiento de parto en casa. Te puedo ofrecer un acompañamiento profesional, cálido, sin juicios, abierto a tus deseos y cuidando honrar tu proceso.
